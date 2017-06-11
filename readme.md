@@ -28,6 +28,7 @@
 	• Total accounts<br />
 	• Hard inquiries
 4. As a user, I would like a clean dashboard with colorful charts to visualize my financial situation.
+5. As a user, I want a login but I don't know if Francheska have enough time to implement it. (Post-MVP 😅)
 
 </a>
 
