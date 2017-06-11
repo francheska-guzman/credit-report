@@ -55,6 +55,8 @@
 
 ### Visual representation of the database
 
+![Database](./images/database.png)
+
 </a>
 
 <a name="flowchart">
