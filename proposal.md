@@ -12,4 +12,4 @@ Develop a financial technology web application focused on credit report, that re
 
 * A library to create interactive charts.
 
-[Go back.](./readme)
+[Go back.](./readme.md)

@@ -1,6 +1,4 @@
-Francheska Guzman
-
-<h1>Credit Report</h1>
+### Credit Report
 
 ## Table of Contents
 
