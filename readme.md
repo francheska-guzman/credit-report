@@ -1,6 +1,8 @@
-### Credit Report
+**Francheska Guzman | GA Final Project**
 
-## Table of Contents
+# Credit Report
+
+### Table of Contents
 
 1. [Project Proposal](./proposal.md)
 2. [Time Management](#timemanagement)
@@ -23,6 +25,17 @@
 <a name="userstories">
 
 ### User Stories
+
+1. As a user who doesn't know what is a Credit Report, and the impact of it in my life; I would like to get information about it, including quick tips for my credit health.
+2. As a user, I want to get my credit score.
+3. As a user interested in get a credit report, I would like to see the following credit factores:<br />
+	• Credit card use<br />
+	• Payment history<br />
+	• Derogatory marks<br />
+	• Credit age<br />
+	• Total accounts<br />
+	• Hard inquiries
+4. As a user, I would like a clean dashboard with colorful charts to visualize my financial situation.
 
 </a>
 
