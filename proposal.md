@@ -22,4 +22,6 @@ In my Credit Report web application, the user will introduce her "identification
 
 * Perform cross-browser testing.
 
+* ... and many equations!
+
 [Go back.](./readme.md)
