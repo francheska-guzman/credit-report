@@ -16,6 +16,8 @@
 
 ### Time Management
 
+[GitHub Board](https://github.com/francheska-guzman/credit-report/projects#boards?repos=93885730)
+
 </a>
 
 <a name="userstories">
