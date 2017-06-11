@@ -5,7 +5,7 @@
 ### Table of Contents
 
 1. [Project Proposal](./proposal.md)
-2. [Time Management](#timemanagement)
+2. [GitHub Board](https://github.com/francheska-guzman/credit-report/projects#boards?repos=93885730)
 3. [User Stories](#userstories)
 4. [Browser Wireframes](#browser)
 5. [Mobile Wireframes](#mobile)
@@ -13,14 +13,6 @@
 7. [Flowchart](#flowchart)
 8. [Pseudocode](#pseudocode)
 9. [Technologies used](#technologies)
-
-<a name="timemanagement">
-
-### Time Management
-
-[GitHub Board](https://github.com/francheska-guzman/credit-report/projects#boards?repos=93885730)
-
-</a>
 
 <a name="userstories">
 
