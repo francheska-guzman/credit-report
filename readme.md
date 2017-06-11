@@ -2,23 +2,64 @@ Francheska Guzman
 
 # Credit Report
 
-### Project Proposal
+## Table of Contents
 
-Develop a credit report web application, that renders user's data previously analyzed in a dashboard (mostly charts).
+1. [Project Proposal](./proposal)
+2. [Time Management](#timemanagement)
+3. [User Stories](#userstories)
+4. [Browser Wireframes](#browser)
+5. [Mobile Wireframes](#mobile)
+6. [Visual representation of the database](#database)
+7. [Flowchart](#flowchart)
+8. [Pseudocode](#pseudocode)
+9. [Technologies used](#technologies)
 
-**Credit factors:**
+<a name="timemanagement">
 
-1. Credit card use (ratios)
-2. Payment history (true/false)
-3. Derogatory marks
-4. Credit age (calculate the average of user's open accounts)
-5. Total accounts
-6. Hard inquiries
+### Time Management
 
-**I will be:**
+</a>
 
-* Using a database to add personal/financial information about the user.
+<a name="userstories">
 
-* Looking for an API to get an overall score of people in the United States, and be able to compare the user with real public data.
+### User Stories
 
-* Searching for a library to create interactive charts.
+</a>
+
+<a name="browser">
+
+### Browser Wireframes
+
+</a>
+
+<a name="mobile">
+
+### Mobile Wireframes
+
+</a>
+
+<a name="database">
+
+### Visual representation of the database
+
+</a>
+
+<a name="flowchart">
+
+### Flowchart
+
+</a>
+
+<a name="pseudocode">
+
+### Pseudocode
+
+</a>
+
+<a name="technologies">
+
+### Technologies Used
+
+</a>
+
+
