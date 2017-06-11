@@ -1,10 +1,10 @@
 Francheska Guzman
 
-# Credit Report
+<h1>Credit Report</h1>
 
 ## Table of Contents
 
-1. [Project Proposal](./proposal)
+1. [Project Proposal](./proposal.md)
 2. [Time Management](#timemanagement)
 3. [User Stories](#userstories)
 4. [Browser Wireframes](#browser)
