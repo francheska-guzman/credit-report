@@ -6,9 +6,9 @@ Develop a financial technology web application focused on credit report, that re
 
 ### Functionality
 
-In the real life when a user request a credit report in web applications like Equifax, Experian, TransUnion, FreeCreditReport, etc; the user introduce her personal information (first, initial and last name, social security number, date of birth, and so on), and the page render all her financial situation.
+In the real Credit Reports web applications like Equifax, Experian, TransUnion; when a user request a credit report, the user introduce her personal information (i.e. first, initial and last name, social security number, date of birth), and the page render all her financial situation.
 
-In my web application, the user will introduce her "identification number" in an input field, and the app will render her personal/financial information from the database ("Read" from CRUD).
+In my Credit Report web application, the user will introduce her "identification number" in an input field, and the app will render her personal/financial information from the database ("Read" from CRUD). 
 
 ### MVP
 
