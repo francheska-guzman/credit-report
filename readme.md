@@ -48,6 +48,10 @@ This is another example. Here, the user press "View Details" for payment history
 
 ![Browser](./images/browser3.png)
 
+My account (render user basic information):
+
+![Browser](./images/browser4.png)
+
 </a>
 
 <a name="mobile">
