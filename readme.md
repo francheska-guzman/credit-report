@@ -70,6 +70,12 @@ This is another example. Here, the user press "View Details" for payment history
 
 ### Pseudocode
 
+1. Make an axios call to the database.
+2. Get all accounts from an especific user.
+3. Find their corresponding credit use and credit limit for each account.
+4. Divide credit use/credit limit to compute the utilization ratio.
+5. Render the result in the Credit Card Use component.
+
 </a>
 
 <a name="technologies">
