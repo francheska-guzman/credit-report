@@ -26,7 +26,7 @@ CREATE TABLE user_information(
   last_name VARCHAR(255),
   date_of_birth VARCHAR(255),
   place_of_birth VARCHAR(255),
-  gender REFERENCES gender(id),
+  gender INT REFERENCES gender(id),
 );
 
 CREATE TABLE account_details(
@@ -55,4 +55,4 @@ CREATE TABLE payment_history(
   oct BOOLEAN,
   nov BOOLEAN,
   dec BOOLEAN
-)
+);
