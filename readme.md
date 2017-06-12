@@ -72,9 +72,9 @@ This is another example. Here, the user press "View Details" for payment history
 
 1. Make an axios call to the database, and get all accounts from an especific user.
 2. Find the credit use and credit limit for each account open account.
-3. Divide credit use/credit limit to compute the utilization ratio.
+3. Divide credit use by the credit limit, to compute the utilization ratio.
 4. Render the result in the Credit Card Use component in the following format: Credit name, Account Type, Credit Use, Credit Limit and the ratio already computed. (Utilization ratio for each account.)
-5. Finally, sum all credit use and divide it by the sum of all credit limit. Render the result in a pie chart. (Utilization ratio in general.)
+5. Finally, sum the credit use of all accounts, sum the credit limit of all accounts, and divide it. Render the result in a pie chart. (Utilization ratio in general.)
 
 </a>
 
