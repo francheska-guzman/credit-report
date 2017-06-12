@@ -25,12 +25,12 @@ CREATE TABLE user_information(
 CREATE TABLE account_details(
   id SERIAL PRIMARY KEY,
   user_id INT REFERENCES user_information(id),
-  account_type INT REFERENCES account_type(id),
+  account_type INT REFERENCES type(id),
   opened VARCHAR(255),
   creditor VARCHAR(255),
   credit_limit INT,
   credit_use INT,
-  current_status INT REFERENCES current_status(id)
+  current_status INT REFERENCES status(id)
 );
 
 CREATE TABLE payment_history(
@@ -69,3 +69,15 @@ INSERT INTO gender (gender) VALUES
 INSERT INTO user_information (first_name, last_name, date_of_birth, place_of_birth, gender) VALUES 
   ('John', 'Doe', '1-18-1979', 'New York, NY', 1), 
   ('Jane', 'Monroe', '10-25-1984', 'San Francisco, CA', 2);
+
+INSERT INTO account_details (user_id, account_type, opened, creditor, credit_limit, credit_use, current_status) VALUES 
+  (1, 2, '10-1-2004', 'JP Morgan Chase', 9500, 1290, 1),
+  (1, 1, '5-12-2001', 'GE Capital Retail Bank', 3200, 203, 1),
+  (1, 5, '3-25-2009', 'Bank of America', 50000, 9721, 1),
+  (1, 1, '11-3-2015', 'JP Morgan Chase', 6400, 904, 1),
+  (2, 3, '1-18-2011', 'FedLoan Servicing', 4200, 3420, 1),
+  (2, 1, '5-20-2010', 'Discover', 2500, 1850, 2),
+  (2, 3, '9-22-2009', 'Fed Loan Servicing', 4500, 3595 2),
+  (2, 1, '4-11-2014', 'TD Bank USA', 2300, 292, 1),
+  (2, 1, '6-23-2015', 'Capital One', 7100, 5232, 2),
+  (2, 4, '12-17-2016', 'Bank of America', 12000, 8300, 1);
