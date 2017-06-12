@@ -8,14 +8,14 @@ let db = pgp(connectionString);
 
 // Get the basic information from all users.
 function getAllUserInformation(req, res, next) {
-  db.any('SELECT * FROM user_information ON user_information.id = account_details.user_id JOIN genders ON genders.id = user_information.gender JOIN account_details JOIN account_type ON account_type.id = account_details.account_type JOIN payment_history ON payment_history.id = account_details.id JOIN current_status ON current_status.id = account_details.current_status')
+  db.any('SELECT * FROM user_information JOIN genders ON genders.id = user_information.gender')
     .then(function(data) {
       console.log('DATA: ', data);
       res.status(200)
         .json({
           status: 'success',
           data: data,
-          message: 'All user information retrieved.'
+          message: 'Basic information from all users retrieved.'
         });
     })
     .catch(function(err) {
@@ -25,15 +25,50 @@ function getAllUserInformation(req, res, next) {
 
 // Get the basic information from one user.
 function getOneUserInformation(req, res, next) {
-let user_id = parseInt(req.params.user_id);
-  db.any('SELECT * FROM user_information ON user_information.id = account_details.user_id JOIN genders ON genders.id = user_information.gender JOIN account_details JOIN account_type ON account_type.id = account_details.account_type JOIN payment_history ON payment_history.id = account_details.id JOIN current_status ON current_status.id = account_details.current_status WHERE user_id = $1', user_id)
+let id = parseInt(req.params.id);
+  db.one('SELECT * FROM user_information JOIN genders ON genders.id = user_information.gender WHERE user_information.id = $1', id)
     .then(function(data) {
       console.log('DATA: ', data);
       res.status(200)
         .json({
           status: 'success',
           data: data,
-          message: 'One user information retrieved.'
+          message: 'Basic information from one user retrieved.'
+        });
+    })
+    .catch(function(err) {
+      return next(err);
+    });
+}
+
+// Get all accounts from all users.
+function getAllUserAccounts(req, res, next) {
+  db.any('SELECT * FROM account_details JOIN account_type ON account_type.id = account_details.account_type JOIN payment_history ON payment_history.id = account_details.id JOIN current_status ON current_status.id = account_details.current_status')
+    .then(function(data) {
+      console.log('DATA: ', data);
+      res.status(200)
+        .json({
+          status: 'success',
+          data: data,
+          message: 'All accounts from all users retrieved.'
+        });
+    })
+    .catch(function(err) {
+      return next(err);
+    });
+}
+
+// Get all accounts from one user.
+function getOneUserAccounts(req, res, next) {
+let id = parseInt(req.params.id);
+  db.any('SELECT * FROM account_details JOIN account_type ON account_type.id = account_details.account_type JOIN payment_history ON payment_history.id = account_details.id JOIN current_status ON current_status.id = account_details.current_status WHERE user_id = $1', id)
+    .then(function(data) {
+      console.log('DATA: ', data);
+      res.status(200)
+        .json({
+          status: 'success',
+          data: data,
+          message: 'All accounts from one user retrieved.'
         });
     })
     .catch(function(err) {
@@ -44,4 +79,6 @@ let user_id = parseInt(req.params.user_id);
 module.exports = {
   getAllUserInformation: getAllUserInformation,
   getOneUserInformation: getOneUserInformation,
+  getAllUserAccounts: getAllUserAccounts,
+  getOneUserAccounts: getOneUserAccounts
 };

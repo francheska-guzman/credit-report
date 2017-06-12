@@ -6,7 +6,9 @@ router.get('/', function(req, res, next) {
 	res.render('index', { title: 'Credit Report API' });
 })
 
-router.get('/userinformation', db.getAllUserInformation);
-router.get('/userinformation/:user_id', db.getOneUserInformation);
+router.get('/personalinformation', db.getAllUserInformation);
+router.get('/personalinformation/:id', db.getOneUserInformation);
+router.get('/financialinformation/', db.getAllUserAccounts);
+router.get('/financialinformation/:id', db.getOneUserAccounts);
 
 module.exports = router;
