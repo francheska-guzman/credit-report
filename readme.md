@@ -19,7 +19,7 @@
 ### User Stories
 
 1. As a user who doesn't know what is a Credit Report, and the impact of it in my life; I would like to get information about it, including quick tips for my credit health.
-2. As a user, I want to get my credit score.
+2. As a user, I want to get my credit score and a histogram chart to see how my score has changed.
 3. As a user interested in get a credit report, I would like to see the following credit factores:<br />
 	• Credit card use<br />
 	• Payment history<br />
