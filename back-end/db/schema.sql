@@ -1,11 +1,11 @@
 CREATE TABLE account_type(
   id SERIAL PRIMARY KEY,
-  type VARCHAR(255)
+  account_type VARCHAR(255)
 );
 
 CREATE TABLE current_status(
   id SERIAL PRIMARY KEY,
-  status VARCHAR(255)
+  current_status VARCHAR(255)
 );
 
 CREATE TABLE genders(
@@ -35,7 +35,6 @@ CREATE TABLE account_details(
 
 CREATE TABLE payment_history(
   id SERIAL PRIMARY KEY REFERENCES account_details(id),
-  user_id INT REFERENCES user_information(id),
   jan BOOLEAN,
   feb BOOLEAN,
   mar BOOLEAN,
@@ -50,7 +49,7 @@ CREATE TABLE payment_history(
   dec BOOLEAN
 );
 
-INSERT INTO account_type (type) VALUES 
+INSERT INTO account_type (account_type) VALUES 
   ('Credit Card'), 
   ('Personal Loan'),
   ('Student Loan'),
@@ -58,7 +57,7 @@ INSERT INTO account_type (type) VALUES
   ('Home Loan'),
   ('Business Loan');
 
-INSERT INTO current_status (status) VALUES 
+INSERT INTO current_status (current_status) VALUES 
   ('Open'), 
   ('Closed');
 
@@ -82,14 +81,14 @@ INSERT INTO account_details (user_id, account_type, opened, creditor, credit_lim
   (2, 1, '6-23-2015', 'Capital One', 7100, 5232, 2),
   (2, 4, '12-17-2016', 'Bank of America', 12000, 8300, 1);
 
-INSERT INTO payment_history (user_id, jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec) VALUES
-  (1, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE),
-  (1, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
-  (1, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
-  (1, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE),
-  (2, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
-  (2, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE),
-  (2, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE),
-  (2, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, FALSE),
-  (2, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE),
-  (2, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE);
+INSERT INTO payment_history (jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec) VALUES
+  (TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE),
+  (TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
+  (TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
+  (TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE),
+  (TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
+  (TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE),
+  (TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE),
+  (TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, FALSE),
+  (TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE),
+  (TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE);
