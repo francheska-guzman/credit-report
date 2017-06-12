@@ -8,7 +8,7 @@ CREATE TABLE current_status(
   status VARCHAR(255)
 );
 
-CREATE TABLE gender(
+CREATE TABLE genders(
   id SERIAL PRIMARY KEY,
   gender VARCHAR(255)
 );
@@ -19,18 +19,18 @@ CREATE TABLE user_information(
   last_name VARCHAR(255),
   date_of_birth VARCHAR(255),
   place_of_birth VARCHAR(255),
-  gender INT REFERENCES gender(id),
+  gender INT REFERENCES genders(id)
 );
 
 CREATE TABLE account_details(
   id SERIAL PRIMARY KEY,
   user_id INT REFERENCES user_information(id),
-  account_type INT REFERENCES type(id),
+  account_type INT REFERENCES account_type(id),
   opened VARCHAR(255),
   creditor VARCHAR(255),
   credit_limit INT,
   credit_use INT,
-  current_status INT REFERENCES status(id)
+  current_status INT REFERENCES current_status(id)
 );
 
 CREATE TABLE payment_history(
@@ -53,7 +53,7 @@ CREATE TABLE payment_history(
 INSERT INTO account_type (type) VALUES 
   ('Credit Card'), 
   ('Personal Loan'),
-  ('Student Loan')
+  ('Student Loan'),
   ('Auto Loan'),
   ('Home Loan'),
   ('Business Loan');
@@ -62,7 +62,7 @@ INSERT INTO current_status (status) VALUES
   ('Open'), 
   ('Closed');
 
-INSERT INTO gender (gender) VALUES 
+INSERT INTO genders (gender) VALUES 
   ('Male'), 
   ('Female');
 
@@ -77,7 +77,7 @@ INSERT INTO account_details (user_id, account_type, opened, creditor, credit_lim
   (1, 1, '11-3-2015', 'JP Morgan Chase', 6400, 904, 1),
   (2, 3, '1-18-2011', 'FedLoan Servicing', 4200, 3420, 1),
   (2, 1, '5-20-2010', 'Discover', 2500, 1850, 2),
-  (2, 3, '9-22-2009', 'Fed Loan Servicing', 4500, 3595 2),
+  (2, 3, '9-22-2009', 'Fed Loan Servicing', 4500, 3595, 2),
   (2, 1, '4-11-2014', 'TD Bank USA', 2300, 292, 1),
   (2, 1, '6-23-2015', 'Capital One', 7100, 5232, 2),
   (2, 4, '12-17-2016', 'Bank of America', 12000, 8300, 1);
@@ -93,4 +93,3 @@ INSERT INTO payment_history (user_id, jan, feb, mar, apr, may, jun, jul, aug, se
   (2, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, FALSE),
   (2, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE),
   (2, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE);
-
