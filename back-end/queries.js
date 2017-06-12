@@ -23,6 +23,25 @@ function getAllUserInformation(req, res, next) {
     });
 }
 
+// Get the basic information from one user.
+function getOneUserInformation(req, res, next) {
+let id = parseInt(req.params.id);
+  db.one('SELECT * FROM user_information JOIN genders ON genders.id = user_information.gender WHERE user_information.id = $1', id)
+    .then(function(data) {
+      console.log('DATA: ', data);
+      res.status(200)
+        .json({
+          status: 'success',
+          data: data,
+          message: 'One user information retrieved.'
+        });
+    })
+    .catch(function(err) {
+      return next(err);
+    });
+}
+
 module.exports = {
   getAllUserInformation: getAllUserInformation,
+  getOneUserInformation: getOneUserInformation,
 };
