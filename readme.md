@@ -10,9 +10,8 @@
 4. [Browser Wireframes](#browser)
 5. [Mobile Wireframes](#mobile)
 6. [Visual representation of the database](#database)
-7. [Flowchart](#flowchart)
-8. [Pseudocode](#pseudocode)
-9. [Technologies used](#technologies)
+7. [Pseudocode](#pseudocode)
+8. [Technologies used](#technologies)
 
 <a name="userstories">
 
@@ -64,12 +63,6 @@ This is another example. Here, the user press "View Details" for payment history
 ### Visual representation of the database
 
 ![Database](./images/database.png)
-
-</a>
-
-<a name="flowchart">
-
-### Flowchart
 
 </a>
 
