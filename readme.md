@@ -19,16 +19,17 @@
 ### User Stories
 
 1. As a user who doesn't know what is a Credit Report, and the impact of it in my life; I would like to get information about it, including quick tips for my credit health.
-2. As a user, I want to get my credit score and a histogram chart to see how my score has changed.
-3. As a user interested in get a credit report, I would like to see the following credit factores:<br />
+2. As a user, I would like instructions on how to use the website.
+3. As a user, I want to get my credit score and a histogram chart to see how my score has changed over the time.
+4. As a user interested in get a credit report, I would like to see the following credit factores:<br />
 	• Credit card use<br />
 	• Payment history<br />
 	• Derogatory marks<br />
 	• Credit age<br />
 	• Total accounts<br />
 	• Hard inquiries
-4. As a user, I would like a clean dashboard with colorful charts to visualize my financial situation.
-5. As a user, I want to protect my personal and financial data by using a login, but I don't know if Francheska have enough time to implement it. (Post-MVP 😅)
+5. As a user, I would like a clean dashboard with colorful charts to visualize my financial situation.
+6. As a user, I want to protect my personal and financial data by using a login. (Post MVP 😅)
 
 </a>
 
