@@ -40,9 +40,13 @@ Dashboard overview:
 
 ![Browser](./images/browser1.png)
 
-If the user click "View Details" in any of the six (6) credit factors, the page will render the information in the same page.
+If the user click "View Details" in any of the six (6) credit factors, the page will render the information in the same page. In this example, the user clicked "View Details" for credit card use.
 
 ![Browser](./images/browser2.png)
+
+This is another example. Here, the user press "View Details" for payment history.
+
+![Browser](./images/browser3.png)
 
 </a>
 
