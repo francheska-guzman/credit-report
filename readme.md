@@ -36,6 +36,14 @@
 
 ### Browser Wireframes
 
+Dashboard overview:
+
+![Browser](./images/browser1.png)
+
+If the user click "View Details" in any of the six (6) credit factors, the page will render the information in the same page.
+
+![Browser](./images/browser2.png)
+
 </a>
 
 <a name="mobile">
