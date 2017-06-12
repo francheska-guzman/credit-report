@@ -54,6 +54,8 @@ This is another example. Here, the user press "View Details" for payment history
 
 ### Mobile Wireframes
 
+![Mobile](./images/mobile1.png)
+
 </a>
 
 <a name="database">
