@@ -35,7 +35,7 @@ CREATE TABLE account_details(
 
 CREATE TABLE payment_history(
   id SERIAL PRIMARY KEY REFERENCES account_details(id),
-  user_id INT REFERENCES account_details(user_id),
+  user_id INT REFERENCES user_information(id),
   jan BOOLEAN,
   feb BOOLEAN,
   mar BOOLEAN,
