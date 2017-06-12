@@ -7,6 +7,6 @@ router.get('/', function(req, res, next) {
 })
 
 router.get('/userinformation', db.getAllUserInformation);
-router.get('/userinformation/:id', db.getOneUserInformation);
+router.get('/userinformation/:user_id', db.getOneUserInformation);
 
 module.exports = router;
