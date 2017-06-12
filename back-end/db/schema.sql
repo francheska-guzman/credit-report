@@ -1,18 +1,11 @@
-DROP TABLE IF EXISTS account_type;
-DROP TABLE IF EXISTS current_status;
-DROP TABLE IF EXISTS gender;
-DROP TABLE IF EXISTS user_information;
-DROP TABLE IF EXISTS account_details;
-DROP TABLE IF EXISTS payment_history;
-
 CREATE TABLE account_type(
   id SERIAL PRIMARY KEY,
-  account_type VARCHAR(255)
+  type VARCHAR(255)
 );
 
 CREATE TABLE current_status(
   id SERIAL PRIMARY KEY,
-  gender VARCHAR(255)
+  status VARCHAR(255)
 );
 
 CREATE TABLE gender(
@@ -56,3 +49,23 @@ CREATE TABLE payment_history(
   nov BOOLEAN,
   dec BOOLEAN
 );
+
+INSERT INTO account_type (type) VALUES 
+  ('Credit Card'), 
+  ('Personal Loan'),
+  ('Student Loan')
+  ('Auto Loan'),
+  ('Home Loan'),
+  ('Business Loan');
+
+INSERT INTO current_status (status) VALUES 
+  ('Open'), 
+  ('Closed');
+
+INSERT INTO gender (gender) VALUES 
+  ('Male'), 
+  ('Female');
+
+INSERT INTO user_information (first_name, last_name, date_of_birth, place_of_birth, gender) VALUES 
+  ('John', 'Doe', '1-18-1979', 'New York, NY', 1), 
+  ('Jane', 'Monroe', '10-25-1984', 'San Francisco, CA', 2);
