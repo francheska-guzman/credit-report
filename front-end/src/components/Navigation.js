@@ -8,8 +8,8 @@ class Navigation extends Component {
     	  <nav>
     	    <ul>
     	    <li className="nav-link"><NavLink to="/">Dashboard</NavLink></li>
-    	    <li className="nav-link"><NavLink to="/helpcenter">Help Center</NavLink></li>
-    	    <li className="nav-link"><NavLink to="/myaccount">My Account</NavLink></li>
+    	    <li className="nav-link"><NavLink to="/help-center">Help Center</NavLink></li>
+    	    <li className="nav-link"><NavLink to="/my-account">My Account</NavLink></li>
           </ul>
     	  </nav>
       </div>
