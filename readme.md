@@ -91,6 +91,9 @@ My account (render user basic information):
 2. Node/Express App for the Server-side
 3. Relational Database using PostgreSQL
 4. Libraries to create responsive charts: [ChartJS](http://www.chartjs.org/), [ChartistJS](http://gionkunz.github.io/chartist-js/), [Fusion Charts](http://www.fusioncharts.com/) and/or [Google Charts](https://developers.google.com/chart/).
+5. [logomakr](https://logomakr.com/) to create credit card, personal loan, student loan, auto loan, home loan, and business loan logos: 
+
+![Credit Card](./images/creditcard.png)  ![Personal Loan](./images/personalloan.png)  ![Student loan](./images/studentloan.png)  ![Auto Loan](./images/autoloan.png)  ![Home Loan](./images/homeloan.png)  ![Business Loan](./images/businessloan.png)
 
 </a>
 
