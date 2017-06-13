@@ -26,8 +26,8 @@ function getAllUserInformation(req, res, next) {
 
 // Get personal information from one user.
 function getOneUserInformation(req, res, next) {
-let user_id = parseInt(req.params.user_id);
-  db.one('SELECT * FROM user_information JOIN genders ON genders.id = user_information.gender JOIN marital_status ON marital_status.id = user_information.marital_status WHERE user_information.id = $1', user_id)
+let id = parseInt(req.params.id);
+  db.one('SELECT * FROM user_information JOIN genders ON genders.id = user_information.gender JOIN marital_status ON marital_status.id = user_information.marital_status WHERE user_information.id = $1', id)
     .then(function(data) {
       console.log('DATA: ', data);
       res.status(200)

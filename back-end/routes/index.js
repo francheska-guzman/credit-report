@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 })
 
 router.get('/personalinformation', db.getAllUserInformation);
-router.get('/personalinformation/:user_id', db.getOneUserInformation);
+router.get('/personalinformation/:id', db.getOneUserInformation);
 router.get('/financialinformation/', db.getAllUserAccounts);
 router.get('/financialinformation/:user_id', db.getOneUserAccounts);
 router.get('/financialinformation/:user_id/:id', db.getOneUserAccount);
