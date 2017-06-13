@@ -9,7 +9,7 @@ let db = pgp(connectionString);
 
 // Get personal information from all users.
 function getAllUserInformation(req, res, next) {
-  db.any('SELECT * FROM user_information JOIN marital_status ON marital_status.id = user_information.marital_status JOIN genders ON genders.id = user_information.gender')
+  db.any('SELECT * FROM user_information JOIN marital_status ON marital_status.id = user_information.marital_status JOIN genders ON genders.id = user_information.gender ORDER BY user_information.id')
     .then(function(data) {
       console.log('DATA: ', data);
       res.status(200)
@@ -44,7 +44,7 @@ let id = parseInt(req.params.id);
 
 // Get personal and financial information from all users.
 function getAllUserAccounts(req, res, next) {
-  db.any('SELECT * FROM user_information JOIN genders ON genders.id = user_information.gender JOIN marital_status ON marital_status.id = user_information.marital_status JOIN account_details ON account_details.user_id = user_information.id JOIN current_status ON current_status.id = account_details.current_status JOIN account_type ON account_type.id = account_details.account_type JOIN payment_history ON payment_history.id = account_details.id')
+  db.any('SELECT * FROM user_information JOIN genders ON genders.id = user_information.gender JOIN marital_status ON marital_status.id = user_information.marital_status JOIN account_details ON account_details.user_id = user_information.id JOIN current_status ON current_status.id = account_details.current_status JOIN account_type ON account_type.id = account_details.account_type JOIN payment_history ON payment_history.id = account_details.id ORDER BY account_details.user_id')
     .then(function(data) {
       console.log('DATA: ', data);
       res.status(200)
