@@ -13,13 +13,20 @@ CREATE TABLE genders(
   gender VARCHAR(255)
 );
 
+CREATE TABLE marital_status(
+  id SERIAL PRIMARY KEY,
+  marital_status VARCHAR(255)
+);
+
 CREATE TABLE user_information(
   id SERIAL PRIMARY KEY,
   first_name VARCHAR(255),
   last_name VARCHAR(255),
   date_of_birth VARCHAR(255),
   place_of_birth VARCHAR(255),
-  gender INT REFERENCES genders(id)
+  gender INT REFERENCES genders(id),
+  marital_status INT REFERENCES marital_status(id),
+  annual_household_income INT
 );
 
 CREATE TABLE account_details(
@@ -65,9 +72,15 @@ INSERT INTO genders (gender) VALUES
   ('Male'), 
   ('Female');
 
-INSERT INTO user_information (first_name, last_name, date_of_birth, place_of_birth, gender) VALUES 
-  ('John', 'Doe', '1-18-1979', 'New York, NY', 1), 
-  ('Jane', 'Monroe', '10-25-1984', 'San Francisco, CA', 2);
+INSERT INTO marital_status (marital_status) VALUES 
+  ('Single'), 
+  ('Married'),
+  ('Divorced'),
+  ('Widowed');
+
+INSERT INTO user_information (first_name, last_name, date_of_birth, place_of_birth, gender, marital_status, annual_household_income) VALUES 
+  ('John', 'Doe', '1-18-1979', 'New York, NY', 1, 2, 72000), 
+  ('Jane', 'Monroe', '10-25-1984', 'San Francisco, CA', 2, 1, 94000);
 
 INSERT INTO account_details (user_id, account_type, opened, creditor, credit_limit, credit_use, current_status) VALUES 
   (1, 2, '10-1-2004', 'JP Morgan Chase', 9500, 1290, 1),
