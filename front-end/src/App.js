@@ -39,6 +39,7 @@ class App extends Component {
           <Route path="/#total-accounts" exact component={() => (<TotalAccounts />) }/>
           <Route path="/*" component={() => (<FourOFour />) }/>
         </Switch>
+      <Footer />
      </div>
     </Router>
     );

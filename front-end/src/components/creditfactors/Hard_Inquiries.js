@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class HardInquiries extends Component {
   render() {
     return (
-      <div className="wrapper"></div>
+      <div className="hard-inquiries flex-1"><h3>Hard Inquiries</h3></div>
     );
   }
 }
