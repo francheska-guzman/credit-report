@@ -10,5 +10,6 @@ router.get('/personalinformation', db.getAllUserInformation);
 router.get('/personalinformation/:id', db.getOneUserInformation);
 router.get('/financialinformation/', db.getAllUserAccounts);
 router.get('/financialinformation/:id', db.getOneUserAccounts);
+router.get('/financialinformation/:id/:account', db.getOneUserAccount);
 
 module.exports = router;

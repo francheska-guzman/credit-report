@@ -3,7 +3,6 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: #7791AC;
-  padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -11,12 +10,13 @@ h1 {
 	text-align: center;
 	font-size: 40px;
 	color: #3D3B3B;
+	padding: 30px;
 }
 
 a {
 	color: #595757;
 	font-size: 18px;
-	padding: 10px 0;
+	padding: 20px;
 	text-decoration: none;
 }
 
