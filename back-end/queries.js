@@ -25,8 +25,8 @@ function getAllUserInformation(req, res, next) {
 
 // Get personal information from one user.
 function getOneUserInformation(req, res, next) {
-let id = parseInt(req.params.id);
-  db.one('SELECT * FROM user_information JOIN genders ON genders.id = user_information.gender WHERE user_information.id = $1', id)
+let user_id = parseInt(req.params.user_id);
+  db.one('SELECT * FROM user_information JOIN genders ON genders.id = user_information.gender WHERE user_information.id = $1', user_id)
     .then(function(data) {
       console.log('DATA: ', data);
       res.status(200)
@@ -60,8 +60,8 @@ function getAllUserAccounts(req, res, next) {
 
 // Get personal and financial information (all accounts) from one user.
 function getOneUserAccounts(req, res, next) {
-let id = parseInt(req.params.id);
-  db.any('SELECT * FROM user_information JOIN genders ON genders.id = user_information.gender JOIN account_details ON account_details.user_id = user_information.id JOIN current_status ON current_status.id = account_details.current_status JOIN account_type ON account_type.id = account_details.account_type JOIN payment_history ON payment_history.id = account_details.id WHERE user_id = $1', id)
+let user_id = parseInt(req.params.user_id);
+  db.any('SELECT * FROM user_information JOIN genders ON genders.id = user_information.gender JOIN account_details ON account_details.user_id = user_information.id JOIN current_status ON current_status.id = account_details.current_status JOIN account_type ON account_type.id = account_details.account_type JOIN payment_history ON payment_history.id = account_details.id WHERE user_id = $1', user_id)
     .then(function(data) {
       console.log('DATA: ', data);
       res.status(200)
@@ -78,9 +78,9 @@ let id = parseInt(req.params.id);
 
 // Get personal and financial information (one account) from one user.
 function getOneUserAccount(req, res, next) {
+let user_id = parseInt(req.params.user_id);
 let id = parseInt(req.params.id);
-let account = parseInt(req.params.account);
-  db.one('SELECT * FROM user_information JOIN genders ON genders.id = user_information.gender JOIN account_details ON account_details.user_id = user_information.id JOIN current_status ON current_status.id = account_details.current_status JOIN account_type ON account_type.id = account_details.account_type JOIN payment_history ON payment_history.id = account_details.id WHERE user_id = $1 AND account_details.id = $2', [id, account])
+  db.one('SELECT * FROM user_information JOIN genders ON genders.id = user_information.gender JOIN account_details ON account_details.user_id = user_information.id JOIN current_status ON current_status.id = account_details.current_status JOIN account_type ON account_type.id = account_details.account_type JOIN payment_history ON payment_history.id = account_details.id WHERE user_id = $1 AND account_details.id = $2', [user_id, id])
     .then(function(data) {
       console.log('DATA: ', data);
       res.status(200)
