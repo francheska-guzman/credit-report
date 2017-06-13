@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 class Navigation extends Component {
   render() {
     return (
-      <div className="navigation">
+      <div className="navigation flex">
     	  <nav>
     	    <ul>
     	    <li className="nav-link"><NavLink to="/">Dashboard</NavLink></li>

@@ -1,3 +1,7 @@
+body {
+  margin: 0 auto;
+}
+
 /* Fonts */
 
 h2 {
@@ -32,8 +36,13 @@ ul {
   list-style: none;
 }
 
+.navigation {
+ 
+}
+
 .nav-link {
   display: inline-block;
+
 }
 
 /* Dashboard */
