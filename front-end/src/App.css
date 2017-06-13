@@ -42,20 +42,12 @@ ul {
 
 /* Dashboard */
 
-.dashboard {
-
-}
-
 /* Credit Score */
-
-.credit-score {
-  
-}
 
 /* Credit Factors */
 
-.credit-factors {
-
+.box {
+  height: 200px;
 }
 
 /* Credit Age */
