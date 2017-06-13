@@ -13,6 +13,8 @@
 7. [Pseudocode](#pseudocode)
 8. [Technologies used](#technologies)
 
+#### [Link to my API deployed in Heroku.](https://creditreportapi.herokuapp.com/) - This is not the final data. I will be adding more tables.
+
 <a name="userstories">
 
 ### User Stories
