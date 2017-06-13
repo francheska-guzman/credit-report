@@ -12,16 +12,35 @@ class CreditFactors extends Component {
       <div className="credit-factors">
       <h2>Credit Factors</h2>
         <div className="flex">
-          <div className="box flex-1"><h3>Credit Age</h3></div>
-	      <div className="box flex-1"><h3>Credit Card Use</h3></div>
-          <div className="box flex-1"><h3>Derogatory Marks</h3></div>
+          <div className="box flex-1">
+          <h3>Credit Age</h3>
+          <input type="button" className="text-appearance" value="Details" onClick=""/>
+          </div>
+  	      <div className="box flex-1">
+          <h3>Credit Card Use</h3>
+          <input type="button" className="text-appearance" value="Details" onClick=""/>
+          </div>
+          <div className="box flex-1">
+          <h3>Derogatory Marks</h3>
+          <input type="button" className="text-appearance" value="Details" onClick=""/>
+          </div>
         </div>
+
         <div className="flex">
-	      <div className="box flex-1"><h3>Hard Inquiries</h3></div>
-          <div className="box flex-1"><h3>Payment History</h3></div>
-	      <div className="box flex-1"><h3>Total Accounts</h3></div>
+  	      <div className="box flex-1">
+          <h3>Hard Inquiries</h3>
+          <input type="button" className="text-appearance" value="Details" onClick=""/>
+          </div>
+          <div className="box flex-1">
+          <h3>Payment History</h3>
+          <input type="button" className="text-appearance" value="Details" onClick=""/>
+          </div>
+  	      <div className="box flex-1">
+          <h3>Total Accounts</h3>
+          <input type="button" className="text-appearance" value="Details" onClick=""/>
+          </div>
+	      </div>
 	    </div>
-	  </div>
     );
   }
 }

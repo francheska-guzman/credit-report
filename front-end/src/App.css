@@ -4,10 +4,6 @@ h2 {
   text-align: center;
 }
 
-h3 {
-  text-align: center;
-}
-
 /* Flexbox */
 
 .flex {
@@ -48,6 +44,17 @@ ul {
 
 .box {
   height: 200px;
+  text-align: center;
+}
+
+.text-appearance {
+  background: none;
+  border: none;
+  font-size: 14px;
+}
+
+*:focus {
+  outline: none;
 }
 
 /* Credit Age */
