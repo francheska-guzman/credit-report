@@ -3,7 +3,8 @@ var options = { promiseLib: promise };
 
 var pgp = require('pg-promise')(options);
 
-let connectionString = 'postgres://localhost:5432/creditreport';
+// let connectionString = 'postgres://localhost:5432/creditreport';
+let connectionString = process.env.DATABASE_URL;
 let db = pgp(connectionString);
 
 // Get personal information from all users.
