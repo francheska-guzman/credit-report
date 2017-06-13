@@ -4,7 +4,6 @@ import Footer from './components/Footer';
 import Dashboard from './components/Dashboard';
 import HelpCenter from './components/Help_Center';
 import MyAccount from './components/My_Account';
-import CreditFactors from './components/Credit_Factors';
 import CreditAge from './components/creditfactors/Credit_Age';
 import CreditCardUse from './components/creditfactors/Credit_Card_Use';
 import DerogatoryMarks from './components/creditfactors/Derogatory_Marks';
