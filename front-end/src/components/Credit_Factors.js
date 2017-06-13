@@ -9,17 +9,17 @@ import TotalAccounts from './creditfactors/Total_Accounts';
 class CreditFactors extends Component {
   render() {
     return (
-      <div className="credit-factors flex-4">
-        <h2>Credit Factors</h2>
+      <div className="credit-factors">
+      <h2>Credit Factors</h2>
         <div className="flex">
-	      <CreditAge />
-	      <CreditCardUse />
-	      <DerogatoryMarks />
-	    </div>
-	    <div className="flex">
-	      <HardInquiries />
-	      <PaymentHistory />
-	      <TotalAccounts />
+          <div className="flex-1"><h3>Credit Age</h3></div>
+	      <div className="flex-1"><h3>Credit Card Use</h3></div>
+          <div className="flex-1"><h3>Derogatory Marks</h3></div>
+        </div>
+        <div className="flex">
+	      <div className="flex-1"><h3>Hard Inquiries</h3></div>
+          <div className="flex-1"><h3>Payment History</h3></div>
+	      <div className="flex-1"><h3>Total Accounts</h3></div>
 	    </div>
 	  </div>
     );

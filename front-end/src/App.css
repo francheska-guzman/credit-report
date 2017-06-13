@@ -4,6 +4,10 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  text-align: center;
+}
+
 /* Flexbox */
 
 .flex {
@@ -23,6 +27,10 @@ h2 {
 }
 
 /* Navigation */
+
+a {
+  text-decoration: none;
+}
 
 ul {
   list-style: none;
