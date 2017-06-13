@@ -12,8 +12,7 @@
 6. [Visual representation of the database](#database)
 7. [Pseudocode](#pseudocode)
 8. [Technologies used](#technologies)
-
-#### [API deployed in Heroku](https://creditreportapi.herokuapp.com/) - I will be adding more data and tables.
+9. [App deployed](#deploy)
 
 <a name="userstories">
 
@@ -95,4 +94,11 @@ My account (render user basic information):
 
 </a>
 
+<a name="deploy">
+
+### App Deployed
+
+1. [Credit Report API](https://creditreportapi.herokuapp.com/) - I created this API to add personal and financial information for users, that I will be using to calculate their credit factors and credit score. This is not a final API. I will be adding more data and tables.
+
+</a>
 
