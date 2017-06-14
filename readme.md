@@ -2,6 +2,8 @@
 
 # Credit Report
 
+<a name="tableofcontents">
+
 ### Table of Contents
 
 1. [Project Proposal](./proposal.md)
@@ -11,11 +13,14 @@
 5. [Mobile Wireframes](#mobile)
 6. [Visual representation of the database](#database)
 7. [Pseudocode](#pseudocode)
-8. [Technologies used](#technologies)
+8. [Technologies Used](#technologies)
+9. [See the Project](#project)
+
+</a>
 
 <a name="userstories">
 
-### User Stories
+## User Stories
 
 1. As a user who doesn't know what is a Credit Report, and the impact of it in my life; I would like to get information about it, including quick tips for my credit health.
 2. As a user, I would like instructions on how to use the website.
@@ -34,7 +39,7 @@
 
 <a name="browser">
 
-### Browser Wireframes
+## Browser Wireframes
 
 Dashboard overview:
 
@@ -56,7 +61,7 @@ My account (render user basic information):
 
 <a name="mobile">
 
-### Mobile Wireframes
+## Mobile Wireframes
 
 ![Mobile](./images/mobile1.png)
 
@@ -64,7 +69,7 @@ My account (render user basic information):
 
 <a name="database">
 
-### Visual representation of the database
+## Visual representation of the database
 
 ![Database](./images/database.png)
 
@@ -72,7 +77,7 @@ My account (render user basic information):
 
 <a name="pseudocode">
 
-### Pseudocode
+## Pseudocode
 
 1. Make an axios call to the Credit Report API, and get the personal and financial information from an especific user.
 2. Find the credit use and credit limit for each account open account.
@@ -84,9 +89,9 @@ My account (render user basic information):
 
 <a name="technologies">
 
-### Technologies Used
+## Technologies Used
 
-#### Core Stack:
+### Core Stack:
 
 - HTML
 - CSS
@@ -96,18 +101,31 @@ My account (render user basic information):
 - Express
 - PostgreSQL
 
-#### API:
+### APIs:
 
 [Credit Report API](https://creditreportapi.herokuapp.com/) - I created this API to add personal and financial information for users, that I will be using to calculate their credit factors and credit score. This is not a final API, I will be adding more data and tables. Inmediatly I made changes to the database, I will be updating the "[Visual representation of the database](#database)".
 
-#### Middleware:
+### Middleware:
 
 - Libraries to create responsive charts: [ChartJS](http://www.chartjs.org/), [ChartistJS](http://gionkunz.github.io/chartist-js/), [Fusion Charts](http://www.fusioncharts.com/) and/or [Google Charts](https://developers.google.com/chart/).
 
-#### Other sources:
+### Other sources:
+
+- [balsamiq](https://balsamiq.com/) for the wireframes.
 
 - [logomakr](https://logomakr.com/) to create credit card, personal loan, student loan, auto loan, home loan, and business loan logos: 
 
 ![Credit Card](./images/creditcard.png)  ![Personal Loan](./images/personalloan.png)  ![Student loan](./images/studentloan.png)  ![Auto Loan](./images/autoloan.png)  ![Home Loan](./images/homeloan.png)  ![Business Loan](./images/businessloan.png)
 
 </a>
+
+<a name="project">
+
+## See the Project
+
+### Life Deployment of Credit Report App:
+### Life Deployment of Credit Report API: https://creditreportapi.herokuapp.com/
+
+</a>
+
+#### [Go Back: Table of Contents](#tableofcontents)
