@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class CreditAge extends Component {
   render() {
     return (
-      <div id="credit-age" className="flex"><h4>Credit Age</h4></div>
+      <div id="credit-age" className="flex-1">
+        <h4 className="center">Credit Age</h4>
+      </div>
     );
   }
 }
