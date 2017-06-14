@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import Welcome from './Welcome';
 import CreditScore from './Credit_Score';
 import CreditFactors from './Credit_Factors';
 
 class Dashboard extends Component {
   constructor(props){
     super(props);
-    console.log(props);
     this.state = {
       component: null
     }
@@ -23,9 +21,7 @@ class Dashboard extends Component {
     return (
       <div className="dashboard">
         <div className="flex">
-          <div className="credit-score flex-1">
-            <Welcome getUserData={this.props.getUserData} /><br />
-            <CreditScore /></div>
+          <div className="credit-score flex-1"><CreditScore /></div>
           <div className="credit-factors flex-4"><CreditFactors 
                renderComponent={this.renderComponent} /></div>
         </div> 
