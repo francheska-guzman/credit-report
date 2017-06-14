@@ -16,13 +16,38 @@ import axios from 'axios';
 console.log("App.js is working.");
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      first_name: null,
+      last_name: null,
+      date_of_birth: null,
+      gender: null,
+      marital_status: null,
+      annual_household_income: null
+    }
+    this.getAllDataFromUser = this.getAllDataFromUser.bind(this);
+  }
+
+  getAllDataFromUser(id){
+    axios.get('https://creditreportapi.herokuapp.com/personalfinancial/' + id, {
+    })
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  }
+
   render() {
     return (
     <Router>
      <div className="wrapper">
       <Navigation />
         <Switch>
-          <Route path="/" exact component={() => (<Dashboard />) }/>
+          <Route path="/" exact component={() => (<Dashboard 
+            getAllDataFromUser={this.getAllDataFromUser} />) }/>
           <Route path="/help-center" exact component={() => (<HelpCenter />) }/>
           <Route path="/my-account" exact component={() => (<MyAccount />) }/>
           <Route path="/*" component={() => (<FourOFour />) }/>
