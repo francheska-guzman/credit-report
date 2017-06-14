@@ -6,6 +6,7 @@ import CreditFactors from './Credit_Factors';
 class Dashboard extends Component {
   constructor(props){
     super(props);
+    console.log(props);
     this.state = {
       component: null
     }
@@ -23,7 +24,8 @@ class Dashboard extends Component {
       <div className="dashboard">
         <div className="flex">
           <div className="credit-score flex-1">
-          <Welcome /><br /><CreditScore /></div>
+            <Welcome getUserData={this.props.getUserData} /><br />
+            <CreditScore /></div>
           <div className="credit-factors flex-4"><CreditFactors 
                renderComponent={this.renderComponent} /></div>
         </div> 

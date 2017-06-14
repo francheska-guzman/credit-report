@@ -26,12 +26,12 @@ class App extends Component {
       marital_status: null,
       annual_household_income: null
     }
-    this.getAllDataFromUser = this.getAllDataFromUser.bind(this);
+    this.getUserData = this.getUserData.bind(this);
   }
 
-  getAllDataFromUser(id){
-    axios.get('https://creditreportapi.herokuapp.com/personalfinancial/' + id, {
-    })
+  getUserData(id){
+    console.log(id);
+    axios.get(`https://creditreportapi.herokuapp.com/personalfinancial/${id}`)
     .then((res) => {
       console.log(res);
     })
@@ -42,19 +42,21 @@ class App extends Component {
 
   render() {
     return (
-    <Router>
-     <div className="wrapper">
-      <Navigation />
-        <Switch>
+      <Router>
+       <div className="wrapper">
+        <Navigation />
+          <Switch>
           <Route path="/" exact component={() => (<Dashboard 
-            getAllDataFromUser={this.getAllDataFromUser} />) }/>
-          <Route path="/help-center" exact component={() => (<HelpCenter />) }/>
-          <Route path="/my-account" exact component={() => (<MyAccount />) }/>
+          getUserData={this.getUserData} />) }/>
+          <Route path="/help-center" exact component={() => (<HelpCenter 
+          />) }/>
+          <Route path="/my-account" exact component={() => (<MyAccount 
+          />) }/>
           <Route path="/*" component={() => (<FourOFour />) }/>
-        </Switch>
-      <Footer />
-     </div>
-    </Router>
+          </Switch>
+        <Footer />
+       </div>
+      </Router>
     );
   }
 }

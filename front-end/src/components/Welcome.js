@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
 
 class Welcome extends Component {
-  userInformation(event){
-    event.preventDefault();
-    console.log("Testing.");
+  constructor(props) {
+    super(props);
+    // console.log(props);
+    this.userInformation = this.userInformation.bind(this);
+  }
+
+  userInformation(event) {
+    event.preventDefault(); 
+      // console.log(this.refs.id.value);
+      this.props.getUserData(this.refs.id.value);
+      this.refs.id.value = "";
   }
 
   render() {
     return (
       <div className="wrapper">
         <h2 className="center">Welcome!</h2>
-		  <label>Identification Number:</label>
-		  <input type="text" name="user_id" />
-		  <input type="button" value="Submit" onClick={this.userInformation}/>
+    		  <input type="text" placeholder="Your User ID" ref="id" />
+    		  <input type="button" value="Submit" onClick={this.userInformation}/>
       </div>
     );
   }
