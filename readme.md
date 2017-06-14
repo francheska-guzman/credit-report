@@ -12,7 +12,6 @@
 6. [Visual representation of the database](#database)
 7. [Pseudocode](#pseudocode)
 8. [Technologies used](#technologies)
-9. [App deployed](#deploy)
 
 <a name="userstories">
 
@@ -87,24 +86,28 @@ My account (render user basic information):
 
 ### Technologies Used
 
-1. HTML
-2. CSS
-3. JavaScript
-4. React for the Client-side
-5. Node/Express App for the Server-side
-6. Relational Database using PostgreSQL
-7. Libraries to create responsive charts: [ChartJS](http://www.chartjs.org/), [ChartistJS](http://gionkunz.github.io/chartist-js/), [Fusion Charts](http://www.fusioncharts.com/) and/or [Google Charts](https://developers.google.com/chart/).
-8. [logomakr](https://logomakr.com/) to create credit card, personal loan, student loan, auto loan, home loan, and business loan logos: 
+#### Core Stack:
+
+- HTML
+- CSS
+- JavaScript
+- React
+- Node
+- Express
+- PostgreSQL
+
+#### API:
+
+[Credit Report API](https://creditreportapi.herokuapp.com/) - I created this API to add personal and financial information for users, that I will be using to calculate their credit factors and credit score. This is not a final API, I will be adding more data and tables. Inmediatly I made changes to the database, I will be updating the "[Visual representation of the database](#database)".
+
+#### Middleware:
+
+- Libraries to create responsive charts: [ChartJS](http://www.chartjs.org/), [ChartistJS](http://gionkunz.github.io/chartist-js/), [Fusion Charts](http://www.fusioncharts.com/) and/or [Google Charts](https://developers.google.com/chart/).
+
+#### Other sources:
+
+- [logomakr](https://logomakr.com/) to create credit card, personal loan, student loan, auto loan, home loan, and business loan logos: 
 
 ![Credit Card](./images/creditcard.png)  ![Personal Loan](./images/personalloan.png)  ![Student loan](./images/studentloan.png)  ![Auto Loan](./images/autoloan.png)  ![Home Loan](./images/homeloan.png)  ![Business Loan](./images/businessloan.png)
 
 </a>
-
-<a name="deploy">
-
-### App Deployed
-
-1. [Credit Report API](https://creditreportapi.herokuapp.com/) - I created this API to add personal and financial information for users, that I will be using to calculate their credit factors and credit score. This is not a final API, I will be adding more data and tables. Inmediatly I made changes to the database, I will be updating the "[Visual representation of the database](#database)".
-
-</a>
-
