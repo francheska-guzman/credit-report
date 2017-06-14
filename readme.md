@@ -74,7 +74,7 @@ My account (render user basic information):
 
 ### Pseudocode
 
-1. Make an axios call to the database, and get all accounts from an especific user.
+1. Make an axios call to the Credit Report API, and get the personal and financial information from an especific user.
 2. Find the credit use and credit limit for each account open account.
 3. Divide credit use by the credit limit, to compute the utilization ratio.
 4. Render the result in the Credit Card Use component in the following format: Credit name, Account Type, Credit Use, Credit Limit and the ratio already computed. (Utilization ratio for each account.)
