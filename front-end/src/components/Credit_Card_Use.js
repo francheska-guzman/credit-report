@@ -7,34 +7,60 @@ constructor(props){
   }
 
   calculateUseRatio() {
-  	// console.log(this.props.state.credit_use);
-  	// console.log(this.props.state.credit_limit);
-  	var use = parseInt(this.props.state.credit_use);
-  	var limit = parseInt(this.props.state.credit_limit);
-  	var ratio = (use/limit).toFixed(2);
+    var use = 0;
+    var limit = 0;
+    var counter = 0;
+
+    for(var i = 0; i < this.props.state.account_type.length; i += 1) {
+    // If the account type is a credit card, and is currently open:
+      if (this.props.state.account_type[i] === "Credit Card" && 
+        this.props.state.current_status[i] === "Open") {
+          use += this.props.state.credit_use[i];
+          limit += this.props.state.credit_limit[i];
+          counter += 1;
+      }
+    }
+
+    var ratio = (use/limit).toFixed(2);
+
   	if(ratio < .09) {
   	  return (
-  	    <span className="ratio green">{ratio}%</span>
+        <div>
+  	      <span className="ratio green">{ratio}%</span><br/>
+          <span className="counter">You have {counter} open credit cards.</span>
+        </div>
   	  )
   	}
   	else if(ratio < .29) {
   	  return (
-  	  	<span className="ratio green">{ratio}%</span>
+        <div>
+  	  	  <span className="ratio green">{ratio}%</span><br/>
+          <span className="counter">You have {counter} open credit cards.</span>
+        </div>
   	  )
   	}
   	else if(ratio < .49) {
   	  return (
-  	  	<span className="ratio yellow">{ratio}%</span>
+        <div>
+  	  	  <span className="ratio yellow">{ratio}%</span><br/>
+          <span className="counter">You have {counter} open credit cards.</span>
+        </div>
   	  )
   	}
   	else if(ratio < .74) {
   	  return (
-  	  	<span className="ratio red">{ratio}%</span>
+        <div>
+  	  	  <span className="ratio red">{ratio}%</span><br/>
+          <span className="counter">You have {counter} open credit cards.</span>
+        </div>
   	  )
   	}
   	else {
   	  return (
-  	  	<span className="ratio red">{ratio}%</span>
+        <div>
+  	  	  <span className="ratio red">{ratio}%</span><br/>
+          <span className="counter">You have {counter} open credit cards.</span>
+        </div>
   	  )
   	}
   }
