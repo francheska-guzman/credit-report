@@ -13,38 +13,38 @@ class CreditFactors extends Component {
   }
 
   showData(event) {
-    if(event.target.id === "creditfactor1") {
+    if(event.target.id === "creditfactor1" && this.props.state.user === true) {
       // console.log("Show Data: Credit Age");
       this.props.renderComponent(<CreditAge 
         state={this.props.state} />);
     }
-    else if(event.target.id === "creditfactor2") {
+    else if(event.target.id === "creditfactor2" && this.props.state.user === true) {
       // console.log("Show Data: Credit Card Use");
       this.props.renderComponent(<CreditCardUse 
         state={this.props.state} />);
     }
-    else if(event.target.id === "creditfactor3") {
+    else if(event.target.id === "creditfactor3" && this.props.state.user === true) {
       // console.log("Show Data: Derogatory Marks");  
       this.props.renderComponent(<DerogatoryMarks 
         state={this.props.state} />);  
     }
-    else if(event.target.id === "creditfactor4") {
+    else if(event.target.id === "creditfactor4" && this.props.state.user === true) {
       // console.log("Show Data: Hard Inquiries"); 
       this.props.renderComponent(<HardInquiries 
         state={this.props.state} />);
     }
-    else if(event.target.id === "creditfactor5") {
+    else if(event.target.id === "creditfactor5" && this.props.state.user === true) {
       // console.log("Show Data: Payment History"); 
       this.props.renderComponent(<PaymentHistory 
         state={this.props.state} />);
     }
-    else if(event.target.id === "creditfactor6") {
+    else if(event.target.id === "creditfactor6" && this.props.state.user === true) {
       // console.log("Show Data: Total Accounts"); 
       this.props.renderComponent(<TotalAccounts 
         state={this.props.state} />);
     }
     else {
-      console.log("No credit factor displayed.");
+      alert("Sign in by using your user id.");
     }
   }
 
