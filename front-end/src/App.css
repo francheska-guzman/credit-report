@@ -74,11 +74,12 @@ h4 {
 
 a {
   text-decoration: none;
-  color: #282626;
+  color: #afa7a7;
+  font-family: 'Quicksand', sans-serif;
 }
 
 a:hover {
-  color: #1c8a8e;
+  color: #dbdfe0;
 }
 
 ul {
@@ -90,13 +91,15 @@ ul {
 }
 
 .navigation {
-  background-color: #FFFFFF;
+  background-color: #353131;
   opacity: .8;
 }
 
 .nav-link {
   display: inline-block;
-  padding: 10px;
+  padding: 8px 25px;
+  font-size: 16px;
+  
 }
 
 .nav-bottom {
@@ -139,37 +142,37 @@ ul {
 
 #credit-age {
   background: #f2f2f2;
-  height: 500px;
+  height: 400px;
   opacity: .8;
 }
 
 #credit-card-use {
   background: #f2f2f2;
-  height: 500px;
+  height: 400px;
   opacity: .8;
 }
 
 #derogatory-marks {
   background: #f2f2f2;
-  height: 500px;
+  height: 400px;
   opacity: .8;
 }
 
 #hard-inquiries {
   background: #f2f2f2;
-  height: 500px;
+  height: 400px;
   opacity: .8;
 }
 
 #payment-history {
   background: #f2f2f2;
-  height: 500px;
+  height: 400px;
   opacity: .8;
 }
 
 #total-accounts {
   background: #f2f2f2;
-  height: 500px;
+  height: 400px;
   opacity: .8;
 }
 
@@ -188,7 +191,5 @@ ul {
 /* Footer */
 
 .footer {
-  background: #FFFFFF;
-  opacity: .8;
-  height: 50px;
+  padding: 15px;
 }
