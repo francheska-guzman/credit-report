@@ -33,7 +33,7 @@ h4 {
 }
 
 .red {
-  color: #a30c01;
+  color: #A30C01;
 }
 
 .green {
@@ -41,7 +41,7 @@ h4 {
 }
 
 .yellow {
-  color: #ccb108;
+  color: #CCB108;
 }
 
 .purple {
@@ -183,6 +183,12 @@ ul {
 
 .welcome_message {
   float: right;
+}
+
+/* Credit Card Use */
+
+.ratio {
+  font-size: 70px;
 }
 
 /* Footer */
