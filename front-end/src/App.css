@@ -158,6 +158,7 @@ ul {
 #credit-age {
   background: #f2f2f2;
   height: 400px;
+  padding: 20px;
 }
 
 /* Credit Card Use */
@@ -165,6 +166,7 @@ ul {
 #credit-card-use {
   background: #f2f2f2;
   height: 400px;
+  padding: 20px;
 }
 
 .ratio {
@@ -182,6 +184,7 @@ ul {
 #derogatory-marks {
   background: #f2f2f2;
   height: 400px;
+  padding: 20px;
 }
 
 /* Hard Inquiries */
@@ -189,6 +192,7 @@ ul {
 #hard-inquiries {
   background: #f2f2f2;
   height: 400px;
+  padding: 20px;
 }
 
 /* Payment History */
@@ -196,6 +200,7 @@ ul {
 #payment-history {
   background: #f2f2f2;
   height: 400px;
+  padding: 20px;
 }
 
 /* Total Accounts */
@@ -203,6 +208,7 @@ ul {
 #total-accounts {
   background: #f2f2f2;
   height: 400px;
+  padding: 20px;
 }
 
 /* My Account */

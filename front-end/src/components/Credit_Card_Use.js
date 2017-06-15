@@ -23,7 +23,7 @@ constructor(props){
     }
 
     var creditcard = ((counter <= 1) ? "credit card" : "credit cards");
-    var ratio = (use/limit).toFixed(2);
+    var ratio = (use/limit).toFixed(2) * 100;
     var available = limit - use;
 
     let data = [
@@ -31,7 +31,7 @@ constructor(props){
             {color: "#0E9E17", label: "Available Credit", value: available}
     ];
 
-  	if(ratio < .09) {
+  	if(ratio < 9) {
   	  return (
         <div className="flex">
           <div className="flex-1">
@@ -49,7 +49,7 @@ constructor(props){
         </div>
   	  )
   	}
-  	else if(ratio < .29) {
+  	else if(ratio < 29) {
   	  return (
         <div className="flex">
           <div className="flex-1">
@@ -67,7 +67,7 @@ constructor(props){
         </div>
   	  )
   	}
-  	else if(ratio < .49) {
+  	else if(ratio < 49) {
   	  return (
         <div className="flex">
           <div className="flex-1">
@@ -85,7 +85,7 @@ constructor(props){
         </div>
   	  )
   	}
-  	else if(ratio < .74) {
+  	else if(ratio < 74) {
   	  return (
         <div className="flex">
           <div className="flex-1">
@@ -103,7 +103,7 @@ constructor(props){
         </div>
   	  )
   	}
-  	else if(ratio < 1.00) {
+  	else if(ratio < 100) {
   	  return (
         <div className="flex">
           <div className="flex-1">
@@ -132,7 +132,8 @@ constructor(props){
     return (
       <div id="credit-card-use" className="flex-1">
         <h4 className="center red">Credit Card Use</h4>
-        <span>{this.calculateUseRatio()}</span>
+        <span>{this.calculateUseRatio()}</span><br />
+        <span className="factor-info">A good rule of thumb is to keep your balances below 30% of your limit.</span>
       </div>
     );
   }
