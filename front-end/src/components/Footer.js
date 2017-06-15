@@ -4,7 +4,10 @@ class Footer extends Component {
   render() {
     return (
       <div className="footer flex-1">
-        <h6 className="center">This is the footer.</h6>
+        <h6 className="center">
+        Credit Report <br />
+        Francheska Guzman
+        </h6>
       </div>
     );
   }

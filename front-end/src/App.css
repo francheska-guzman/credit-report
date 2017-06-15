@@ -35,6 +35,13 @@ h4 {
   font-family: 'Quicksand', sans-serif;
 }
 
+h6 {
+  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
+  padding: 10px;
+  margin: 0;
+}
+
 .blue {
   color: #0a72b2;
 }
@@ -159,6 +166,7 @@ ul {
   background: #f2f2f2;
   height: 400px;
   padding: 20px;
+  margin: 0 40px 40px 40px;
 }
 
 /* Credit Card Use */
@@ -167,6 +175,7 @@ ul {
   background: #f2f2f2;
   height: auto;
   padding: 20px;
+  margin: 0 40px 40px 40px;
 }
 
 .ratio {
@@ -185,6 +194,7 @@ ul {
   background: #f2f2f2;
   height: 400px;
   padding: 20px;
+  margin: 0 40px 40px 40px;
 }
 
 /* Hard Inquiries */
@@ -193,6 +203,7 @@ ul {
   background: #f2f2f2;
   height: 400px;
   padding: 20px;
+  margin: 0 40px 40px 40px;
 }
 
 /* Payment History */
@@ -201,6 +212,7 @@ ul {
   background: #f2f2f2;
   height: 400px;
   padding: 20px;
+  margin: 0 40px 40px 40px;
 }
 
 /* Total Accounts */
@@ -209,6 +221,7 @@ ul {
   background: #f2f2f2;
   height: 400px;
   padding: 20px;
+  margin: 0 40px 40px 40px;
 }
 
 /* My Account */
@@ -228,4 +241,11 @@ input[type=text] {
   height: 20px;
   font-family: 'Quicksand', sans-serif;
   font-size: 14px;
+}
+
+/* Footer */
+
+.footer {
+  background: #7c7777;
+  height: auto;
 }

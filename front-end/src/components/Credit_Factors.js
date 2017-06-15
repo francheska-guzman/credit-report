@@ -44,7 +44,7 @@ class CreditFactors extends Component {
         state={this.props.state} />);
     }
     else {
-      alert("Sign in by using your user id.");
+      console.log("No data to show.");
     }
   }
 
