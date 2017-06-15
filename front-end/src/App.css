@@ -2,7 +2,7 @@
 
 body {
   margin: 0 auto;
-  background: url('/images/background.jpg');
+  background: #e2e0e0;
 }
 
 /* Fonts */
@@ -92,7 +92,6 @@ ul {
 
 .navigation {
   background-color: #353131;
-  opacity: .8;
 }
 
 .nav-link {
@@ -112,7 +111,6 @@ ul {
   margin: 40px 5px 40px 40px;
   background: #f2f2f2;
   border-radius: 30px;
-  opacity: .8;
   text-align: center;
 }
 
@@ -120,9 +118,8 @@ ul {
 
 .credit-factors {
   margin: 40px 40px 40px 5px;
-  background: #f2f2f2;
+  background: #fcfcfc;
   border-radius: 30px;
-  opacity: .8;
 }
 
 .box {
