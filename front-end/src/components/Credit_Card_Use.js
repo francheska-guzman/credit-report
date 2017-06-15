@@ -5,6 +5,7 @@ class CreditCardUse extends Component {
 constructor(props){
   super(props);
   this.calculateUseRatio = this.calculateUseRatio.bind(this);
+  this.renderOpenCreditCards = this.renderOpenCreditCards.bind(this);
   }
 
   calculateUseRatio() {
@@ -128,12 +129,34 @@ constructor(props){
     }
   }
 
+  renderOpenCreditCards() {
+    var opened = [];
+    var creditor = [];
+    var credit_limit = [];
+    var credit_use = [];
+    var current_status = [];
+    var payment_history = [];
+
+    for(var i = 0; i < this.props.state.opened.length; i += 1) {
+      if (this.props.state.account_type[i] === "Credit Card" && 
+          this.props.state.current_status[i] === "Open") {
+          opened.push(this.props.state.opened[i]);
+          creditor.push(this.props.state.creditor[i]);
+          credit_limit.push(this.props.state.credit_limit[i]);
+          credit_use.push(this.props.state.credit_use[i]);
+          current_status.push(this.props.state.current_status[i]);
+          payment_history.push(this.props.state.payment_history[i]);
+      };
+    }
+  }
+
   render() {
     return (
       <div id="credit-card-use" className="flex-1">
         <h4 className="center red">Credit Card Use</h4>
         <span>{this.calculateUseRatio()}</span><br />
         <span className="factor-info">A good rule of thumb is to keep your balances below 30% of your limit.</span>
+        <div><ul>{this.renderOpenCreditCards()}</ul></div>
       </div>
     );
   }
