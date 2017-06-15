@@ -27,8 +27,8 @@ constructor(props){
     var available = limit - use;
 
     let data = [
-            {color: "#c1091f", label: "Credit Use", value: use},
-            {color: "#0e9e17", label: "Available Credit", value: available}
+            {color: "#C1091f", label: "Credit Use", value: use},
+            {color: "#0E9E17", label: "Available Credit", value: available}
     ];
 
   	if(ratio < .09) {

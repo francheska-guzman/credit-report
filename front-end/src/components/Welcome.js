@@ -10,7 +10,7 @@ class Welcome extends Component {
   userInformation(event) {
     event.preventDefault(); 
       this.props.getUserData(this.refs.id.value);
-      this.refs.id.value = "";
+      this.refs.id.value = ' ';
   }
 
   login() {
@@ -18,7 +18,7 @@ class Welcome extends Component {
       return (
         <div className="welcome_message flex">
           <input type="text" placeholder="Your User ID" ref="id" />
-          <input type="button" value="Sign In" onClick={this.userInformation} />
+          <input className="sign" type="button" value="Sign In" onClick={this.userInformation} />
         </div>
       )
     }
@@ -26,7 +26,7 @@ class Welcome extends Component {
       return (
         <div className="welcome_message flex">
           <span>Welcome to Credit Report, {this.props.state.first_name} {this.props.state.last_name}.</span>
-          <input type="button" value="Sign Off" onClick={this.props.signOff} />
+          <input className="sign" type="button" value="Sign Off" onClick={this.props.signOff} />
         </div>
       );
     }

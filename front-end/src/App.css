@@ -2,7 +2,7 @@
 
 body {
   margin: 0 auto;
-  background: #e2e0e0;
+  background: #898282;
 }
 
 /* Fonts */
@@ -40,11 +40,11 @@ h4 {
 }
 
 .red {
-  color: #A30C01;
+  color: #c1091f;
 }
 
 .green {
-  color: #106815;
+  color: #0E9E17;
 }
 
 .yellow {
@@ -56,7 +56,7 @@ h4 {
 }
 
 .orange {
-  color: #c14d09;
+  color: #d16100;
 }
 
 /* Flexbox */
@@ -81,12 +81,12 @@ h4 {
 
 a {
   text-decoration: none;
-  color: #afa7a7;
+  color: #dbdfe0;
   font-family: 'Quicksand', sans-serif;
 }
 
 a:hover {
-  color: #dbdfe0;
+  color: #ffffff;
 }
 
 ul {
@@ -98,25 +98,20 @@ ul {
 }
 
 .navigation {
-  background-color: #353131;
+  background-color: #444141;
 }
 
 .nav-link {
   display: inline-block;
   padding: 8px 25px;
-  font-size: 16px;
-  
-}
-
-.nav-bottom {
-
+  font-size: 18px;
 }
 
 /* Credit Score */
 
 .credit-score {
   margin: 40px 5px 40px 40px;
-  background: #f2f2f2;
+  background: #c1bbbb;
   border-radius: 30px;
   text-align: center;
 }
@@ -144,30 +139,52 @@ ul {
   outline: none;
 }
 
+/* Credit Age */
+
 #credit-age {
   background: #f2f2f2;
   height: 400px;
 }
+
+/* Credit Card Use */
 
 #credit-card-use {
   background: #f2f2f2;
   height: 400px;
 }
 
+.ratio {
+  font-size: 80px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.factor-info {
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Derogatory Marks */
+
 #derogatory-marks {
   background: #f2f2f2;
   height: 400px;
 }
+
+/* Hard Inquiries */
 
 #hard-inquiries {
   background: #f2f2f2;
   height: 400px;
 }
 
+/* Payment History */
+
 #payment-history {
   background: #f2f2f2;
   height: 400px;
 }
+
+/* Total Accounts */
 
 #total-accounts {
   background: #f2f2f2;
@@ -186,20 +203,9 @@ ul {
   float: right;
 }
 
-/* Credit Card Use */
-
-.ratio {
-  font-size: 80px;
+input[type=text] {
+  width: 90px;
+  height: 20px;
   font-family: 'Quicksand', sans-serif;
-}
-
-.factor-info {
-  font-size: 20px;
-  font-family: 'Quicksand', sans-serif;
-}
-
-/* Footer */
-
-.footer {
-  padding: 15px;
+  font-size: 14px;
 }
