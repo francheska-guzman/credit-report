@@ -55,16 +55,19 @@ class CreditFactors extends Component {
          <div className="flex">
          <div className="box flex-1">
             <h3 className="center blue">Credit Age</h3>
+            <span className="factor-description">Average age of your open accounts.</span><br />
             <input type="button" id="creditfactor1" className="text-appearance" 
             value="View Details" onClick={this.showData} />
          </div>
   	     <div className="box flex-1">
             <h3 className="center red">Credit Card Use</h3>
+            <span className="factor-description">How much credit you're using compared to your total limits.</span><br />
             <input type="button" id="creditfactor2" className="text-appearance" 
             value="View Details" onClick={this.showData} />
          </div>
          <div className="box flex-1">
             <h3 className="center green">Derogatory Marks</h3>
+            <span className="factor-description">Collections, tax liens, bankruptcies or civil judgments on your report.</span><br />
             <input type="button" id="creditfactor3" className="text-appearance" 
             value="View Details" onClick={this.showData} />
          </div>
@@ -73,16 +76,19 @@ class CreditFactors extends Component {
          <div className="flex">
   	     <div className="box flex-1">
             <h3 className="center yellow">Hard Inquiries</h3>
+            <span className="factor-description">Number of times you've applied for credit.</span><br />
             <input type="button" id="creditfactor4" className="text-appearance" 
             value="View Details" onClick={this.showData} />
          </div>
          <div className="box flex-1">
             <h3 className="center purple">Payment History</h3>
+            <span className="factor-description">Percentage of payments you've made on time.</span><br />
             <input type="button" id="creditfactor5" className="text-appearance" 
             value="View Details" onClick={this.showData} />
          </div>
     	   <div className="box flex-1">
             <h3 className="center orange">Total Accounts</h3>
+            <span className="factor-description">Total open and closed accounts.</span><br />
             <input type="button" id="creditfactor6" className="text-appearance" 
             value="View Details" onClick={this.showData} />
          </div>

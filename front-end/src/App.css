@@ -130,9 +130,23 @@ ul {
 }
 
 .text-appearance {
+  font-family: helvetica;
   background: none;
   border: none;
+  font-size: 15px;
+  color: #202223;
+  padding: 8px 0 0 0;
+}
+
+.text-appearance:hover {
+  color: #1b7fc1;
+}
+
+.factor-description {
+  color: #544645;
   font-size: 14px;
+  padding: 1px;
+  font-family: helvetica;
 }
 
 *:focus {
