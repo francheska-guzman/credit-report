@@ -4,7 +4,7 @@ class HardInquiries extends Component {
   render() {
     return (
       <div id="hard-inquiries" className="flex-1">
-        <h4 className="center">Hard Inquiries</h4>
+        <h4 className="center yellow">Hard Inquiries</h4>
       </div>
     );
   }

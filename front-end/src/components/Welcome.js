@@ -16,15 +16,15 @@ class Welcome extends Component {
   login() {
     if(this.props.state.user === false) {
       return (
-        <div id="welcome_message">
+        <div className="welcome_message flex">
           <input type="text" placeholder="Your User ID" ref="id" />
-          <input type="button" value="Submit" onClick={this.userInformation} />
+          <input type="button" value="Sign In" onClick={this.userInformation} />
         </div>
       )
     }
     else {
       return (
-        <div id="welcome_message">
+        <div className="welcome_message flex">
           <span>Welcome to Credit Report, {this.props.state.first_name} {this.props.state.last_name}.</span>
           <input type="button" value="Sign Off" onClick={this.props.signOff} />
         </div>

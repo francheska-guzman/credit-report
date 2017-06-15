@@ -4,7 +4,7 @@ class PaymentHistory extends Component {
   render() {
     return (
       <div id="payment-history" className="flex-1">
-        <h4 className="center">Payment History</h4>
+        <h4 className="center purple">Payment History</h4>
       </div>
     );
   }

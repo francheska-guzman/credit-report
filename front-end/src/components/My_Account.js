@@ -10,7 +10,7 @@ class MyAccount extends Component {
   profile() {
   	if(this.props.state.user === false) {
   	  return (
-  	    <div className="profile">No profile to show. Sign in with your user id.</div>
+  	    <div className="profile">No profile to show. Sign in by using your user id.</div>
   	  )
   	}
   	else {

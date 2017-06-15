@@ -4,7 +4,7 @@ class CreditAge extends Component {
   render() {
     return (
       <div id="credit-age" className="flex-1">
-        <h4 className="center">Credit Age</h4>
+        <h4 className="center blue">Credit Age</h4>
       </div>
     );
   }

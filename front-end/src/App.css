@@ -1,11 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=El+Messiri|Quicksand');
+
 body {
   margin: 0 auto;
+  background: url('/images/background.jpg');
 }
 
 /* Fonts */
 
 .center {
   text-align: center;
+}
+
+h1 {
+  margin: 10px 0 10px 20px;
+  color: #111111;
+  font-family: 'El Messiri', sans-serif;
+}
+
+h2, h3 {
+  margin: 10px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+h4 {
+  margin: 10px;
+  font-size: 25px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.blue {
+  color: #0a72b2;
+}
+
+.red {
+  color: #a30c01;
+}
+
+.green {
+  color: #106815;
+}
+
+.yellow {
+  color: #ccb108;
+}
+
+.purple {
+  color: #3c076d;
+}
+
+.orange {
+  color: #c14d09;
 }
 
 /* Flexbox */
@@ -30,17 +74,53 @@ body {
 
 a {
   text-decoration: none;
+  color: #282626;
+}
+
+a:hover {
+  color: #1c8a8e;
 }
 
 ul {
   list-style: none;
 }
 
+.wrapper {
+  display: block;
+}
+
+.navigation {
+  background-color: #FFFFFF;
+  opacity: .8;
+}
+
 .nav-link {
   display: inline-block;
+  padding: 10px;
+}
+
+.nav-bottom {
+
+}
+
+/* Credit Score */
+
+.credit-score {
+  margin: 40px 5px 40px 40px;
+  background: #f2f2f2;
+  border-radius: 30px;
+  opacity: .8;
+  text-align: center;
 }
 
 /* Credit Factors */
+
+.credit-factors {
+  margin: 40px 40px 40px 5px;
+  background: #f2f2f2;
+  border-radius: 30px;
+  opacity: .8;
+}
 
 .box {
   height: 200px;
@@ -57,8 +137,58 @@ ul {
   outline: none;
 }
 
+#credit-age {
+  background: #f2f2f2;
+  height: 500px;
+  opacity: .8;
+}
+
+#credit-card-use {
+  background: #f2f2f2;
+  height: 500px;
+  opacity: .8;
+}
+
+#derogatory-marks {
+  background: #f2f2f2;
+  height: 500px;
+  opacity: .8;
+}
+
+#hard-inquiries {
+  background: #f2f2f2;
+  height: 500px;
+  opacity: .8;
+}
+
+#payment-history {
+  background: #f2f2f2;
+  height: 500px;
+  opacity: .8;
+}
+
+#total-accounts {
+  background: #f2f2f2;
+  height: 500px;
+  opacity: .8;
+}
+
 /* My Account */
 
 .profile-info {
   display: block;
+}
+
+/* Welcome */
+
+.welcome_message {
+  float: right;
+}
+
+/* Footer */
+
+.footer {
+  background: #FFFFFF;
+  opacity: .8;
+  height: 50px;
 }
