@@ -12,16 +12,20 @@ In my Credit Report web application, the user will introduce her "identification
 
 ### MVP
 
-* Create a database to add personal/financial information about the user.
-
-* Find a js library to create interactive charts.
-
-* Find an API to get an overall credit score of people in the United States, and compare the user with real public data.
-
+* Create a "how to use" section. (Help Center component)
+* Create a "frequent ask questions" section, which includes information about what is a credit report, and quick tips for credit health. (Help Center component)
+* Create my own API with user's personal and financial information.
+* Render user's basic information, with an option to dispute (edit) any innacurate information. (My Acccount component)
+* Create six credit factors (credit card use, payment history, derogatory marks, credit age, total accounts, and hard inquiries), and calculate each one by using the data from my api.
+* Use a js library to create interactive charts. Also use tables and logos to display information.
+* Create a credit score component that is calculated in base of the six credit factors.
+* Create an input field to retrieve user data.
 * Make it responsive design.
-
 * Perform cross-browser testing.
 
-* ... and many equations!
+
+### Post MVP
+
+* Find an API to get an overall credit score of people in the United States, and compare the user with real public data.
 
 [Go back.](./readme.md)
