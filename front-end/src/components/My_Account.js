@@ -23,8 +23,8 @@ class MyAccount extends Component {
           <span className="profile-info">Marital Status: {this.props.state.marital_status}</span>
           <span className="profile-info">Annual Household Income: {this.props.state.annual_household_income}</span>
         </div>
-  	  )
-  	};
+  	  );
+  	}
   }
 
   render() {
