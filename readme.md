@@ -12,9 +12,10 @@
 4. [Browser Wireframes](#browser)
 5. [Mobile Wireframes](#mobile)
 6. [Visual representation of the database](#database)
-7. [Pseudocode](#pseudocode)
-8. [Technologies Used](#technologies)
-9. [See the Project](#project)
+7. [React Components](#components)
+8. [Pseudocode](#pseudocode)
+9. [Technologies Used](#technologies)
+10. [See the Project](#project)
 
 </a>
 
@@ -72,6 +73,16 @@ My account (render user basic information):
 ## Visual representation of the database
 
 ![Database](./images/database.png)
+
+</a>
+
+<a name="components">
+
+## React Components
+
+These are the components and how they are related.
+
+![components](./images/components.png)
 
 </a>
 
