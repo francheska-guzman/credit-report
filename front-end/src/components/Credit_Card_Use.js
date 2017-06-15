@@ -23,11 +23,16 @@ constructor(props){
 
     var ratio = (use/limit).toFixed(2);
 
+    var creditcard = ((counter <= 1) ? "credit card" : "credit cards");
+
   	if(ratio < .09) {
   	  return (
         <div>
   	      <span className="ratio green">{ratio}%</span><br/>
-          <span className="counter">You have {counter} open credit cards.</span>
+          <span className="factor-info">
+          You have {counter} open {creditcard}.<br/>
+          Your total credit use is: {use}<br/>
+          Your total credit limit is: {limit}</span>
         </div>
   	  )
   	}
@@ -35,7 +40,10 @@ constructor(props){
   	  return (
         <div>
   	  	  <span className="ratio green">{ratio}%</span><br/>
-          <span className="counter">You have {counter} open credit cards.</span>
+          <span className="factor-info">
+          You have {counter} open {creditcard}.<br/>
+          Your total credit use is: {use}<br/>
+          Your total credit limit is: {limit}</span>
         </div>
   	  )
   	}
@@ -43,7 +51,10 @@ constructor(props){
   	  return (
         <div>
   	  	  <span className="ratio yellow">{ratio}%</span><br/>
-          <span className="counter">You have {counter} open credit cards.</span>
+          <span className="factor-info">
+          You have {counter} open {creditcard}.<br/>
+          Your total credit use is: {use}<br/>
+          Your total credit limit is: {limit}</span>
         </div>
   	  )
   	}
@@ -51,18 +62,29 @@ constructor(props){
   	  return (
         <div>
   	  	  <span className="ratio red">{ratio}%</span><br/>
-          <span className="counter">You have {counter} open credit cards.</span>
+          <span className="factor-info">
+          You have {counter} open {creditcard}.<br/>
+          Your total credit use is: {use}<br/>
+          Your total credit limit is: {limit}</span>
         </div>
   	  )
   	}
-  	else {
+  	else if(ratio < 1.00) {
   	  return (
         <div>
   	  	  <span className="ratio red">{ratio}%</span><br/>
-          <span className="counter">You have {counter} open credit cards.</span>
+          <span className="factor-info">
+          You have {counter} open {creditcard}.<br/>
+          Your total credit use is: {use}<br/>
+          Your total credit limit is: {limit}</span>
         </div>
   	  )
   	}
+    else {
+      return (
+        <div>You have 0 open credit card.</div>
+      )
+    }
   }
 
   render() {

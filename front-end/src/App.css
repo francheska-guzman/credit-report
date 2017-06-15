@@ -188,7 +188,13 @@ ul {
 /* Credit Card Use */
 
 .ratio {
-  font-size: 70px;
+  font-size: 80px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.factor-info {
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 /* Footer */
