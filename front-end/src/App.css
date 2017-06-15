@@ -17,14 +17,21 @@ h1 {
   font-family: 'El Messiri', sans-serif;
 }
 
-h2, h3 {
-  margin: 10px;
+h2 {
+  margin: 20px;
+  font-size: 30px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+h3 {
+  margin: 20px;
+  font-size: 24px;
   font-family: 'Quicksand', sans-serif;
 }
 
 h4 {
-  margin: 10px;
-  font-size: 25px;
+  margin: 20px;
+  font-size: 35px;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -140,37 +147,31 @@ ul {
 #credit-age {
   background: #f2f2f2;
   height: 400px;
-  opacity: .8;
 }
 
 #credit-card-use {
   background: #f2f2f2;
   height: 400px;
-  opacity: .8;
 }
 
 #derogatory-marks {
   background: #f2f2f2;
   height: 400px;
-  opacity: .8;
 }
 
 #hard-inquiries {
   background: #f2f2f2;
   height: 400px;
-  opacity: .8;
 }
 
 #payment-history {
   background: #f2f2f2;
   height: 400px;
-  opacity: .8;
 }
 
 #total-accounts {
   background: #f2f2f2;
   height: 400px;
-  opacity: .8;
 }
 
 /* My Account */

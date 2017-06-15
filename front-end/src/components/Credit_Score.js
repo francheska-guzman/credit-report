@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class CreditScore extends Component {
   render() {
     return (
-      <div className="credit-score">
+      <div>
         <h2 className="center">Credit Score</h2>
       </div>
     );

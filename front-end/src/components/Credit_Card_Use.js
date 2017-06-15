@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Doughnut } from 'react-chartjs';
 
 class CreditCardUse extends Component {
 constructor(props){
@@ -21,62 +22,102 @@ constructor(props){
       }
     }
 
-    var ratio = (use/limit).toFixed(2);
-
     var creditcard = ((counter <= 1) ? "credit card" : "credit cards");
+    var ratio = (use/limit).toFixed(2);
+    var available = limit - use;
+
+    let data = [
+            {color: "#c1091f", label: "Credit Use", value: use},
+            {color: "#0e9e17", label: "Available Credit", value: available}
+    ];
 
   	if(ratio < .09) {
   	  return (
-        <div>
-  	      <span className="ratio green">{ratio}%</span><br/>
-          <span className="factor-info">
-          You have {counter} open {creditcard}.<br/>
-          Your total credit use is: {use}<br/>
-          Your total credit limit is: {limit}</span>
+        <div className="flex">
+          <div className="flex-1">
+            <Doughnut data={data} options={{animateRotate: true}} width="600" height="250"/>
+          </div>
+          <div className="flex-2">
+    	      <span className="ratio green">{ratio}%</span><br />
+            <span className="factor-info">
+            You have {counter} open {creditcard}.<br /><br />
+            Your total credit limit is: {limit}<br />
+            Your total credit use is: {use}<br />
+            Your total available credit is: {available}<br />
+            </span>
+          </div>
         </div>
   	  )
   	}
   	else if(ratio < .29) {
   	  return (
-        <div>
-  	  	  <span className="ratio green">{ratio}%</span><br/>
-          <span className="factor-info">
-          You have {counter} open {creditcard}.<br/>
-          Your total credit use is: {use}<br/>
-          Your total credit limit is: {limit}</span>
+        <div className="flex">
+          <div className="flex-1">
+            <Doughnut data={data} options={{animateRotate: true}} width="600" height="250"/>
+          </div>
+          <div className="flex-2">
+            <span className="ratio green">{ratio}%</span><br />
+            <span className="factor-info">
+            You have {counter} open {creditcard}.<br /><br />
+            Your total credit limit is: {limit}<br />
+            Your total credit use is: {use}<br />
+            Your total available credit is: {available}<br />
+            </span>
+          </div>
         </div>
   	  )
   	}
   	else if(ratio < .49) {
   	  return (
-        <div>
-  	  	  <span className="ratio yellow">{ratio}%</span><br/>
-          <span className="factor-info">
-          You have {counter} open {creditcard}.<br/>
-          Your total credit use is: {use}<br/>
-          Your total credit limit is: {limit}</span>
+        <div className="flex">
+          <div className="flex-1">
+            <Doughnut data={data} options={{animateRotate: true}} width="600" height="250"/>
+          </div>
+          <div className="flex-2">
+            <span className="ratio green">{ratio}%</span><br />
+            <span className="factor-info">
+            You have {counter} open {creditcard}.<br /><br />
+            Your total credit limit is: {limit}<br />
+            Your total credit use is: {use}<br />
+            Your total available credit is: {available}<br />
+            </span>
+          </div>
         </div>
   	  )
   	}
   	else if(ratio < .74) {
   	  return (
-        <div>
-  	  	  <span className="ratio red">{ratio}%</span><br/>
-          <span className="factor-info">
-          You have {counter} open {creditcard}.<br/>
-          Your total credit use is: {use}<br/>
-          Your total credit limit is: {limit}</span>
+        <div className="flex">
+          <div className="flex-1">
+            <Doughnut data={data} options={{animateRotate: true}} width="600" height="250"/>
+          </div>
+          <div className="flex-2">
+            <span className="ratio green">{ratio}%</span><br />
+            <span className="factor-info">
+            You have {counter} open {creditcard}.<br /><br />
+            Your total credit limit is: {limit}<br />
+            Your total credit use is: {use}<br />
+            Your total available credit is: {available}<br />
+            </span>
+          </div>
         </div>
   	  )
   	}
   	else if(ratio < 1.00) {
   	  return (
-        <div>
-  	  	  <span className="ratio red">{ratio}%</span><br/>
-          <span className="factor-info">
-          You have {counter} open {creditcard}.<br/>
-          Your total credit use is: {use}<br/>
-          Your total credit limit is: {limit}</span>
+        <div className="flex">
+          <div className="flex-1">
+            <Doughnut data={data} options={{animateRotate: true}} width="600" height="250"/>
+          </div>
+          <div className="flex-2">
+            <span className="ratio green">{ratio}%</span><br />
+            <span className="factor-info">
+            You have {counter} open {creditcard}.<br /><br />
+            Your total credit limit is: {limit}<br />
+            Your total credit use is: {use}<br />
+            Your total available credit is: {available}<br />
+            </span>
+          </div>
         </div>
   	  )
   	}
