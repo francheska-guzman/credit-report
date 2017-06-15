@@ -123,7 +123,8 @@ My account (render user basic information):
 
 ## See the Project
 
-### Life Deployment of Credit Report App:
+### Life Deployment of Credit Report App: https://creditreportapp.herokuapp.com/
+
 ### Life Deployment of Credit Report API: https://creditreportapi.herokuapp.com/
 
 </a>
