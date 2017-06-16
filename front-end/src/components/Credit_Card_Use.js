@@ -151,11 +151,11 @@ constructor(props){
         <span className="factor-info">A good rule of thumb is to keep your balances below 30% of your limit.</span>
         <table className="dark">
           <tr>
-            <th>Opened</th>
-            <th>Creditor</th>
-            <th>Credit Limit</th>
-            <th>Credit Use</th>
-            <th>Current Status</th>
+            <th className="t-title">Opened</th>
+            <th className="t-title">Creditor</th>
+            <th className="t-title">Credit Limit</th>
+            <th className="t-title">Credit Use</th>
+            <th className="t-title">Current Status</th>
           </tr>
         {this.renderOpenCreditCards()}
         </table>
