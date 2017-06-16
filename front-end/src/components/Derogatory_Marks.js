@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { Doughnut } from 'react-chartjs';
 
 class DerogatoryMarks extends Component {
   constructor(props){
     super(props);
     this.renderMessage = this.renderMessage.bind(this);
     this.renderCollectionAccounts = this.renderCollectionAccounts.bind(this);
+    this.renderCollectionGraphic = this.renderCollectionGraphic.bind(this);
   }
 
   renderMessage() {
@@ -30,6 +32,31 @@ class DerogatoryMarks extends Component {
           <span className="factor-info">You don't have any collection or public record.</span>
         </div>
     )}
+  }
+
+  renderCollectionGraphic() {
+    var collection_amount = 0;
+    var paid = 0;
+
+    for(var i = 0; i < this.props.state.amount_paid_to_collection.length; i += 1) {
+      if (this.props.state.amount_paid_to_collection[i] > 0) {
+        collection_amount += this.props.state.credit_use[i];
+        paid += this.props.state.amount_paid_to_collection[i];
+      }
+    }
+
+    var pending = collection_amount - paid;
+
+    let data = [
+            {color: "#3c076d", label: "Amount pending to be paid:", value: pending},
+            {color: "#0a72b2", label: "Amount you already paid to collection", value: paid}
+    ];
+
+    if (collection_amount !== 0 && paid !== 0) {
+      return (
+        <div className="center"><Doughnut data={data} options={{animateRotate: true}} width="600" height="250"/></div>
+      )
+    }
   }
 
   renderCollectionAccounts() {
@@ -62,6 +89,7 @@ class DerogatoryMarks extends Component {
           </tr> 
           {this.renderCollectionAccounts()}
         </table>
+        {this.renderCollectionGraphic()}
       </div>
     );
   }
