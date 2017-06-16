@@ -121,7 +121,7 @@ INSERT INTO account_details (user_id, account_type, opened, creditor, credit_lim
   (2, 1, '5-20-2010', 'Discover', 2500, 1850, 2, 2, 'ABC Collection Agency', 220),
   (2, 3, '9-22-2009', 'Fed Loan Servicing', 4500, 3595, 2, 1, '', 0),
   (2, 1, '4-11-2014', 'TD Bank USA', 2300, 292, 1, 1, '', 0),
-  (2, 1, '6-23-2015', 'Capital One', 7100, 5232, 2, 2, 'NYC Collection Agency', 1350),
+  (2, 1, '6-23-2015', 'Capital One', 7100, 5232, 2, 2, 'XYZ Collection Agency', 1350),
   (2, 4, '12-17-2016', 'Bank of America', 12000, 8300, 1, 1, '', 0);
 
 INSERT INTO payment_history (jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec) VALUES
