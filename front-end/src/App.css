@@ -200,10 +200,6 @@ th {
   font-family: 'Quicksand', sans-serif;
 }
 
-td {
-
-}
-
 /* Derogatory Marks */
 
 #derogatory-marks {
@@ -244,27 +240,25 @@ td {
 
 .profile {
   height: 600px;
-  background: #1c1b1b;
   width: 100%;
+  background: #fcfcfc;
 }
 
 .profile-wrap {
   width: 100%;
-  margin: 18px;
-  background: #262424;
+  background: #fcfcfc;
 }
 
 .profile-info {
   font-size: 20px;
-  padding: 2px;
-  color: #c1bdbd;
-  font-family: 'Quicksand', sans-serif;
+  padding: 5px 20px;
+  color: #262424;
 }
 
 /* Help Center */
 
 .help-center {
-  background: #f2f2f2;
+  background: #1c1b1b;
   height: 600px;
 }
 
