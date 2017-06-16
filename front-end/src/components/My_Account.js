@@ -16,12 +16,14 @@ class MyAccount extends Component {
   	else {
   	  return (
         <div className="profile flex">
-          <span className="profile-info">First Name: {this.props.state.first_name}</span>
-          <span className="profile-info">Last Name: {this.props.state.last_name}</span>
-          <span className="profile-info">Date of Birth: {this.props.state.date_of_birth}</span>
-          <span className="profile-info">Place of Birth: {this.props.state.place_of_birth}</span>
-          <span className="profile-info">Marital Status: {this.props.state.marital_status}</span>
-          <span className="profile-info">Annual Household Income: {this.props.state.annual_household_income}</span>
+          <ul className="profile-wrap">
+          <li className="profile-info">First Name: {this.props.state.first_name}</li>
+          <li className="profile-info">Last Name: {this.props.state.last_name}</li>
+          <li className="profile-info">Date of Birth: {this.props.state.date_of_birth}</li>
+          <li className="profile-info">Place of Birth: {this.props.state.place_of_birth}</li>
+          <li className="profile-info">Marital Status: {this.props.state.marital_status}</li>
+          <li className="profile-info">Annual Household Income: {this.props.state.annual_household_income}</li>
+          </ul>
         </div>
   	  );
   	}

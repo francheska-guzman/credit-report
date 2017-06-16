@@ -7,10 +7,7 @@ class Navigation extends Component {
     return (
       <div className="wrapper">
         <div className="navigation flex">
-          <h1 className="flex-1">Credit Report</h1>
-          <Welcome getUserData={this.props.getUserData}
-                 signOff={this.props.signOff}
-                 state={this.props.state} />
+          <h1 className="flex">Credit Report</h1>
             <nav>
           	<ul className="list-of-links">
           	  <li className="nav-link"><NavLink to="/">Dashboard</NavLink></li>
@@ -18,6 +15,9 @@ class Navigation extends Component {
           	  <li className="nav-link"><NavLink to="/my-account">My Account</NavLink></li>
             </ul>
             </nav>
+          <Welcome getUserData={this.props.getUserData}
+                 signOff={this.props.signOff}
+                 state={this.props.state} />
         </div>
       </div>
     );

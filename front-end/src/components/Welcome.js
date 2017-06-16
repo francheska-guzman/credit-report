@@ -21,18 +21,18 @@ class Welcome extends Component {
   login() {
     if(this.props.state.user === false) {
       return (
-        <div className="log">
+        <div>
           <input type="text" placeholder="Type your user id." ref="id" />
-          <input className="sign" type="button" value="Sign In" onClick={this.userInformation} />
+          <input className="signIn" type="button" value="Sign In" onClick={this.userInformation} />
           <input className="hint" type="button" value="?" onClick={this.getAHint} />
         </div>
       )
     }
     else {
       return (
-        <div className="log">
-          <span>Welcome to Credit Report, {this.props.state.first_name} {this.props.state.last_name}.</span>
-          <input className="sign" type="button" value="Sign Off" onClick={this.props.signOff} />
+        <div>
+          <span className="message">Welcome to Credit Report, {this.props.state.first_name} {this.props.state.last_name}.</span>
+          <input className="signOff" type="button" value="Sign Off" onClick={this.props.signOff} />
         </div>
       );
     }

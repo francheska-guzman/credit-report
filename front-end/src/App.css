@@ -248,8 +248,17 @@ td {
   width: 100%;
 }
 
+.profile-wrap {
+  width: 100%;
+  margin: 18px;
+  background: #262424;
+}
+
 .profile-info {
-  display: block;
+  font-size: 20px;
+  padding: 2px;
+  color: #c1bdbd;
+  font-family: 'Quicksand', sans-serif;
 }
 
 /* Help Center */
@@ -263,26 +272,48 @@ td {
 
 input[type=text] {
   width: 180px;
-  height: 20px;
+  height: 22px;
   font-family: 'Quicksand', sans-serif;
   font-size: 14px;
   border: none;
-  border-radius: 10px;
-  margin: 14px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin: 13px 0 13px 13px;
   padding: 5px;
   background: #3a3636;
   color: #F2F2F2;
 }
 
-.log {
-  flex: 1;
+.signIn {
+  height: 31px;
+  background: #d8d4d4;
+  border: none;
+  color: #262222;
+  font-size: 15px;
+  padding: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.signIn:hover {
+  background: #bcb8b8;
 }
 
 .hint {
   background: none;
   border: none;
   font-family: 'Quicksand', sans-serif;
-  font-size: 20px;
+  font-size: 26px;
+  color: #dbdfe0;
+}
+
+.hint:hover {
+  color: #FFFFFF;
+}
+
+.message {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
 }
 
 /* Footer */
