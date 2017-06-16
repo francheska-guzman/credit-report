@@ -5,6 +5,7 @@ class Welcome extends Component {
     super(props);
     this.userInformation = this.userInformation.bind(this);
     this.login = this.login.bind(this);
+    this.getAHint = this.getAHint.bind(this);
   }
 
   userInformation(event) {
@@ -13,12 +14,17 @@ class Welcome extends Component {
       this.refs.id.value = ' ';
   }
 
+  getAHint(event) {
+    alert("Type the number '1' or '2'.");
+  }
+
   login() {
     if(this.props.state.user === false) {
       return (
         <div className="log">
-          <input type="text" placeholder="Your User ID" ref="id" />
+          <input type="text" placeholder="Type your user id." ref="id" />
           <input className="sign" type="button" value="Sign In" onClick={this.userInformation} />
+          <input className="hint" type="button" value="?" onClick={this.getAHint} />
         </div>
       )
     }

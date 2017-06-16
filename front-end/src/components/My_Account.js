@@ -9,13 +9,13 @@ class MyAccount extends Component {
 
   profile() {
   	if(this.props.state.user === false) {
-  	  return (
-  	    <div className="profile">No profile to show. Sign in by using your user id.</div>
-  	  )
+       return (
+        <div className="profile flex"></div>
+       )
   	}
   	else {
   	  return (
-        <div className="profile">
+        <div className="profile flex">
           <span className="profile-info">First Name: {this.props.state.first_name}</span>
           <span className="profile-info">Last Name: {this.props.state.last_name}</span>
           <span className="profile-info">Date of Birth: {this.props.state.date_of_birth}</span>

@@ -242,21 +242,47 @@ td {
 
 /* My Account */
 
+.profile {
+  height: 600px;
+  background: #1c1b1b;
+  width: 100%;
+}
+
 .profile-info {
   display: block;
+}
+
+/* Help Center */
+
+.help-center {
+  background: #f2f2f2;
+  height: 600px;
 }
 
 /* Welcome */
 
 input[type=text] {
-  width: 150px;
+  width: 180px;
   height: 20px;
   font-family: 'Quicksand', sans-serif;
   font-size: 14px;
+  border: none;
+  border-radius: 10px;
+  margin: 14px;
+  padding: 5px;
+  background: #3a3636;
+  color: #F2F2F2;
 }
 
 .log {
   flex: 1;
+}
+
+.hint {
+  background: none;
+  border: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
 }
 
 /* Footer */
