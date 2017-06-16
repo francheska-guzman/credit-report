@@ -2,7 +2,7 @@
 
 body {
   margin: 0 auto;
-  background: #898282;
+  background: #f2f2f2;
 }
 
 /* Fonts */
@@ -88,7 +88,7 @@ h6 {
 
 a {
   text-decoration: none;
-  color: #dbdfe0;
+  color: #262222;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -105,7 +105,7 @@ ul {
 }
 
 .navigation {
-  background: #4c4949;
+
 }
 
 .nav-link {
@@ -118,7 +118,7 @@ ul {
 
 .credit-score {
   margin: 40px 5px 40px 40px;
-  background: #c1bbbb;
+  background: #fcfcfc;
   border-radius: 30px;
   text-align: center;
 }
@@ -274,8 +274,8 @@ input[type=text] {
   border-bottom-left-radius: 10px;
   margin: 13px 0 13px 13px;
   padding: 5px;
-  background: #3a3636;
-  color: #F2F2F2;
+  background: #f2f2f2;
+  color: #262222;
 }
 
 .signIn {
@@ -313,6 +313,6 @@ input[type=text] {
 /* Footer */
 
 .footer {
-  background: #7c7777;
+  background: #d8d4d4;
   height: auto;
 }

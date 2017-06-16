@@ -28,12 +28,21 @@ class App extends Component {
       gender: null,
       marital_status: null,
       annual_household_income: null,
+      street_address: null,
+      apartment: null,
+      city: null,
+      state: null,
+      zip_code: null,
+      telephone_number: null,
+      email: null,
+      public_record: null,
       account_type: [],
       opened: [],
       creditor: [],
       credit_limit: [],
       credit_use: [],
       current_status: [],
+      collection: [],
       payment_history: []
     }
     this.getUserData = this.getUserData.bind(this);
@@ -50,6 +59,7 @@ class App extends Component {
       var credit_limit = [];
       var credit_use = [];
       var current_status = [];
+      var collection = [];
       var payment_history = [];
 
       for (var i = 0; i < res.data.data.length; i += 1) {
@@ -66,6 +76,7 @@ class App extends Component {
         credit_limit.push(res.data.data[i].credit_limit)
         credit_use.push(res.data.data[i].credit_use)
         current_status.push(res.data.data[i].current_status)
+        collection.push(res.data.data[i].collection)
         payment_history.push(payments)
 
       }
@@ -79,21 +90,23 @@ class App extends Component {
         gender: res.data.data[0].gender,
         marital_status: res.data.data[0].marital_status,
         annual_household_income: res.data.data[0].annual_household_income,
+        street_address: res.data.data[0].street_address,
+        apartment: res.data.data[0].apartment,
+        city: res.data.data[0].city,
+        state: res.data.data[0].state,
+        zip_code: res.data.data[0].zip_code,
+        telephone_number: res.data.data[0].telephone_number,
+        email: res.data.data[0].email,
+        public_record: res.data.data[0].public_record,
         account_type: account_type,
         opened: opened,
         creditor: creditor,
         credit_limit: credit_limit,
         credit_use: credit_use,
         current_status: current_status,
+        collection: collection,
         payment_history: payment_history
       })
-      //console.log(this.state.account_type);
-      //console.log(this.state.opened);
-      //console.log(this.state.creditor);
-      //console.log(this.state.credit_limit);
-      //console.log(this.state.credit_use);
-      //console.log(this.state.current_status);
-      //console.log(this.state.payment_history);
     })
     .catch((error) => {
       console.log(error);
