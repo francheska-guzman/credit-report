@@ -105,7 +105,7 @@ ul {
 }
 
 .navigation {
-
+  background: #dbd6d6;
 }
 
 .nav-link {
@@ -280,7 +280,7 @@ input[type=text] {
 
 .signIn {
   height: 31px;
-  background: #d8d4d4;
+  background: #c1baba;
   border: none;
   color: #262222;
   font-size: 15px;
@@ -298,7 +298,7 @@ input[type=text] {
   border: none;
   font-family: 'Quicksand', sans-serif;
   font-size: 26px;
-  color: #dbdfe0;
+  color: #f9f9f9;
 }
 
 .hint:hover {
