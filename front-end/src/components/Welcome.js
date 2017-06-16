@@ -16,7 +16,7 @@ class Welcome extends Component {
   login() {
     if(this.props.state.user === false) {
       return (
-        <div className="welcome_message flex">
+        <div className="log">
           <input type="text" placeholder="Your User ID" ref="id" />
           <input className="sign" type="button" value="Sign In" onClick={this.userInformation} />
         </div>
@@ -24,7 +24,7 @@ class Welcome extends Component {
     }
     else {
       return (
-        <div className="welcome_message flex">
+        <div className="log">
           <span>Welcome to Credit Report, {this.props.state.first_name} {this.props.state.last_name}.</span>
           <input className="sign" type="button" value="Sign Off" onClick={this.props.signOff} />
         </div>

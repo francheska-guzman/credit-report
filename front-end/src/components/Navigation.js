@@ -16,7 +16,7 @@ class Navigation extends Component {
             </ul>
             </nav>
         </div>
-        <div className="nav-bottom flex">
+        <div className="flex">
         <Welcome getUserData={this.props.getUserData}
                  signOff={this.props.signOff}
                  state={this.props.state} />

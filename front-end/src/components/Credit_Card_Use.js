@@ -130,24 +130,17 @@ constructor(props){
   }
 
   renderOpenCreditCards() {
-    var opened = [];
-    var creditor = [];
-    var credit_limit = [];
-    var credit_use = [];
-    var current_status = [];
-    var payment_history = [];
-
+    var table = []
     for(var i = 0; i < this.props.state.opened.length; i += 1) {
       if (this.props.state.account_type[i] === "Credit Card" && 
-          this.props.state.current_status[i] === "Open") {
-          opened.push(this.props.state.opened[i]);
-          creditor.push(this.props.state.creditor[i]);
-          credit_limit.push(this.props.state.credit_limit[i]);
-          credit_use.push(this.props.state.credit_use[i]);
-          current_status.push(this.props.state.current_status[i]);
-          payment_history.push(this.props.state.payment_history[i]);
-      };
-    }
+          this.props.state.current_status[i] === "Open") { 
+          table.push([<td>{this.props.state.opened[i]}</td>,<td>{this.props.state.creditor[i]}</td>,<td>{this.props.state.credit_limit[i]}</td>,<td>{this.props.state.credit_use[i]}</td>,<td>{this.props.state.current_status[i]}</td>]);
+        }
+      }
+      return (table.map(function(table){
+        return <tr>{table}</tr>
+     })
+    )
   }
 
   render() {
@@ -156,7 +149,16 @@ constructor(props){
         <h4 className="center red">Credit Card Use</h4>
         <span>{this.calculateUseRatio()}</span><br />
         <span className="factor-info">A good rule of thumb is to keep your balances below 30% of your limit.</span>
-        <div><ul>{this.renderOpenCreditCards()}</ul></div>
+        <table className="dark">
+          <tr>
+            <th>Opened</th>
+            <th>Creditor</th>
+            <th>Credit Limit</th>
+            <th>Credit Use</th>
+            <th>Current Status</th>
+          </tr>
+        {this.renderOpenCreditCards()}
+        </table>
       </div>
     );
   }
