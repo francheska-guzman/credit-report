@@ -44,6 +44,8 @@ class App extends Component {
       credit_use: [],
       current_status: [],
       collection: [],
+      collection_agency: [],
+      amount_paid_to_collection: [],
       payment_history: []
     }
     this.getUserData = this.getUserData.bind(this);
@@ -61,6 +63,8 @@ class App extends Component {
       var credit_use = [];
       var current_status = [];
       var collection = [];
+      var collection_agency = [];
+      var amount_paid_to_collection = [];
       var payment_history = [];
 
       for (var i = 0; i < res.data.data.length; i += 1) {
@@ -78,6 +82,8 @@ class App extends Component {
         credit_use.push(res.data.data[i].credit_use)
         current_status.push(res.data.data[i].current_status)
         collection.push(res.data.data[i].collection)
+        collection_agency.push(res.data.data[i].collection_agency)
+        amount_paid_to_collection.push(res.data.data[i].amount_paid_to_collection)
         payment_history.push(payments)
 
       }

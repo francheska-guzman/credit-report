@@ -37,7 +37,7 @@ class DerogatoryMarks extends Component {
    
     for(var i = 0; i < this.props.state.collection.length; i += 1) {
       if (this.props.state.collection[i] === "In Collection") {
-        collections.push([<td>{this.props.state.opened[i]}</td>,<td>{this.props.state.creditor[i]}</td>,<td>{this.props.state.account_type[i]}</td>,<td>{this.props.state.credit_use[i]}</td>,<td>{this.props.state.current_status[i]}</td>]);
+        collections.push([<td>{this.props.state.opened[i]}</td>,<td>{this.props.state.creditor[i]}</td>,<td>{this.props.state.collection_agency[i]}</td>,<td>{this.props.state.account_type[i]}</td>,<td>{this.props.state.credit_use[i]}</td>,<td>{this.props.state.amount_paid_to_collection[i]}</td>,<td>{this.props.state.current_status[i]}</td>]);
       }}
       
     return (collections.map(function(collections){
@@ -54,8 +54,10 @@ class DerogatoryMarks extends Component {
           <tr>
             <th className="t-title">Opened</th>
             <th className="t-title">Creditor</th>
+            <th className="t-title">Collection Agency</th>
             <th className="t-title">Account Type</th>
             <th className="t-title">Collection Amount</th>
+            <th className="t-title">Amount Paid to Collection</th>
             <th className="t-title">Current Status</th>  
           </tr> 
           {this.renderCollectionAccounts()}
