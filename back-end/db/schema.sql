@@ -86,7 +86,7 @@ INSERT INTO account_type (account_type) VALUES
 
 INSERT INTO collection (collection) VALUES 
   ('No Collection Record'), 
-  ('Collection');
+  ('In Collection');
 
 INSERT INTO current_status (current_status) VALUES 
   ('Open'), 
@@ -104,7 +104,7 @@ INSERT INTO marital_status (marital_status) VALUES
 
 INSERT INTO public_record (public_record) VALUES 
   ('No Public Record'), 
-  ('Record');
+  ('Have Public Record');
 
 INSERT INTO user_information (first_name, middle_name, last_name, date_of_birth, place_of_birth, gender, marital_status, annual_household_income, street_address, apartment, city, state, zip_code, telephone_number, email, public_record) VALUES 
   ('Alex', 'Daniel', 'Rivera', '1-18-1979', 'New York, NY', 1, 2, 72000, '7601 River Road', '2A', 'North Bergen', 'NJ', '07047', '917-123-4567', 'alex_rivera@gmail.com', 1), 

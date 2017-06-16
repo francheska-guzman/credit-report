@@ -4,11 +4,11 @@ import { Doughnut } from 'react-chartjs';
 class CreditCardUse extends Component {
 constructor(props){
   super(props);
-  this.calculateUseRatio = this.calculateUseRatio.bind(this);
+  this.renderUseRatio = this.renderUseRatio.bind(this);
   this.renderOpenCreditCards = this.renderOpenCreditCards.bind(this);
   }
 
-  calculateUseRatio() {
+  renderUseRatio() {
     var use = 0;
     var limit = 0;
     var counter = 0;
@@ -147,7 +147,7 @@ constructor(props){
     return (
       <div id="credit-card-use" className="flex-1">
         <h4 className="center red">Credit Card Use</h4>
-        <span>{this.calculateUseRatio()}</span><br />
+        <span>{this.renderUseRatio()}</span><br />
         <span className="factor-info">A good rule of thumb is to keep your balances below 30% of your limit.</span>
         <table className="dark">
           <tr>

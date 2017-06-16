@@ -35,7 +35,7 @@ class MyAccount extends Component {
             <li className="profile-info">State: {this.props.state.state}</li>
             <li className="profile-info">Zip Code: {this.props.state.zip_code}</li>
           <h2>Contact</h2>
-            <li className="profile-info">Telephone: {this.props.state.telephone}</li>
+            <li className="profile-info">Telephone: {this.props.state.telephone_number}</li>
             <li className="profile-info">Email: {this.props.state.email}</li>
           </ul>
         </div>
