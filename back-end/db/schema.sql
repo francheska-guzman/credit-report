@@ -57,7 +57,9 @@ CREATE TABLE account_details(
   credit_limit INT,
   credit_use INT,
   current_status INT REFERENCES current_status(id),
-  collection INT REFERENCES collection(id)
+  collection INT REFERENCES collection(id),
+  collection_agency VARCHAR(255),
+  amount_paid_to_collection INT
 );
 
 CREATE TABLE payment_history(
@@ -110,17 +112,17 @@ INSERT INTO user_information (first_name, middle_name, last_name, date_of_birth,
   ('Alex', 'Daniel', 'Rivera', '1-18-1979', 'New York, NY', 1, 2, 72000, '7601 River Road', '2A', 'North Bergen', 'NJ', '07047', '917-123-4567', 'alex_rivera@gmail.com', 1), 
   ('Sofia', 'Isabelle', 'Monroe', '10-25-1984', 'San Francisco, CA', 2, 1, 94000, '6670 Doriana Street', '101', 'San Diego', 'CA', '92139', '415-789-1234', 'sofia_monroe@gmail.com', 1);
 
-INSERT INTO account_details (user_id, account_type, opened, creditor, credit_limit, credit_use, current_status, collection) VALUES 
-  (1, 2, '10-1-2004', 'JP Morgan Chase', 9500, 1290, 1, 1),
-  (1, 1, '5-12-2001', 'GE Capital Retail Bank', 3200, 203, 1, 1),
-  (1, 5, '3-25-2009', 'Bank of America', 50000, 9721, 1, 1),
-  (1, 1, '11-3-2015', 'JP Morgan Chase', 6400, 904, 1, 1),
-  (2, 3, '1-18-2011', 'FedLoan Servicing', 4200, 3420, 1, 1),
-  (2, 1, '5-20-2010', 'Discover', 2500, 1850, 2, 1),
-  (2, 3, '9-22-2009', 'Fed Loan Servicing', 4500, 3595, 2, 1),
-  (2, 1, '4-11-2014', 'TD Bank USA', 2300, 292, 1, 1),
-  (2, 1, '6-23-2015', 'Capital One', 7100, 5232, 2, 2),
-  (2, 4, '12-17-2016', 'Bank of America', 12000, 8300, 1, 1);
+INSERT INTO account_details (user_id, account_type, opened, creditor, credit_limit, credit_use, current_status, collection, collection_agency, amount_paid_to_collection) VALUES 
+  (1, 2, '10-1-2004', 'JP Morgan Chase', 9500, 1290, 1, 1, '', 0),
+  (1, 1, '5-12-2001', 'GE Capital Retail Bank', 3200, 203, 1, 1, '', 0),
+  (1, 5, '3-25-2009', 'Bank of America', 50000, 9721, 1, 1, '', 0),
+  (1, 1, '11-3-2015', 'JP Morgan Chase', 6400, 904, 1, 1, '', 0),
+  (2, 3, '1-18-2011', 'FedLoan Servicing', 4200, 3420, 1, 1, '', 0),
+  (2, 1, '5-20-2010', 'Discover', 2500, 1850, 2, 2, 'ABC Collection Agency', 220),
+  (2, 3, '9-22-2009', 'Fed Loan Servicing', 4500, 3595, 2, 1, '', 0),
+  (2, 1, '4-11-2014', 'TD Bank USA', 2300, 292, 1, 1, '', 0),
+  (2, 1, '6-23-2015', 'Capital One', 7100, 5232, 2, 2, 'NYC Collection Agency', 1350),
+  (2, 4, '12-17-2016', 'Bank of America', 12000, 8300, 1, 1, '', 0);
 
 INSERT INTO payment_history (jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec) VALUES
   (TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE),
