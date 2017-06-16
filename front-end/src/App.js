@@ -113,6 +113,8 @@ class App extends Component {
         credit_use: credit_use,
         current_status: current_status,
         collection: collection,
+        collection_agency: collection_agency,
+        amount_paid_to_collection: amount_paid_to_collection,
         payment_history: payment_history
       })
     })
