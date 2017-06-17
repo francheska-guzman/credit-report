@@ -80,8 +80,16 @@ h6 {
   flex: 2;
 }
 
+.flex-3 {
+  flex: 3;
+}
+
 .flex-4 {
   flex: 4;
+}
+
+.flex-5 {
+  flex: 5;
 }
 
 /* Navigation */
@@ -191,14 +199,26 @@ ul {
   font-family: 'Quicksand', sans-serif;
 }
 
+.utilization {
+  margin: 40px;
+}
+
 .dark {
   width: 100%;
   margin: 20px 0;
 }
 
+.graphic-description {
+  margin: 50px;
+}
+
 .t-title {
   background: #e0d9d9;
   color: #1c1919;
+}
+
+.graphic {
+  margin: 20px;
 }
 
 table {

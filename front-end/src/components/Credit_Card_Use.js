@@ -32,13 +32,13 @@ constructor(props){
             {color: "#0E9E17", label: "Available Credit", value: available}
     ];
 
-  	if(ratio < 9) {
+  	if(ratio <= 9) {
   	  return (
         <div className="flex">
-          <div className="flex-1">
-            <Doughnut data={data} options={{animateRotate: true}} width="600" height="250"/>
+          <div className="flex-1 center">
+            <Doughnut data={data} options={{animateRotate: true}} width="250" height="250"/>
           </div>
-          <div className="flex-2">
+          <div className="flex-1">
     	      <span className="ratio green">{ratio}%</span><br />
             <span className="factor-info">
             You have {counter} open {creditcard}.<br /><br />
@@ -47,16 +47,46 @@ constructor(props){
             Your total available credit is: {available}<br />
             </span>
           </div>
+          <div className="center factor-info">
+          <table className="flex-1 dark">
+            <tbody>
+              <tr>
+                <td className="t-title">Utilization Ratio</td>
+                <td className="t-title">Result</td>
+              </tr>
+              <tr>
+                <td>0-9%</td>
+                <td className="green">Excellent</td>
+              </tr>
+              <tr>
+                <td>10-29%</td>
+                <td className="green">Good</td>
+              </tr>
+              <tr>
+                <td>30-49%</td>
+                <td className="yellow">Fair</td>
+              </tr>
+              <tr>
+                <td>50-74%</td>
+                <td className="red">Poor</td>
+              </tr>
+              <tr>
+                <td>75-100%</td>
+                <td className="red">Very Poor</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
         </div>
   	)}
 
-  	else if(ratio < 29) {
+  	else if(ratio <= 29) {
   	  return (
         <div className="flex">
-          <div className="flex-1">
-            <Doughnut data={data} options={{animateRotate: true}} width="600" height="250"/>
+          <div className="flex-1 center">
+            <Doughnut data={data} options={{animateRotate: true}} width="250" height="250"/>
           </div>
-          <div className="flex-2">
+          <div className="flex-1">
             <span className="ratio green">{ratio}%</span><br />
             <span className="factor-info">
             You have {counter} open {creditcard}.<br /><br />
@@ -65,17 +95,47 @@ constructor(props){
             Your total available credit is: {available}<br />
             </span>
           </div>
+          <div className="center factor-info">
+          <table className="flex-1 dark">
+            <tbody>
+              <tr>
+                <td className="t-title">Utilization Ratio</td>
+                <td className="t-title">Result</td>
+              </tr>
+              <tr>
+                <td>0-9%</td>
+                <td className="green">Excellent</td>
+              </tr>
+              <tr>
+                <td>10-29%</td>
+                <td className="green">Good</td>
+              </tr>
+              <tr>
+                <td>30-49%</td>
+                <td className="yellow">Fair</td>
+              </tr>
+              <tr>
+                <td>50-74%</td>
+                <td className="red">Poor</td>
+              </tr>
+              <tr>
+                <td>75-100%</td>
+                <td className="red">Very Poor</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
         </div>
   	)}
 
-  	else if(ratio < 49) {
+  	else if(ratio <= 49) {
   	  return (
         <div className="flex">
-          <div className="flex-1">
-            <Doughnut data={data} options={{animateRotate: true}} width="600" height="250"/>
+          <div className="flex-1 center">
+            <Doughnut data={data} options={{animateRotate: true}} width="250" height="250"/>
           </div>
-          <div className="flex-2">
-            <span className="ratio green">{ratio}%</span><br />
+          <div className="flex-1">
+            <span className="ratio yellow">{ratio}%</span><br />
             <span className="factor-info">
             You have {counter} open {creditcard}.<br /><br />
             Your total credit limit is: {limit}<br />
@@ -83,17 +143,47 @@ constructor(props){
             Your total available credit is: {available}<br />
             </span>
           </div>
+          <div className="center factor-info">
+          <table className="flex-1 dark">
+            <tbody>
+              <tr>
+                <td className="t-title">Utilization Ratio</td>
+                <td className="t-title">Result</td>
+              </tr>
+              <tr>
+                <td>0-9%</td>
+                <td className="green">Excellent</td>
+              </tr>
+              <tr>
+                <td>10-29%</td>
+                <td className="green">Good</td>
+              </tr>
+              <tr>
+                <td>30-49%</td>
+                <td className="yellow">Fair</td>
+              </tr>
+              <tr>
+                <td>50-74%</td>
+                <td className="red">Poor</td>
+              </tr>
+              <tr>
+                <td>75-100%</td>
+                <td className="red">Very Poor</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
         </div>
   	)}
 
-  	else if(ratio < 74) {
+  	else if(ratio <= 74) {
   	  return (
         <div className="flex">
-          <div className="flex-1">
-            <Doughnut data={data} options={{animateRotate: true}} width="600" height="250"/>
+          <div className="flex-1 center">
+            <Doughnut data={data} options={{animateRotate: true}} width="250" height="250"/>
           </div>
-          <div className="flex-2">
-            <span className="ratio green">{ratio}%</span><br />
+          <div className="flex-1">
+            <span className="ratio red">{ratio}%</span><br />
             <span className="factor-info">
             You have {counter} open {creditcard}.<br /><br />
             Your total credit limit is: {limit}<br />
@@ -101,23 +191,83 @@ constructor(props){
             Your total available credit is: {available}<br />
             </span>
           </div>
+          <div className="center factor-info">
+          <table className="flex-1 dark">
+            <tbody>
+              <tr>
+                <td className="t-title">Utilization Ratio</td>
+                <td className="t-title">Result</td>
+              </tr>
+              <tr>
+                <td>0-9%</td>
+                <td className="green">Excellent</td>
+              </tr>
+              <tr>
+                <td>10-29%</td>
+                <td className="green">Good</td>
+              </tr>
+              <tr>
+                <td>30-49%</td>
+                <td className="yellow">Fair</td>
+              </tr>
+              <tr>
+                <td>50-74%</td>
+                <td className="red">Poor</td>
+              </tr>
+              <tr>
+                <td>75-100%</td>
+                <td className="red">Very Poor</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
         </div>
   	)}
 
-  	else if(ratio < 100) {
+  	else if(ratio <= 100) {
   	  return (
         <div className="flex">
-          <div className="flex-1">
-            <Doughnut data={data} options={{animateRotate: true}} width="600" height="250"/>
+          <div className="flex-1 center">
+            <Doughnut data={data} options={{animateRotate: true}} width="250" height="250"/>
           </div>
-          <div className="flex-2">
-            <span className="ratio green">{ratio}%</span><br />
+          <div className="flex-1">
+            <span className="ratio red">{ratio}%</span><br />
             <span className="factor-info">
             You have {counter} open {creditcard}.<br /><br />
             Your total credit limit is: {limit}<br />
             Your total credit use is: {use}<br />
             Your total available credit is: {available}<br />
             </span>
+          </div>
+          <div className="center factor-info">
+          <table className="flex-1 dark">
+            <tbody>
+              <tr>
+                <td className="t-title">Utilization Ratio</td>
+                <td className="t-title">Result</td>
+              </tr>
+              <tr>
+                <td>0-9%</td>
+                <td className="green">Excellent</td>
+              </tr>
+              <tr>
+                <td>10-29%</td>
+                <td className="green">Good</td>
+              </tr>
+              <tr>
+                <td>30-49%</td>
+                <td className="yellow">Fair</td>
+              </tr>
+              <tr>
+                <td>50-74%</td>
+                <td className="red">Poor</td>
+              </tr>
+              <tr>
+                <td>75-100%</td>
+                <td className="red">Very Poor</td>
+              </tr>
+            </tbody>
+          </table>
           </div>
         </div>
   	)}
@@ -148,20 +298,23 @@ constructor(props){
     return (
       <div id="credit-card-use" className="flex-1">
         <h4 className="center red">Credit Card Use</h4>
-        <span>{this.renderUseRatio()}</span><br />
-        <span className="factor-info">A good rule of thumb is to keep your balances below 30% of your limit.</span>
-        <table className="dark">
-          <tbody>
-          <tr>
-            <th className="t-title">Opened</th>
-            <th className="t-title">Creditor</th>
-            <th className="t-title">Credit Limit</th>
-            <th className="t-title">Credit Use</th>
-            <th className="t-title">Current Status</th>
-          </tr>
-          {this.renderOpenCreditCards()}
-          </tbody>
-        </table>
+          <span className="factor-info">Your credit card utilization is the 
+          percentage of your credit limits that you're using. It's calculated 
+          by dividing your total credit balances by your total credit limits on open accounts.</span><br /><br />
+          <span className="factor-info">A good rule of thumb is to keep your balances below 30% of your limit.</span><br /><br />
+          <span className="graphic-description flex-5">{this.renderUseRatio()}</span>
+            <table className="dark">
+              <tbody>
+              <tr>
+                <th className="t-title">Opened</th>
+                <th className="t-title">Creditor</th>
+                <th className="t-title">Credit Limit</th>
+                <th className="t-title">Credit Use</th>
+                <th className="t-title">Current Status</th>
+              </tr>
+              {this.renderOpenCreditCards()}
+              </tbody>
+            </table>
       </div>
     );
   }
