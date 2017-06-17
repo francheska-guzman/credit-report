@@ -111,6 +111,8 @@ These are the components and how they are related.
 - Node
 - Express
 - PostgreSQL
+- Heroku
+- GitHub
 
 ### APIs:
 
