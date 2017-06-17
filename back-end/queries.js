@@ -96,10 +96,47 @@ let account_id = parseInt(req.params.account_id);
     });
 }
 
+// Get all hard inquiries from all users.
+function getAllUsersAllInquiries(req, res, next) {
+  db.any('SELECT user_information.id, user_id, first_name, middle_name, last_name, inq_creditor, posted, hard_inquiries.account_type, account_type.id, account_type.account_type FROM user_information FULL OUTER JOIN hard_inquiries ON user_information.id = hard_inquiries.user_id LEFT JOIN account_type ON account_type.id = hard_inquiries.account_type ORDER BY user_information.id')
+    .then(function(data) {
+      console.log('DATA: ', data);
+      res.status(200)
+        .json({
+          status: 'success',
+          data: data,
+          message: 'Personal information from all users retrieved.'
+        });
+    })
+    .catch(function(err) {
+      return next(err);
+    });
+}
+
+// Get all hard inquiries from one user.
+function getOneUsersAllInquiries(req, res, next) {
+let id = parseInt(req.params.id);
+  db.any('SELECT user_information.id, user_id, first_name, middle_name, last_name, inq_creditor, posted, hard_inquiries.account_type, account_type.id, account_type.account_type FROM user_information FULL OUTER JOIN hard_inquiries ON user_information.id = hard_inquiries.user_id LEFT JOIN account_type ON account_type.id = hard_inquiries.account_type WHERE user_information.id = $1', id)
+    .then(function(data) {
+      console.log('DATA: ', data);
+      res.status(200)
+        .json({
+          status: 'success',
+          data: data,
+          message: 'Personal information from all users retrieved.'
+        });
+    })
+    .catch(function(err) {
+      return next(err);
+    });
+}
+
 module.exports = {
   getAllUserInformation: getAllUserInformation,
   getOneUserInformation: getOneUserInformation,
   getAllUserAccounts: getAllUserAccounts,
   getOneUserAccounts: getOneUserAccounts,
-  getOneUserAccount: getOneUserAccount
+  getOneUserAccount: getOneUserAccount,
+  getAllUsersAllInquiries: getAllUsersAllInquiries,
+  getOneUsersAllInquiries: getOneUsersAllInquiries
 };
