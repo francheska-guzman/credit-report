@@ -106,11 +106,12 @@ ul {
 
 .navigation {
   background: #dbd6d6;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.19);
 }
 
 .nav-link {
   display: inline-block;
-  padding: 0 25px;
+  padding: 0 18px;
   font-size: 18px;
 }
 
@@ -129,9 +130,11 @@ ul {
   margin: 40px 40px 40px 5px;
   background: #fcfcfc;
   border-radius: 30px;
+  padding: 5px;
 }
 
 .box {
+  margin: 5px;
   height: 200px;
   text-align: center;
 }
@@ -164,7 +167,7 @@ ul {
 
 #credit-age {
   background: #f2f2f2;
-  height: 400px;
+  height: auto;
   padding: 20px;
   margin: 0 40px 40px 40px;
 }
@@ -303,6 +306,19 @@ input[type=text] {
   background: #bcb8b8;
 }
 
+.signOff {
+  height: 31px;
+  background: #c1baba;
+  border: none;
+  color: #262222;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.signOff:hover {
+  background: #bcb8b8;
+}
+
 .hint {
   background: none;
   border: none;
@@ -315,9 +331,15 @@ input[type=text] {
   color: #FFFFFF;
 }
 
+.wrap-message {
+  margin: 12px;
+}
+
 .message {
   font-family: 'Quicksand', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
+  padding: 7px;
+  background: #f2f2f2;
 }
 
 /* Footer */

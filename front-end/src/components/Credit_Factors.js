@@ -50,7 +50,7 @@ class CreditFactors extends Component {
 
   render() {
     return (
-      <div className="credit-factors">
+      <div>
       <h2 className="center">Credit Factors</h2>
          <div className="flex">
          <div className="box flex-1">

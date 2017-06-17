@@ -30,7 +30,7 @@ class Welcome extends Component {
     }
     else {
       return (
-        <div>
+        <div className="wrap-message">
           <span className="message">Welcome to Credit Report, {this.props.state.first_name} {this.props.state.last_name}.</span>
           <input className="signOff" type="button" value="Sign Off" onClick={this.props.signOff} />
         </div>
