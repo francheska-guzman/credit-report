@@ -45,24 +45,28 @@ class PaymentHistory extends Component {
     });
   }
 
+  // Render creditor information.
   tableCreditor(){
     return (this.props.state.creditor.map(function(creditor, c){
       return <tr><td key={c+1}>{creditor}</td></tr>
     }))
   }
 
+  // Render credit limit information.
   tableCreditLimit(){
     return (this.props.state.credit_limit.map(function(limit, l){
       return <tr><td key={l+1}>{limit}</td></tr>
     }))
   }
 
+  // Render credit use information.
   tableCreditUse(){
     return (this.props.state.credit_use.map(function(use, u){
       return <tr><td key={u+1}>{use}</td></tr>
     }))
   }
 
+  // Render the table of payments.
   tableOfPayments(){
     return (this.state.accounts_ph.map(function(months, m){
       return <tr><td key={m+1}>{months}</td></tr>
@@ -76,18 +80,18 @@ class PaymentHistory extends Component {
         <h4 className="purple">Payment History</h4>
       </div>
         <table className="dark factor-info">
-     	<tbody>
-	      <tr>
-	      	<th className="t-title month">Creditor</th>
-	      	<th className="t-title month">Credit Limit</th>
-	      	<th className="t-title month">Credit Use</th>
-          <th className="t-title month">Payment History<br/>J F M A M J J A S O N D</th>
-	      </tr>
-        <td>{this.tableCreditor()}</td>
-        <td>{this.tableCreditLimit()}</td>
-        <td>{this.tableCreditUse()}</td>
-        <td className="center">{this.tableOfPayments()}</td>
-	    </tbody>
+       	<tbody>
+  	      <tr>
+  	      	<th className="t-title month">Creditor</th>
+  	      	<th className="t-title month">Credit Limit</th>
+  	      	<th className="t-title month">Credit Use</th>
+            <th className="t-title month">Payment History<br/>J F M A M J J A S O N D</th>
+  	      </tr>
+            <td>{this.tableCreditor()}</td>
+            <td>{this.tableCreditLimit()}</td>
+            <td>{this.tableCreditUse()}</td>
+            <td>{this.tableOfPayments()}</td>
+  	    </tbody>
         </table>
       </div>
     );

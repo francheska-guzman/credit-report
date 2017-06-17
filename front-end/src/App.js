@@ -53,9 +53,13 @@ class App extends Component {
   }
 
   getUserData(id){
+  // Making an axios call to my api.
+  // The first part of the url was added because of a cross-origin browser issue.
+  // The instructor Joe helped me to figured out this problem.
     axios.get(`https://accesscontrolalloworiginall.herokuapp.com/https://creditreportapi.herokuapp.com/personalfinancial/${id}`)
     .then((res) => {
 
+      // Creating temporary variables to be using later for set state.
       var account_type = [];
       var opened = [];
       var creditor = [];
@@ -67,8 +71,10 @@ class App extends Component {
       var amount_paid_to_collection = [];
       var payment_history = [];
 
+      // Looping through the data received from the api.
       for (var i = 0; i < res.data.data.length; i += 1) {
 
+        // Inserting payments that are related to the same account, into a single array.
         var payments = 
         [res.data.data[i].jan, res.data.data[i].feb, res.data.data[i].mar, 
         res.data.data[i].apr, res.data.data[i].may, res.data.data[i].jun, 
@@ -124,6 +130,8 @@ class App extends Component {
   }
 
   signOff(){
+    // When user click Sign Off, the state turn to false. I will be using this state
+    // to show/hide information.
     this.setState({
       user: false
     });
