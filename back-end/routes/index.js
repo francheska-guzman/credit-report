@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 router.get('/personal', db.getAllUserInformation);
 router.get('/personal/:id', db.getOneUserInformation);
 router.get('/personalfinancial/', db.getAllUserAccounts);
-router.get('/personalfinancial/:user_id', db.getOneUserAccounts);
-router.get('/personalfinancial/:user_id/:id', db.getOneUserAccount);
+router.get('/personalfinancial/:id', db.getOneUserAccounts);
+router.get('/personalfinancial/:id/:account_id', db.getOneUserAccount);
 
 module.exports = router;

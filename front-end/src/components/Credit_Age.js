@@ -25,10 +25,11 @@ constructor(props){
     var years_months = [];
     var row = [];
 
-      for(var i = 0; i < this.props.state.current_status.length; i += 1) {
+      for(var i = 0; i < this.props.state.creditor.length; i += 1) {
       	if(this.props.state.current_status[i] === "Open") {
     	  	year_opened = this.props.state.opened[i].split("-")[2];
     	  	year_per_account.push(year_opened);
+          console.log(year_per_account);
 
           month_opened = this.props.state.opened[i].split("-")[0]; 
           month_per_account.push(month_opened);
