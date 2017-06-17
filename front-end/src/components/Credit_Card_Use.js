@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import { Doughnut } from 'react-chartjs';
+import UtilizationTable from './UtilizationTable';
 
 class CreditCardUse extends Component {
 constructor(props){
   super(props);
-  this.renderUseRatio = this.renderUseRatio.bind(this);
-  this.renderOpenCreditCards = this.renderOpenCreditCards.bind(this);
+  this.state = {
+    counter_use: 0
+  }
+  this.useRatio = this.useRatio.bind(this);
+  this.openCreditCards = this.openCreditCards.bind(this);
+  this.headerUse = this.headerUse.bind(this);
   }
 
-  renderUseRatio() {
+  useRatio() {
     var use = 0;
     var limit = 0;
     var counter = 0;
@@ -22,6 +27,10 @@ constructor(props){
           counter += 1;
       }
     }
+
+    this.setState({
+      counter_use: counter
+    })
 
     var creditcard = ((counter <= 1) ? "credit card" : "credit cards");
     var ratio = (use/limit).toFixed(2) * 100;
@@ -39,44 +48,15 @@ constructor(props){
             <Doughnut data={data} options={{animateRotate: true}} width="250" height="250"/>
           </div>
           <div className="flex-1">
-    	      <span className="ratio green">{ratio}%</span><br />
-            <span className="factor-info">
-            You have {counter} open {creditcard}.<br /><br />
-            Your total credit limit is: {limit}<br />
-            Your total credit use is: {use}<br />
-            Your total available credit is: {available}<br />
-            </span>
+            <ul className="factor-info">
+    	        <li className="ratio green">{ratio}%</li>
+              <li>You have {counter} open {creditcard}.</li>
+              <li>Your total credit limit is: {limit}</li>
+              <li>Your total credit use is: {use}</li>
+              <li>Your total available credit is: {available}</li>
+            </ul>
           </div>
-          <div className="center factor-info">
-          <table className="flex-1 dark">
-            <tbody>
-              <tr>
-                <td className="t-title">Utilization Ratio</td>
-                <td className="t-title">Result</td>
-              </tr>
-              <tr>
-                <td>0-9%</td>
-                <td className="green">Excellent</td>
-              </tr>
-              <tr>
-                <td>10-29%</td>
-                <td className="green">Good</td>
-              </tr>
-              <tr>
-                <td>30-49%</td>
-                <td className="yellow">Fair</td>
-              </tr>
-              <tr>
-                <td>50-74%</td>
-                <td className="red">Poor</td>
-              </tr>
-              <tr>
-                <td>75-100%</td>
-                <td className="red">Very Poor</td>
-              </tr>
-            </tbody>
-          </table>
-          </div>
+          <UtilizationTable />
         </div>
   	)}
 
@@ -87,44 +67,15 @@ constructor(props){
             <Doughnut data={data} options={{animateRotate: true}} width="250" height="250"/>
           </div>
           <div className="flex-1">
-            <span className="ratio green">{ratio}%</span><br />
-            <span className="factor-info">
-            You have {counter} open {creditcard}.<br /><br />
-            Your total credit limit is: {limit}<br />
-            Your total credit use is: {use}<br />
-            Your total available credit is: {available}<br />
-            </span>
+            <ul className="factor-info">
+              <li className="ratio green">{ratio}%</li>
+              <li>You have {counter} open {creditcard}.</li>
+              <li>Your total credit limit is: {limit}</li>
+              <li>Your total credit use is: {use}</li>
+              <li>Your total available credit is: {available}</li>
+            </ul>
           </div>
-          <div className="center factor-info">
-          <table className="flex-1 dark">
-            <tbody>
-              <tr>
-                <td className="t-title">Utilization Ratio</td>
-                <td className="t-title">Result</td>
-              </tr>
-              <tr>
-                <td>0-9%</td>
-                <td className="green">Excellent</td>
-              </tr>
-              <tr>
-                <td>10-29%</td>
-                <td className="green">Good</td>
-              </tr>
-              <tr>
-                <td>30-49%</td>
-                <td className="yellow">Fair</td>
-              </tr>
-              <tr>
-                <td>50-74%</td>
-                <td className="red">Poor</td>
-              </tr>
-              <tr>
-                <td>75-100%</td>
-                <td className="red">Very Poor</td>
-              </tr>
-            </tbody>
-          </table>
-          </div>
+          <UtilizationTable />
         </div>
   	)}
 
@@ -135,44 +86,15 @@ constructor(props){
             <Doughnut data={data} options={{animateRotate: true}} width="250" height="250"/>
           </div>
           <div className="flex-1">
-            <span className="ratio yellow">{ratio}%</span><br />
-            <span className="factor-info">
-            You have {counter} open {creditcard}.<br /><br />
-            Your total credit limit is: {limit}<br />
-            Your total credit use is: {use}<br />
-            Your total available credit is: {available}<br />
-            </span>
+            <ul className="factor-info">
+              <li className="ratio yellow">{ratio}%</li>
+              <li>You have {counter} open {creditcard}.</li>
+              <li>Your total credit limit is: {limit}</li>
+              <li>Your total credit use is: {use}</li>
+              <li>Your total available credit is: {available}</li>
+            </ul>
           </div>
-          <div className="center factor-info">
-          <table className="flex-1 dark">
-            <tbody>
-              <tr>
-                <td className="t-title">Utilization Ratio</td>
-                <td className="t-title">Result</td>
-              </tr>
-              <tr>
-                <td>0-9%</td>
-                <td className="green">Excellent</td>
-              </tr>
-              <tr>
-                <td>10-29%</td>
-                <td className="green">Good</td>
-              </tr>
-              <tr>
-                <td>30-49%</td>
-                <td className="yellow">Fair</td>
-              </tr>
-              <tr>
-                <td>50-74%</td>
-                <td className="red">Poor</td>
-              </tr>
-              <tr>
-                <td>75-100%</td>
-                <td className="red">Very Poor</td>
-              </tr>
-            </tbody>
-          </table>
-          </div>
+          <UtilizationTable />
         </div>
   	)}
 
@@ -183,44 +105,15 @@ constructor(props){
             <Doughnut data={data} options={{animateRotate: true}} width="250" height="250"/>
           </div>
           <div className="flex-1">
-            <span className="ratio red">{ratio}%</span><br />
-            <span className="factor-info">
-            You have {counter} open {creditcard}.<br /><br />
-            Your total credit limit is: {limit}<br />
-            Your total credit use is: {use}<br />
-            Your total available credit is: {available}<br />
-            </span>
+            <ul className="factor-info">
+              <li className="ratio red">{ratio}%</li>
+              <li>You have {counter} open {creditcard}.</li>
+              <li>Your total credit limit is: {limit}</li>
+              <li>Your total credit use is: {use}</li>
+              <li>Your total available credit is: {available}</li>
+            </ul>
           </div>
-          <div className="center factor-info">
-          <table className="flex-1 dark">
-            <tbody>
-              <tr>
-                <td className="t-title">Utilization Ratio</td>
-                <td className="t-title">Result</td>
-              </tr>
-              <tr>
-                <td>0-9%</td>
-                <td className="green">Excellent</td>
-              </tr>
-              <tr>
-                <td>10-29%</td>
-                <td className="green">Good</td>
-              </tr>
-              <tr>
-                <td>30-49%</td>
-                <td className="yellow">Fair</td>
-              </tr>
-              <tr>
-                <td>50-74%</td>
-                <td className="red">Poor</td>
-              </tr>
-              <tr>
-                <td>75-100%</td>
-                <td className="red">Very Poor</td>
-              </tr>
-            </tbody>
-          </table>
-          </div>
+          <UtilizationTable />
         </div>
   	)}
 
@@ -231,44 +124,15 @@ constructor(props){
             <Doughnut data={data} options={{animateRotate: true}} width="250" height="250"/>
           </div>
           <div className="flex-1">
-            <span className="ratio red">{ratio}%</span><br />
-            <span className="factor-info">
-            You have {counter} open {creditcard}.<br /><br />
-            Your total credit limit is: {limit}<br />
-            Your total credit use is: {use}<br />
-            Your total available credit is: {available}<br />
-            </span>
+            <ul className="factor-info">
+              <li className="ratio red">{ratio}%</li>
+              <li>You have {counter} open {creditcard}.</li>
+              <li>Your total credit limit is: {limit}</li>
+              <li>Your total credit use is: {use}</li>
+              <li>Your total available credit is: {available}</li>
+            </ul>
           </div>
-          <div className="center factor-info">
-          <table className="flex-1 dark">
-            <tbody>
-              <tr>
-                <td className="t-title">Utilization Ratio</td>
-                <td className="t-title">Result</td>
-              </tr>
-              <tr>
-                <td>0-9%</td>
-                <td className="green">Excellent</td>
-              </tr>
-              <tr>
-                <td>10-29%</td>
-                <td className="green">Good</td>
-              </tr>
-              <tr>
-                <td>30-49%</td>
-                <td className="yellow">Fair</td>
-              </tr>
-              <tr>
-                <td>50-74%</td>
-                <td className="red">Poor</td>
-              </tr>
-              <tr>
-                <td>75-100%</td>
-                <td className="red">Very Poor</td>
-              </tr>
-            </tbody>
-          </table>
-          </div>
+          <UtilizationTable />
         </div>
   	)}
 
@@ -278,7 +142,7 @@ constructor(props){
     )}
   }
 
-  renderOpenCreditCards() {
+  openCreditCards() {
     var table = [];
 
     for(var i = 0; i < this.props.state.opened.length; i += 1) {
@@ -294,6 +158,20 @@ constructor(props){
      }))
   }
 
+  headerUse() {
+    for(var i = 0; i < this.props.state.collection.length; i += 1){
+    if(this.state.counter_use > 0){
+    return (
+      <tr>
+        <th className="t-title">Opened</th>
+        <th className="t-title">Creditor</th>
+        <th className="t-title">Credit Limit</th>
+        <th className="t-title">Credit Use</th>
+        <th className="t-title">Current Status</th>
+      </tr>
+    )}}
+  }
+
   render() {
     return (
       <div id="credit-card-use" className="flex-1">
@@ -302,17 +180,11 @@ constructor(props){
           percentage of your credit limits that you're using. It's calculated 
           by dividing your total credit balances by your total credit limits on open accounts.</span><br /><br />
           <span className="factor-info">A good rule of thumb is to keep your balances below 30% of your limit.</span><br /><br />
-          <span className="graphic-description flex-5">{this.renderUseRatio()}</span>
+          <span className="graphic-description flex-5">{this.useRatio()}</span>
             <table className="dark">
               <tbody>
-              <tr>
-                <th className="t-title">Opened</th>
-                <th className="t-title">Creditor</th>
-                <th className="t-title">Credit Limit</th>
-                <th className="t-title">Credit Use</th>
-                <th className="t-title">Current Status</th>
-              </tr>
-              {this.renderOpenCreditCards()}
+              {this.headerUse()}
+              {this.openCreditCards()}
               </tbody>
             </table>
       </div>
