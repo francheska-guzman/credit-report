@@ -194,7 +194,13 @@ ul {
 }
 
 .t-title {
-  background: #3d3737;
+  background: #e0d9d9;
+  color: #1c1919;
+}
+
+table {
+  border: 1px solid #e5e3e3;
+  background: #efeded;
 }
 
 th {

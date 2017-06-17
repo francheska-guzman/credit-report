@@ -59,13 +59,13 @@ constructor(props){
     return (
       <div id="credit-age" className="flex-1">
         <h4 className="center blue">Credit Age</h4>
-        {this.renderAverage()}
+        <h2 className="center">Average age of open accounts:</h2>{this.renderAverage()}
         <table className="dark">
           <tbody>
           <tr>
-            <th>Creditor</th>
-            <th>Type of Account</th>
-            <th>Age of Account</th>
+            <th className="t-title">Creditor</th>
+            <th className="t-title">Type of Account</th>
+            <th className="t-title">Age of Account</th>
           </tr>
           {this.renderYearsMonths()}
           </tbody>

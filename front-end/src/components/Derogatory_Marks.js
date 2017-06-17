@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Pie } from 'react-chartjs';
+import { Doughnut } from 'react-chartjs';
 
 class DerogatoryMarks extends Component {
   constructor(props){
@@ -7,6 +7,7 @@ class DerogatoryMarks extends Component {
     this.renderMessage = this.renderMessage.bind(this);
     this.renderCollectionAccounts = this.renderCollectionAccounts.bind(this);
     this.renderCollectionGraphic = this.renderCollectionGraphic.bind(this);
+    this.renderTableHeader = this.renderTableHeader.bind(this);
   }
 
   renderMessage() {
@@ -21,7 +22,8 @@ class DerogatoryMarks extends Component {
       return (
         <div className="center">
           <h2>We noticed a negative mark on your report.</h2>
-          <span className="factor-info">Derogatory marks generally stay on your report for 7-10 years, but their effects can start to fade over time.</span>
+          <span className="factor-info">Derogatory marks generally stay on your report 
+          for 7-10 years, but their effects can start to fade over time.</span>
         </div>
     )}
 
@@ -54,7 +56,8 @@ class DerogatoryMarks extends Component {
 
     if (collection_amount !== 0 && paid !== 0) {
       return (
-        <div className="center"><Pie data={data} options={{animateScale: true}} width="600" height="250"/></div>
+        <div className="center"><Doughnut data={data} 
+        options={{animateScale: true}} width="600" height="250"/></div>
     )};
   }
 
@@ -74,26 +77,35 @@ class DerogatoryMarks extends Component {
     })
   )}
 
+  renderTableHeader() {
+    for(var i = 0; i < this.props.state.collection.length; i += 1){
+    if(this.props.state.collection[i] === "In Collection" || this.props.state.public_record === "Have Public Record"){
+    return (
+      <tr>
+        <th className="t-title">Opened</th>
+        <th className="t-title">Creditor</th>
+        <th className="t-title">Collection Agency</th>
+        <th className="t-title">Account Type</th>
+        <th className="t-title">Collection Amount</th>
+        <th className="t-title">Amount Paid to Collection</th>
+        <th className="t-title">Current Status</th>  
+      </tr> 
+    )}}
+  }
+
   render() {
     return (
       <div id="derogatory-marks" className="flex-1">
         <h4 className="center green">Derogatory Marks</h4>
         {this.renderMessage()}
+        <br />
+        {this.renderCollectionGraphic()}
         <table className="dark">
           <tbody>
-          <tr>
-            <th className="t-title">Opened</th>
-            <th className="t-title">Creditor</th>
-            <th className="t-title">Collection Agency</th>
-            <th className="t-title">Account Type</th>
-            <th className="t-title">Collection Amount</th>
-            <th className="t-title">Amount Paid to Collection</th>
-            <th className="t-title">Current Status</th>  
-          </tr> 
+            {this.renderTableHeader()}
             {this.renderCollectionAccounts()}
           </tbody>
         </table>
-        {this.renderCollectionGraphic()}
       </div>
     );
   }
