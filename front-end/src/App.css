@@ -255,9 +255,17 @@ th {
 
 #payment-history {
   background: #f2f2f2;
-  height: 400px;
+  height: auto;
   padding: 20px;
   margin: 0 40px 40px 40px;
+}
+
+.green-background {
+  background: #0E9E17;
+}
+
+.red-background {
+  background: #c1091f;
 }
 
 /* Total Accounts */
