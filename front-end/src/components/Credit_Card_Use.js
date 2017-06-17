@@ -48,8 +48,8 @@ constructor(props){
             </span>
           </div>
         </div>
-  	  )
-  	}
+  	)}
+
   	else if(ratio < 29) {
   	  return (
         <div className="flex">
@@ -66,8 +66,8 @@ constructor(props){
             </span>
           </div>
         </div>
-  	  )
-  	}
+  	)}
+
   	else if(ratio < 49) {
   	  return (
         <div className="flex">
@@ -84,8 +84,8 @@ constructor(props){
             </span>
           </div>
         </div>
-  	  )
-  	}
+  	)}
+
   	else if(ratio < 74) {
   	  return (
         <div className="flex">
@@ -102,8 +102,8 @@ constructor(props){
             </span>
           </div>
         </div>
-  	  )
-  	}
+  	)}
+
   	else if(ratio < 100) {
   	  return (
         <div className="flex">
@@ -120,27 +120,28 @@ constructor(props){
             </span>
           </div>
         </div>
-  	  )
-  	}
+  	)}
+
     else {
       return (
         <div>You have 0 open credit card.</div>
-      )
-    }
+    )}
   }
 
   renderOpenCreditCards() {
-    var table = []
+    var table = [];
+
     for(var i = 0; i < this.props.state.opened.length; i += 1) {
       if (this.props.state.account_type[i] === "Credit Card" && 
           this.props.state.current_status[i] === "Open") { 
-          table.push([<td>{this.props.state.opened[i]}</td>,<td>{this.props.state.creditor[i]}</td>,<td>{this.props.state.credit_limit[i]}</td>,<td>{this.props.state.credit_use[i]}</td>,<td>{this.props.state.current_status[i]}</td>]);
+          table.push([<td>{this.props.state.opened[i]}</td>,<td>{this.props.state.creditor[i]}</td>,
+            <td>{this.props.state.credit_limit[i]}</td>,<td>{this.props.state.credit_use[i]}</td>,
+            <td>{this.props.state.current_status[i]}</td>]);
         }
       }
-      return (table.map(function(table){
-        return <tr>{table}</tr>
-     })
-    )
+      return (table.map(function(table, i){
+        return <tr key={i+1}>{table}</tr>
+     }))
   }
 
   render() {
@@ -150,6 +151,7 @@ constructor(props){
         <span>{this.renderUseRatio()}</span><br />
         <span className="factor-info">A good rule of thumb is to keep your balances below 30% of your limit.</span>
         <table className="dark">
+          <tbody>
           <tr>
             <th className="t-title">Opened</th>
             <th className="t-title">Creditor</th>
@@ -157,7 +159,8 @@ constructor(props){
             <th className="t-title">Credit Use</th>
             <th className="t-title">Current Status</th>
           </tr>
-        {this.renderOpenCreditCards()}
+          {this.renderOpenCreditCards()}
+          </tbody>
         </table>
       </div>
     );
