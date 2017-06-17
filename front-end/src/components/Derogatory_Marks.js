@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Doughnut } from 'react-chartjs';
+import { Pie } from 'react-chartjs';
 
 class DerogatoryMarks extends Component {
   constructor(props){
@@ -48,13 +48,13 @@ class DerogatoryMarks extends Component {
     var pending = collection_amount - paid;
 
     let data = [
-            {color: "#3c076d", label: "Amount pending to be paid:", value: pending},
-            {color: "#0a72b2", label: "Amount you already paid to collection", value: paid}
+            {color: "#3c076d", label: "Total amount pending to be paid", value: pending},
+            {color: "#0a72b2", label: "Total amount you already paid to collection", value: paid}
     ];
 
     if (collection_amount !== 0 && paid !== 0) {
       return (
-        <div className="center"><Doughnut data={data} options={{animateRotate: true}} width="600" height="250"/></div>
+        <div className="center"><Pie data={data} options={{animateScale: true}} width="600" height="250"/></div>
     )};
   }
 

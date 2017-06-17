@@ -44,10 +44,10 @@ constructor(props){
       if(this.props.state.current_status[z] === "Open") {
         row.push([<td>{this.props.state.creditor[z]}</td>,
         <td>{this.props.state.account_type[z]}</td>,<td>{years_months[z]}</td>])
-      }}
+    }}
 
     return (row.map(function(row, i){
-      return <tr key={i+1}>{row}</tr> 
+      return <tr key={i+1}>{row}</tr>
   }))
   }
 
