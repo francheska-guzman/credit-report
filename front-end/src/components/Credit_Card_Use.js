@@ -13,7 +13,7 @@ constructor(props){
   utilizationRatio() {
     var use = 0;
     var limit = 0;
-    var counter = null;
+    var counter = 0;
 
     for(var i = 0; i < this.props.state.account_type.length; i += 1) {
     // If the account type is a credit card, and is currently open:

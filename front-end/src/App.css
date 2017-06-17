@@ -262,10 +262,19 @@ th {
 
 .green-background {
   background: #0E9E17;
+  height: 20px;
+  width: 20px;
 }
 
 .red-background {
   background: #c1091f;
+  height: 20px;
+  width: 20px;
+}
+
+.month {
+  height: 20px;
+  width: 20px;
 }
 
 /* Total Accounts */
@@ -280,7 +289,7 @@ th {
 /* My Account */
 
 .profile {
-  height: 600px;
+  height: 700px;
   width: 100%;
   background: #fcfcfc;
 }
@@ -300,7 +309,7 @@ th {
 
 .help-center {
   background: #1c1b1b;
-  height: 600px;
+  height: 700px;
 }
 
 /* Welcome */
@@ -331,7 +340,7 @@ input[type=text] {
 }
 
 .signIn:hover {
-  background: #bcb8b8;
+  background: #ccc3c3;
 }
 
 .signOff {
@@ -344,7 +353,7 @@ input[type=text] {
 }
 
 .signOff:hover {
-  background: #bcb8b8;
+  background: #ccc3c3;
 }
 
 .hint {
@@ -352,11 +361,11 @@ input[type=text] {
   border: none;
   font-family: 'Quicksand', sans-serif;
   font-size: 26px;
-  color: #f9f9f9;
+  color: #ffffff;
 }
 
 .hint:hover {
-  color: #FFFFFF;
+  color: #333030;
 }
 
 .wrap-message {
@@ -375,4 +384,7 @@ input[type=text] {
 .footer {
   background: #d8d4d4;
   height: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }

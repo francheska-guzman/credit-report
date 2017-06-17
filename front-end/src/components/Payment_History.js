@@ -7,6 +7,9 @@ class PaymentHistory extends Component {
   	accounts_ph: []
   }
   this.componentWillMount = this.componentWillMount.bind(this);
+  this.tableCreditor = this.tableCreditor.bind(this);
+  this.tableCreditLimit = this.tableCreditLimit.bind(this);
+  this.tableCreditUse = this.tableCreditUse.bind(this);
   this.tableOfPayments = this.tableOfPayments.bind(this);
   }
 
@@ -24,13 +27,13 @@ class PaymentHistory extends Component {
 	  for(var n = 0; n < this.props.state.payment_history[i].length; n += 1) {
 	  //console.log("Account: " + i + ", Payments for the Month: " + n + ": " +this.props.state.payment_history[i][n]);
 	  	// If user made a payment (true), render green color.
-	  	if(this.props.state.payment_history[i][n] === "true") {
-	  	single_account.push('<span className="green-background"></span>')
+	  	if(this.props.state.payment_history[i][n] === true) {
+	  	single_account.push(<td className="green-background"></td>);
 	  	}
 	  	// Otherwise, render red color.
-	  	else {
-	  	single_account.push('<span className="red-background"><span>')
-		}
+	  	else if(this.props.state.payment_history[i][n] === false) {
+	  	single_account.push(<td className="red-background"></td>);
+		  }
 	  }
 	  // When the 12 months finish, then push to this other array.
 	  accounts.push(single_account)
@@ -42,8 +45,28 @@ class PaymentHistory extends Component {
     });
   }
 
+  tableCreditor(){
+    return (this.props.state.creditor.map(function(creditor, c){
+      return <tr><td key={c+1}>{creditor}</td></tr>
+    }))
+  }
+
+  tableCreditLimit(){
+    return (this.props.state.credit_limit.map(function(limit, l){
+      return <tr><td key={l+1}>{limit}</td></tr>
+    }))
+  }
+
+  tableCreditUse(){
+    return (this.props.state.credit_use.map(function(use, u){
+      return <tr><td key={u+1}>{use}</td></tr>
+    }))
+  }
+
   tableOfPayments(){
-  	console.log(this.state.accounts_ph)
+    return (this.state.accounts_ph.map(function(months, m){
+      return <tr><td key={m+1}>{months}</td></tr>
+    }))
   }
 
   render() {
@@ -52,16 +75,18 @@ class PaymentHistory extends Component {
       <div className="center">
         <h4 className="purple">Payment History</h4>
       </div>
-        <table className="dark">
+        <table className="dark factor-info">
      	<tbody>
 	      <tr>
-	      	<th>Creditor</th>
-	      	<th>Credit Limit</th>
-	      	<th>Credit Use</th>
-	      	<th>Current Status</th>
-	      	<th>Payment History</th>
+	      	<th className="t-title month">Creditor</th>
+	      	<th className="t-title month">Credit Limit</th>
+	      	<th className="t-title month">Credit Use</th>
+          <th className="t-title month">Payment History<br/>J F M A M J J A S O N D</th>
 	      </tr>
-		  {this.tableOfPayments()}
+        <td>{this.tableCreditor()}</td>
+        <td>{this.tableCreditLimit()}</td>
+        <td>{this.tableCreditUse()}</td>
+        <td className="center">{this.tableOfPayments()}</td>
 	    </tbody>
         </table>
       </div>
