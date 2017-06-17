@@ -3,99 +3,148 @@ import React, { Component } from 'react';
 class CreditAge extends Component {
 constructor(props){
   super(props);
+  // console.log(props);
   this.state = {
-    num_of_years: [],
-    num_of_months: [],
-    counter_age: 0
+    creditor_ca: [],
+    account_type_ca: [],
+    num_of_years_ca: [],
+    num_of_months_ca: [],
+    years_months_ca: []
   }
-  this.ageOfAccounts = this.ageOfAccounts.bind(this);
+  this.componentWillMount = this.componentWillMount.bind(this);
+  this.joinYearsMonths = this.joinYearsMonths.bind(this);
+  this.headerCreditAge = this.headerCreditAge.bind(this);
+  this.tableCreditAge = this.tableCreditAge.bind(this);
   this.ageAverage = this.ageAverage.bind(this);
   }
 
-  ageOfAccounts() {
+  componentWillMount() {
+    // Get today's date.
     var today = new Date();
+    // Get only the year.
     var current_year = today.getFullYear();
-    var counter = 0;
-    var year_opened = 0;
+    // Local variables.
     var year_per_account = [];
-    var num_of_years = [];
-    var month_opened = 0;
     var month_per_account = [];
-    var num_of_months = [];
-    var years_months = [];
-    var row = [];
+    var account_type = [];
+    var creditor = [];
+    var year_opened = 0;
+    var years = 0;
+    var month_opened = 0;
+    var months = 0;
 
+      // Check which accounts are Open and save creditor, account type, number of years and months.
       for(var i = 0; i < this.props.state.creditor.length; i += 1) {
-      	if(this.props.state.current_status[i] === "Open") {
-    	  	year_opened = this.props.state.opened[i].split("-")[2];
-    	  	year_per_account.push(year_opened);
-          console.log(year_per_account);
-
+        // console.log(this.props.state.current_status[i])
+        if(this.props.state.current_status[i] === "Open") {
+          // About the account
+          creditor.push(this.props.state.creditor[i]);
+          account_type.push(this.props.state.account_type[i]);
+          // Years
+          year_opened = this.props.state.opened[i].split("-")[2];
+          years = (current_year - year_opened);
+          year_per_account.push(years);
+          // Months
           month_opened = this.props.state.opened[i].split("-")[0]; 
-          month_per_account.push(month_opened);
-    	  }
-    	  counter += 1;
-    	}
-
-    	for(var x = 0; x < year_per_account.length; x += 1) {
-        num_of_years.push(current_year - Number(year_per_account[x]));
-        num_of_months.push(12 - Number(month_per_account[x]));
-    	}
-
-      for(var y = 0; y < year_per_account.length; y += 1) {
-        years_months.push(num_of_years[y] + " yrs " + num_of_months[y] + " mos")
+          months = (12 - Number(month_opened));
+          month_per_account.push(months);
+        }
       }
 
-      for(var z = 0; z < this.props.state.current_status.length; z += 1) {
-        if(this.props.state.current_status[z] === "Open") {
-          row.push([<td>{this.props.state.creditor[z]}</td>,
-          <td>{this.props.state.account_type[z]}</td>,<td>{years_months[z]}</td>])
-      }}
+      // Setting the state by reference the local variables.
+      this.setState({ 
+        creditor_ca: creditor,
+        account_type_ca: account_type,
+        num_of_years_ca: year_per_account,
+        num_of_months_ca: month_per_account
+      }, function() {
+        this.joinYearsMonths();
+     });
+  }
 
+  
+  joinYearsMonths() {
+    // Local variable.
+    var years_months = [];
+
+      for(var y = 0; y < this.state.creditor_ca.length; y += 1) {
+        years_months.push(this.state.num_of_years_ca[y] + " yrs, " + this.state.num_of_months_ca[y] + " mos")
+      }
+
+      // Setting the state by reference the local variable.
       this.setState({
-        num_of_years: num_of_years,
-        num_of_months: num_of_months,
-        counter_age: counter
-      })
+        years_months_ca: years_months
+      });
+  }
 
+  tableCreditAge() {
+    // Local variables.
+    var row = [];
+
+      // Looping to push into an array each row with the purpose of render.
+      for(var z = 0; z < this.state.creditor_ca.length; z += 1) {
+        row.push([
+          <td key={"Creditor_"+z+1}>{this.state.creditor_ca[z]}</td>,
+          <td key={"AccountType_"+z+1}>{this.state.account_type_ca[z]}</td>,
+          <td key={"YearsMonths_"+z+1}>{this.state.years_months_ca[z]}</td>
+        ]);
+      }
+
+      // Render
       return (row.map(function(row, i){
         return <tr key={i+1}>{row}</tr>
-    }))
-      
+      }));
   }
 
   ageAverage() {
+    // Local variable.
     var sum_years = 0;
     var sum_months = 0;
     var numerator = 0;
+    var denominator = 0;
     var result = 0;
 
-      for(var i = 0; i < this.state.counter_age; i += 1){
-        sum_years += this.state.num_of_years[i];
-        sum_months += this.state.num_of_months[i];
+      for(var n = 0; n < this.state.creditor_ca.length; n += 1){
+        sum_years += this.state.num_of_years_ca[n];
+        sum_months += this.state.num_of_months_ca[n];
+        denominator += 1;
       }
 
       numerator = sum_years + (sum_months/12);
-      result = (numerator/this.state.counter_age).toFixed(2);
+      result = (numerator/denominator).toFixed(2);
 
+    if(this.state.creditor_ca[0] !== []) {
       return (
-        <span className="orange">{result} yrs</span>
-      )
+        <h2 className="center">Average age of open accounts: <span>{result} yrs</span></h2>
+    )}
+
+    else {
+      return (
+        <h2 className="center">Unable to calculate the average, because you have 0 opened accounts.</h2>
+    )}
+
+  }
+
+  headerCreditAge() {
+    if(this.state.creditor_ca[0] !== []) {
+      return (
+      <tr>
+        <th className="t-title">Creditor</th>
+        <th className="t-title">Type of Account</th>
+        <th className="t-title">Age of Account</th>
+      </tr>
+    )};
   }
 
   render() {
     return (
       <div id="credit-age" className="flex-1">
         <h4 className="center blue">Credit Age</h4>
-        <h2 className="center">Average age of open accounts: {this.ageAverage()}</h2>
+          {this.ageAverage()}
         <table className="dark">
           <tbody>
-          <tr>
-            <th className="t-title">Creditor</th>
-            <th className="t-title">Type of Account</th>
-            <th className="t-title">Age of Account</th>
-          </tr>
-          {this.ageOfAccounts()}
+          {this.headerCreditAge()}
+          {this.tableCreditAge()}
           </tbody>
         </table>
       </div>
