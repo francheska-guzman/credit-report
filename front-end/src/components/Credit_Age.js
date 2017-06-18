@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AgeTable from './Age_Table';
 
 class CreditAge extends Component {
 constructor(props){
@@ -16,6 +17,7 @@ constructor(props){
   this.headerCreditAge = this.headerCreditAge.bind(this);
   this.tableCreditAge = this.tableCreditAge.bind(this);
   this.ageAverage = this.ageAverage.bind(this);
+  this.headerAgeTable = this.headerAgeTable.bind(this);
   }
 
   componentWillMount() {
@@ -113,9 +115,19 @@ constructor(props){
       numerator = sum_years + (sum_months/12);
       result = (numerator/denominator).toFixed(2);
 
-    if(this.state.creditor_ca[0] !== []) {
+    if(this.state.creditor_ca[0] !== [] && result < 5) {
       return (
-        <h2 className="center">Average age of open accounts: <span>{result} yrs</span></h2>
+        <h2 className="center">Average age of open accounts: <span className="red">{result} yrs</span></h2>
+    )}
+
+    else if(this.state.creditor_ca[0] !== [] && result <= 7) {
+      return (
+        <h2 className="center">Average age of open accounts: <span className="yellow">{result} yrs</span></h2>
+    )}
+
+    else if(this.state.creditor_ca[0] !== [] && result > 7) {
+      return (
+        <h2 className="center">Average age of open accounts: <span className="green">{result} yrs</span></h2>
     )}
 
     else {
@@ -136,11 +148,19 @@ constructor(props){
     )};
   }
 
+  headerAgeTable() {
+    if(this.state.creditor_ca[0] !== []) {
+      return (
+      <AgeTable />
+    )};
+  }
+
   render() {
     return (
       <div id="credit-age" className="flex-1">
         <h4 className="center blue">Credit Age</h4>
           {this.ageAverage()}
+          {this.headerAgeTable()}
         <table className="dark">
           <tbody>
           {this.headerCreditAge()}

@@ -180,6 +180,25 @@ ul {
   margin: 0 40px 40px 40px;
 }
 
+.r-background {
+  background: #c1091f;
+  width: 60px;
+}
+
+.y-background {
+  background: #CCB108;
+  width: 60px;
+}
+
+.g-background {
+  background: #0E9E17;
+  width: 60px;
+}
+
+.centralize {
+  margin: auto;
+}
+
 /* Credit Card Use */
 
 #credit-card-use {
