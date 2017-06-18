@@ -83,7 +83,7 @@ class TotalAccounts extends Component {
   	if(this.state.counter_open > 0) {
   	  return (
   	  	<div className="flex-1">
-  	  	<h2>Your open accounts:</h2>
+  	  	<h2>Your open accounts: {this.state.counter_open}</h2>
 	  	  <table className="dark">
 		  <tbody>
 		    <tr>
@@ -112,7 +112,7 @@ class TotalAccounts extends Component {
   	if(this.state.counter_closed > 0) {
   	  return (
   	  	<div className="flex-1">
-  	  	<h2>Your closed accounts:</h2>
+  	  	<h2>Your closed accounts: {this.state.counter_closed}</h2>
 	  	  <table className="dark">
 		  <tbody>
 		    <tr>
@@ -142,6 +142,7 @@ class TotalAccounts extends Component {
       <div id="total-accounts" className="flex-1">
         <h4 className="center orange">Total Accounts</h4>
         <h2 className="center">You have a total of {this.totalAccounts()} accounts.</h2>
+        <h3 className="center">Lenders typically like to see that you've used a variety of accounts responsibly.</h3>
         <AccountsTable />
         {this.renderOpenAccounts()}
         {this.renderClosedAccounts()}

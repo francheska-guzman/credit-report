@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Doughnut } from 'react-chartjs';
+import { Pie } from 'react-chartjs';
 
 class DerogatoryMarks extends Component {
   constructor(props){
@@ -56,8 +56,9 @@ class DerogatoryMarks extends Component {
 
     if (collection_amount !== 0 && paid !== 0) {
       return (
-        <div className="center"><Doughnut data={data} 
-        options={{animateScale: true}} width="600" height="250"/></div>
+        <div className="center">
+        <Pie data={data} options={{animateScale: true}} width="600" height="250"/>
+        </div>
     )};
   }
 
