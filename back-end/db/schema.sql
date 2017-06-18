@@ -137,6 +137,8 @@ INSERT INTO account_details (user_id, account_type, opened, creditor, credit_lim
   (2, 3, '9-22-2009', 'FedLoan Servicing', 4500, 3595, 2, 1, null, null),
   (2, 1, '2-09-2015', 'JCPenney, Synchrony Bank', 1000, 398, 1, 1, null, null),
   (2, 1, '4-11-2014', 'Target Credit Card, TD Bank USA', 2300, 292, 1, 1, null, null),
+  (1, 1, '11-5-2009', 'CitiBank Credit Card', 2500, 1904, 1, 1, null, null),
+  (1, 2, '3-1-2016', 'JP Morgan Chase', 5000, 1500, 1, 1, null, null),
   (2, 1, '6-23-2015', 'Capital One', 7100, 5232, 2, 2, 'XYZ Collection Agency', 1350),
   (2, 4, '9-17-2016', 'Bank of America', 12000, 8300, 1, 1, null, null),
   (2, 1, '6-20-2008', 'Best Buy Visa, Cibibank', 2500, 403, 1, 1, null, null);
@@ -158,6 +160,8 @@ INSERT INTO payment_history (jan, feb, mar, apr, may, jun, jul, aug, sep, oct, n
   (TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, FALSE),
   (FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
   (TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, FALSE),
+  (null, null, null, null, null, null, null, TRUE, TRUE, TRUE, TRUE, TRUE),
+  (TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
   (TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE),
   (TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
   (TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE);
