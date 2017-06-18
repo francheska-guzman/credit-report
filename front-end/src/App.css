@@ -132,6 +132,10 @@ ul {
   text-align: center;
 }
 
+.big {
+  font-size: 80px;
+}
+
 /* Credit Factors */
 
 .credit-factors {

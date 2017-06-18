@@ -22,7 +22,8 @@ class Dashboard extends Component {
       <div className="dashboard">
         <div className="flex">
           <div className="credit-score flex-1"><CreditScore 
-               state={this.props.state} /></div>
+               state={this.props.state} />
+          </div>
           <div className="credit-factors flex-4"><CreditFactors 
                renderComponent={this.renderComponent} 
                state={this.props.state} /></div>
