@@ -26,14 +26,18 @@ class PaymentHistory extends Component {
 	  // Looping through each month of each account.
 	  for(var n = 0; n < this.props.state.payment_history[i].length; n += 1) {
 	  //console.log("Account: " + i + ", Payments for the Month: " + n + ": " +this.props.state.payment_history[i][n]);
-	  	// If user made a payment (true), render green color.
+	  	// If user paid at least the minimum payment due (true), render green color.
 	  	if(this.props.state.payment_history[i][n] === true) {
 	  	single_account.push(<td className="green-background"></td>);
 	  	}
-	  	// Otherwise, render red color.
+	  	// If user don't paid the bill in a particular month, render red color.
 	  	else if(this.props.state.payment_history[i][n] === false) {
 	  	single_account.push(<td className="red-background">✕</td>);
 		  }
+      // If no data, render grey.
+      else {
+      single_account.push(<td className="grey-background"></td>);
+      }
 	  }
 	  // When the 12 months finish, then push to this other array.
 	  accounts.push(single_account)
@@ -81,13 +85,13 @@ class PaymentHistory extends Component {
         <h3>Even one late payment could hurt your credit health, so stay mindful of your due dates. 
         A 100% on-time payment history is a good sign for lenders that you can reliably make payments.</h3>
       </div>
-        <table className="dark history">
+        <table className="centralize flex-1">
        	<tbody>
   	      <tr>
-  	      	<th className="month t-title">Creditor</th>
-  	      	<th className="month t-title">Credit Limit</th>
-  	      	<th className="month t-title">Credit Use</th>
-            <th className="month t-title">J F M A M J J A S O N D</th>
+  	      	<th className="month t-title factor-info">Creditor</th>
+  	      	<th className="month t-title factor-info">Credit Limit</th>
+  	      	<th className="month t-title factor-info">Credit Use</th>
+            <th className="month t-title factor-info">J F M A M J J A S O N D</th>
   	      </tr>
             <td>{this.tableCreditor()}</td>
             <td>{this.tableCreditLimit()}</td>

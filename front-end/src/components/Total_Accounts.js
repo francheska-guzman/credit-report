@@ -60,7 +60,7 @@ class TotalAccounts extends Component {
   	  return (
   	  	<div className="flex-1">
   	  	<h2>Your open accounts:</h2>
-	  	  <table className="flex-1 centralize">
+	  	  <table className="dark">
 		  <tbody>
 		    <tr>
 			  <th className="t-title factor-info">Creditor</th>
@@ -76,7 +76,7 @@ class TotalAccounts extends Component {
   	  )
   	}
   	else {
-  	  <div className="flex"><h2>You have 0 open accounts.</h2></div>
+  	  <div className="flex-1"><h2>You have 0 open accounts.</h2></div>
   	}
   }
 
@@ -85,7 +85,7 @@ class TotalAccounts extends Component {
   	  return (
   	  	<div className="flex-1">
   	  	<h2>Your closed accounts:</h2>
-	  	  <table className="flex-1 centralize">
+	  	  <table className="dark">
 		  <tbody>
 		    <tr>
 			  <th className="t-title factor-info">Creditor</th>
@@ -101,7 +101,7 @@ class TotalAccounts extends Component {
   	  )
   	}
   	else {
-  	  <div className="flex"><h2>You have 0 closed accounts.</h2></div>
+  	  <div className="flex-1"><h2>You have 0 closed accounts.</h2></div>
   	}
   }
 
@@ -109,6 +109,7 @@ class TotalAccounts extends Component {
     return (
       <div id="total-accounts" className="flex-1">
         <h4 className="center orange">Total Accounts</h4>
+        <AccountsTable />
         {this.renderOpenAccounts()}
         {this.renderClosedAccounts()}
       </div>
