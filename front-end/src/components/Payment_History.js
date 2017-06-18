@@ -85,13 +85,13 @@ class PaymentHistory extends Component {
         <h3>Even one late payment could hurt your credit health, so stay mindful of your due dates. 
         A 100% on-time payment history is a good sign for lenders that you can reliably make payments.</h3>
       </div>
-        <table className="centralize flex-1">
+        <table className="dark history">
        	<tbody>
   	      <tr>
-  	      	<th className="month t-title factor-info flex-1">Creditor</th>
-  	      	<th className="month t-title factor-info flex-1">Credit Limit</th>
-  	      	<th className="month t-title factor-info flex-1">Credit Use</th>
-            <th className="month t-title factor-info flex-1">J F M A M J J A S O N D</th>
+  	      	<th className="month t-title factor-info">Creditor</th>
+  	      	<th className="month t-title factor-info">Credit Limit</th>
+  	      	<th className="month t-title factor-info">Credit Use</th>
+            <th className="month t-title factor-info">J F M A M J J A S O N D</th>
   	      </tr>
             <td>{this.tableCreditor()}</td>
             <td>{this.tableCreditLimit()}</td>

@@ -278,6 +278,10 @@ th {
   margin: 0 40px 40px 40px;
 }
 
+.history {
+  font-size: 18px;
+}
+
 .green-background {
   background: #0E9E17;
   height: 20px;

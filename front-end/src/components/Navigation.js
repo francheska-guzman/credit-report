@@ -15,7 +15,8 @@ class Navigation extends Component {
           	  <li className="nav-link"><NavLink to="/my-account">My Account</NavLink></li>
             </ul>
             </nav>
-          <Welcome getUserData={this.props.getUserData}
+          <Welcome 
+                 getUserData={this.props.getUserData}
                  signOff={this.props.signOff}
                  state={this.props.state} />
         </div>
