@@ -176,8 +176,8 @@ INSERT INTO public_record (public_record) VALUES
   ('Have Public Record');
 
 INSERT INTO user_information (first_name, middle_name, last_name, date_of_birth, place_of_birth, gender, marital_status, annual_household_income, street_address, apartment, city, state, zip_code, telephone_number, email, public_record, user_credit_score) VALUES 
-  ('Alex', 'Daniel', 'Rivera', '1-18-1979', 'New York, NY', 1, 2, 72000, '7601 River Road', '2A', 'North Bergen', 31, '07047', '917-123-4567', 'alex_rivera@gmail.com', 1, 675), 
-  ('Sofia', 'Isabelle', 'Monroe', '10-25-1984', 'San Francisco, CA', 2, 1, 94000, '6670 Doriana Street', '101', 'San Diego', 5, '92139', '415-789-1234', 'sofia_monroe@gmail.com', 1, 560);
+  ('Alex', 'Daniel', 'Rivera', '1-18-1979', 'New York, NY', 1, 2, 72000, '7601 River Road', '2A', 'North Bergen', 31, '07047', '917-123-4567', 'alex_rivera@gmail.com', 1, 710), 
+  ('Sofia', 'Isabelle', 'Monroe', '10-25-1984', 'San Francisco, CA', 2, 1, 94000, '6670 Doriana Street', '101', 'San Diego', 5, '92139', '415-789-1234', 'sofia_monroe@gmail.com', 1, 590);
 
 INSERT INTO account_details (user_id, account_type, opened, creditor, credit_limit, credit_use, current_status, collection, collection_agency, amount_paid_to_collection) VALUES 
   (1, 1, '12-3-2008', 'American Express', 5000, 3490, 1, 1, null, null),
