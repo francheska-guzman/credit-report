@@ -141,9 +141,9 @@ constructor(props){
     if(this.state.creditor_ca[0] !== []) {
       return (
       <tr>
-        <th className="t-title">Creditor</th>
-        <th className="t-title">Type of Account</th>
-        <th className="t-title">Age of Account</th>
+        <th className="t-title factor-info">Creditor</th>
+        <th className="t-title factor-info">Type of Account</th>
+        <th className="t-title factor-info">Age of Account</th>
       </tr>
     )};
   }

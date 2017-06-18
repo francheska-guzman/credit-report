@@ -161,11 +161,11 @@ constructor(props){
   headerUse() {
     return (
       <tr>
-        <th className="t-title">Opened</th>
-        <th className="t-title">Creditor</th>
-        <th className="t-title">Credit Limit</th>
-        <th className="t-title">Credit Use</th>
-        <th className="t-title">Current Status</th>
+        <th className="t-title factor-info">Opened</th>
+        <th className="t-title factor-info">Creditor</th>
+        <th className="t-title factor-info">Credit Limit</th>
+        <th className="t-title factor-info">Credit Use</th>
+        <th className="t-title factor-info">Current Status</th>
       </tr>
   )};
 

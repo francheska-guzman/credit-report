@@ -298,6 +298,11 @@ th {
   width: 20px;
 }
 
+.history {
+  font-size: 19px;
+  padding: 4px;
+}
+
 /* Total Accounts */
 
 #total-accounts {

@@ -48,28 +48,28 @@ class PaymentHistory extends Component {
   // Render creditor information.
   tableCreditor(){
     return (this.props.state.creditor.map(function(creditor, c){
-      return <tr><td key={c+1}>{creditor}</td></tr>
+      return <tr key={c+1}>{creditor}</tr>
     }))
   }
 
   // Render credit limit information.
   tableCreditLimit(){
     return (this.props.state.credit_limit.map(function(limit, l){
-      return <tr><td key={l+1}>{limit}</td></tr>
+      return <tr key={l+1}>{limit}</tr>
     }))
   }
 
   // Render credit use information.
   tableCreditUse(){
     return (this.props.state.credit_use.map(function(use, u){
-      return <tr><td key={u+1}>{use}</td></tr>
+      return <tr key={u+1}>{use}</tr>
     }))
   }
 
   // Render the table of payments.
   tableOfPayments(){
     return (this.state.accounts_ph.map(function(months, m){
-      return <tr><td key={m+1}>{months}</td></tr>
+      return <tr key={m+1}>{months}</tr>
     }))
   }
 
@@ -81,7 +81,7 @@ class PaymentHistory extends Component {
         <h3>Even one late payment could hurt your credit health, so stay mindful of your due dates. 
         A 100% on-time payment history is a good sign for lenders that you can reliably make payments.</h3>
       </div>
-        <table className="dark factor-info">
+        <table className="dark history">
        	<tbody>
   	      <tr>
   	      	<th className="month t-title">Creditor</th>

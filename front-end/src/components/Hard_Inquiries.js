@@ -55,9 +55,9 @@ class HardInquiries extends Component {
         <table className="dark">
           <tbody>
             <tr>
-              <td className="t-title factor-info">Creditor</td>
-              <td className="t-title factor-info">Posted</td>
-              <td className="t-title factor-info">Account Type</td>
+              <td className="t-title factor-info center">Creditor</td>
+              <td className="t-title factor-info center">Posted</td>
+              <td className="t-title factor-info center">Account Type</td>
             </tr>
               <td>{this.tableCreditor()}</td>
               <td>{this.tablePosted()}</td>
