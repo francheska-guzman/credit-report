@@ -29,16 +29,16 @@ class TotalAccounts extends Component {
   	for(var i = 0; i < this.props.state.creditor.length; i += 1) {
   	  if(this.props.state.current_status[i] === "Open") {
   	  	open_accounts.push([
-  	  	<td>{this.props.state.creditor[i]}</td>, <td>{this.props.state.account_type[i]}</td>,
-  	  	<td>{this.props.state.credit_limit[i]}</td>, <td>{this.props.state.credit_use[i]}</td>,
-  	  	<td>{this.props.state.opened[i]}</td>]);
+  	  	<td key={i+1}>{this.props.state.creditor[i]}</td>, <td key={i+2}>{this.props.state.account_type[i]}</td>,
+  	  	<td key={i+3}>{this.props.state.credit_limit[i]}</td>, <td key={i+4}>{this.props.state.credit_use[i]}</td>,
+  	  	<td key={i+5}>{this.props.state.opened[i]}</td>]);
         counter_open += 1;
   	  }
   	  else if(this.props.state.current_status[i] === "Closed") {
 		closed_accounts.push([
-  	  	<td>{this.props.state.creditor[i]}</td>, <td>{this.props.state.account_type[i]}</td>,
-  	  	<td>{this.props.state.credit_limit[i]}</td>, <td>{this.props.state.credit_use[i]}</td>,
-  	  	<td>{this.props.state.opened[i]}</td>]);
+  	  	<td key={i+1}>{this.props.state.creditor[i]}</td>, <td key={i+2}>{this.props.state.account_type[i]}</td>,
+  	  	<td key={i+3}>{this.props.state.credit_limit[i]}</td>, <td key={i+4}>{this.props.state.credit_use[i]}</td>,
+  	  	<td key={i+5}>{this.props.state.opened[i]}</td>]);
         counter_closed += 1;
   	  }
       counter += 1;

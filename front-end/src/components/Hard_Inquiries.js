@@ -12,19 +12,19 @@ class HardInquiries extends Component {
 
   tableCreditor(){
     return (this.props.state.inq_creditor.map(function(creditor, c){
-      return <tr><td key={c+1}>{creditor}</td></tr>
+      return <tr key={c}><td>{creditor}</td></tr>
     }))
   }
 
   tablePosted(){
     return (this.props.state.posted.map(function(posted, p){
-      return <tr><td key={p+1}>{posted}</td></tr>
+      return <tr key={p}><td>{posted}</td></tr>
     }))
   }
 
   tableAccountType(){
     return (this.props.state.inq_account_type.map(function(account, a){
-      return <tr><td key={a+1}>{account}</td></tr>
+      return <tr key={a}><td>{account}</td></tr>
     }))
   }
 

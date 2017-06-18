@@ -6,7 +6,13 @@ class Dashboard extends Component {
   constructor(props){
     super(props);
     this.state = {
-      component: null
+      component: null,
+      credit_age_result: null,
+      credit_card_use_result: null,
+      derogatory_marks_result: null,
+      hard_inquiries_result: null,
+      payment_history_result: null,
+      total_accounts_result: null
     }
     this.renderComponent = this.renderComponent.bind(this);
   }

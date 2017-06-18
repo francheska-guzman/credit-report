@@ -32,16 +32,16 @@ class PaymentHistory extends Component {
 	  //console.log("Account: " + i + ", Payments for the Month: " + n + ": " +this.props.state.payment_history[i][n]);
 	  	// If user paid at least the minimum payment due (true), render green color.
 	  	if(this.props.state.payment_history[i][n] === true) {
-	  	single_account.push(<td className="green-background"></td>);
+	  	single_account.push(<td key={n+1} className="green-background"></td>);
       paid += 1;
 	  	}
 	  	// If user don't paid the bill in a particular month, render red color.
 	  	else if(this.props.state.payment_history[i][n] === false) {
-	  	single_account.push(<td className="red-background">✕</td>);
+	  	single_account.push(<td key={n+1} className="red-background">✕</td>);
 		  }
       // If no data, render grey.
       else {
-      single_account.push(<td className="grey-background"></td>);
+      single_account.push(<td key={n+1} className="grey-background"></td>);
       }
       paid_unpaid_nodata += 1;
 	  }
@@ -87,6 +87,7 @@ class PaymentHistory extends Component {
 
   percentage() {
     var result = (this.state.paid/this.state.paid_unpaid_nodata).toFixed(2) * 100;
+
     return (
       <h2 className="flex-1">You paid the {result}% of your total payments.</h2>
     )
