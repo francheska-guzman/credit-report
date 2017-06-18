@@ -101,7 +101,7 @@ a {
 }
 
 a:hover {
-  color: #ffffff;
+  color: #6d6363;
 }
 
 ul {
@@ -315,7 +315,7 @@ th {
 /* My Account */
 
 .profile {
-  height: 700px;
+  min-height: 600px;
   width: 100%;
   background: #fcfcfc;
 }
@@ -334,8 +334,36 @@ th {
 /* Help Center */
 
 .help-center {
-  background: #1c1b1b;
-  height: 700px;
+  background: #ffffff;
+  height: auto;
+}
+
+.bone {
+  color: #605d5d;
+  margin: 10px;
+}
+
+.block {
+  display: flex;
+}
+
+.question {
+  color: #383434;
+  font-size: 20px;
+}
+
+.basic {
+  font-family: 'Quicksand', sans-serif;
+  padding: 20px;
+}
+
+.faq {
+  background: #f7f4f4;
+  padding: 20px;
+}
+
+.indent {
+  margin: 20px 30px;
 }
 
 /* Welcome */
