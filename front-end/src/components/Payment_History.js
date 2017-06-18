@@ -4,8 +4,11 @@ class PaymentHistory extends Component {
   constructor(props){
   super(props);
   this.state = {
-  	accounts_ph: []
+  	accounts_ph: [],
+    paid: 0,
+    paid_unpaid_nodata: 0
   }
+  this.percentage = this.percentage.bind(this);
   this.tableCreditor = this.tableCreditor.bind(this);
   this.tableCreditLimit = this.tableCreditLimit.bind(this);
   this.tableCreditUse = this.tableCreditUse.bind(this);
@@ -16,6 +19,8 @@ class PaymentHistory extends Component {
   componentWillMount() {
   // Local variable.
   let accounts = [];
+  let paid = 0;
+  let paid_unpaid_nodata = 0;
 
   	// Looping through each account.
 	for (var i = 0; i < this.props.state.payment_history.length; i += 1) {
@@ -28,6 +33,7 @@ class PaymentHistory extends Component {
 	  	// If user paid at least the minimum payment due (true), render green color.
 	  	if(this.props.state.payment_history[i][n] === true) {
 	  	single_account.push(<td className="green-background"></td>);
+      paid += 1;
 	  	}
 	  	// If user don't paid the bill in a particular month, render red color.
 	  	else if(this.props.state.payment_history[i][n] === false) {
@@ -37,12 +43,15 @@ class PaymentHistory extends Component {
       else {
       single_account.push(<td className="grey-background"></td>);
       }
+      paid_unpaid_nodata += 1;
 	  }
 	  // When the 12 months finish, then push to this other array.
 	  accounts.push(single_account)
     }
     this.setState({
-      accounts_ph: accounts
+      accounts_ph: accounts,
+      paid: paid,
+      paid_unpaid_nodata: paid_unpaid_nodata
     }, function() {
         this.tableOfPayments();
     });
@@ -76,12 +85,20 @@ class PaymentHistory extends Component {
     }))
   }
 
+  percentage() {
+    var result = (this.state.paid/this.state.paid_unpaid_nodata).toFixed(2) * 100;
+    return (
+      <h2 className="flex-1">You paid the {result}% of your total payments.</h2>
+    )
+  }
+
   render() {
     return (
       <div id="payment-history" className="flex-1">
       <div className="center">
         <h4 className="purple">Payment History</h4>
-        <h3>Even one late payment could hurt your credit health, so stay mindful of your due dates. 
+        {this.percentage()}
+        <h3 className="factor-info">Even one late payment could hurt your credit health, so stay mindful of your due dates. 
         A 100% on-time payment history is a good sign for lenders that you can reliably make payments.</h3>
       </div>
         <table className="dark history">
