@@ -12,7 +12,6 @@ constructor(props){
     num_of_months_ca: [],
     years_months_ca: []
   }
-  this.componentWillMount = this.componentWillMount.bind(this);
   this.joinYearsMonths = this.joinYearsMonths.bind(this);
   this.headerCreditAge = this.headerCreditAge.bind(this);
   this.tableCreditAge = this.tableCreditAge.bind(this);

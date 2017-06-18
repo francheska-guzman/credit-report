@@ -6,7 +6,6 @@ class PaymentHistory extends Component {
   this.state = {
   	accounts_ph: []
   }
-  this.componentWillMount = this.componentWillMount.bind(this);
   this.tableCreditor = this.tableCreditor.bind(this);
   this.tableCreditLimit = this.tableCreditLimit.bind(this);
   this.tableCreditUse = this.tableCreditUse.bind(this);

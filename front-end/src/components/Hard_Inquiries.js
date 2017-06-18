@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class HardInquiries extends Component {
   constructor(props){
   	super(props);
-  	console.log(props);
+  	// console.log(props);
     this.tableCreditor = this.tableCreditor.bind(this);
     this.tablePosted = this.tablePosted.bind(this);
     this.tableAccountType = this.tableAccountType.bind(this);

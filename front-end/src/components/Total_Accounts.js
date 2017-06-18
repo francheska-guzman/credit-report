@@ -11,7 +11,6 @@ class TotalAccounts extends Component {
       counter_open: 0,
       counter_closed: 0
     }
-    this.componentWillMount = this.componentWillMount.bind(this);
     this.totalAccounts = this.totalAccounts.bind(this);
     this.openAccounts = this.openAccounts.bind(this);
     this.closedAccounts = this.closedAccounts.bind(this);

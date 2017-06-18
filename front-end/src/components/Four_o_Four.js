@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 class FourOFour extends Component {
   render() {
     return (
-      <div className="flex">
-      404 Error
-      <br/>
-      Page Not Found
+      <div id="fof" className="flex">
+      	<div className="flex-1 centralize">
+        <h2 className="bigger center"><span className="num">404</span> Error</h2>
+        <h3 className="smaller center">Page Not Found</h3>
+        </div>
       </div>
     );
   }
