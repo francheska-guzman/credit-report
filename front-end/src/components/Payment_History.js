@@ -84,10 +84,10 @@ class PaymentHistory extends Component {
         <table className="dark factor-info">
        	<tbody>
   	      <tr>
-  	      	<th className="t-title month">Creditor</th>
-  	      	<th className="t-title month">Credit Limit</th>
-  	      	<th className="t-title month">Credit Use</th>
-            <th className="t-title month">J F M A M J J A S O N D</th>
+  	      	<th className="month t-title">Creditor</th>
+  	      	<th className="month t-title">Credit Limit</th>
+  	      	<th className="month t-title">Credit Use</th>
+            <th className="month t-title">J F M A M J J A S O N D</th>
   	      </tr>
             <td>{this.tableCreditor()}</td>
             <td>{this.tableCreditLimit()}</td>
