@@ -13,6 +13,12 @@ CREATE TABLE current_status(
   current_status VARCHAR(255)
 );
 
+CREATE TABLE us_credit_score(
+  id SERIAL PRIMARY KEY,
+  state VARCHAR(255),
+  state_average_score INT
+);
+
 CREATE TABLE genders(
   id SERIAL PRIMARY KEY,
   gender VARCHAR(255)
@@ -41,11 +47,12 @@ CREATE TABLE user_information(
   street_address VARCHAR(255),
   apartment VARCHAR(255),
   city VARCHAR(255),
-  state VARCHAR(255),
+  state INT REFERENCES us_credit_score(id),
   zip_code VARCHAR(255),
   telephone_number VARCHAR(255),
   email VARCHAR(255),
-  public_record INT REFERENCES public_record(id)
+  public_record INT REFERENCES public_record(id),
+  user_credit_score INT
 );
 
 CREATE TABLE account_details(
@@ -102,6 +109,58 @@ INSERT INTO current_status (current_status) VALUES
   ('Open'), 
   ('Closed');
 
+INSERT INTO us_credit_score (state, state_average_score) VALUES
+  ('Alabama', 656),
+  ('Alaska', 674),
+  ('Arizona', 674),
+  ('Arkansas', 653),
+  ('California', 677),
+  ('Colorado', 689),
+  ('Connecticut', 684),
+  ('DC', 661),
+  ('Delaware', 665),
+  ('Florida', 669),
+  ('Georgia', 644),
+  ('Hawaii', 691),
+  ('Idaho', 680),
+  ('Illinois', 679),
+  ('Indiana', 666),
+  ('Iowa', 686),
+  ('Kansas', 674),
+  ('Kentucky', 656),
+  ('Louisiana', 650),
+  ('Maine', 671),
+  ('Maryland', 667),
+  ('Massachusetts', 694),
+  ('Michigan', 678),
+  ('Minnesota', 707),
+  ('Mississipi', 642),
+  ('Missouri', 674),
+  ('Montana', 684),
+  ('Nebraska', 692),
+  ('Nevada', 658),
+  ('New Hampshire', 690),
+  ('New Jersey', 671),
+  ('New Mexico', 648),
+  ('New York', 692),
+  ('North Carolina', 660),
+  ('North Dakota', 700),
+  ('Ohio', 679),
+  ('Oklahoma', 660),
+  ('Oregon', 682),
+  ('Pennsylvania', 691),
+  ('Rhode Island', 672),
+  ('South Dakota', 655),
+  ('Tennesse', 666),
+  ('Texas', 657),
+  ('Utah', 678),
+  ('Vermont', 677),
+  ('Virginia', 679),
+  ('Washington', 682),
+  ('West Virginia', 660),
+  ('Wiscosing', 698),
+  ('Wyoming', 671);
+
 INSERT INTO genders (gender) VALUES 
   ('Male'), 
   ('Female');
@@ -116,9 +175,9 @@ INSERT INTO public_record (public_record) VALUES
   ('No Public Record'), 
   ('Have Public Record');
 
-INSERT INTO user_information (first_name, middle_name, last_name, date_of_birth, place_of_birth, gender, marital_status, annual_household_income, street_address, apartment, city, state, zip_code, telephone_number, email, public_record) VALUES 
-  ('Alex', 'Daniel', 'Rivera', '1-18-1979', 'New York, NY', 1, 2, 72000, '7601 River Road', '2A', 'North Bergen', 'NJ', '07047', '917-123-4567', 'alex_rivera@gmail.com', 1), 
-  ('Sofia', 'Isabelle', 'Monroe', '10-25-1984', 'San Francisco, CA', 2, 1, 94000, '6670 Doriana Street', '101', 'San Diego', 'CA', '92139', '415-789-1234', 'sofia_monroe@gmail.com', 1);
+INSERT INTO user_information (first_name, middle_name, last_name, date_of_birth, place_of_birth, gender, marital_status, annual_household_income, street_address, apartment, city, state, zip_code, telephone_number, email, public_record, user_credit_score) VALUES 
+  ('Alex', 'Daniel', 'Rivera', '1-18-1979', 'New York, NY', 1, 2, 72000, '7601 River Road', '2A', 'North Bergen', 31, '07047', '917-123-4567', 'alex_rivera@gmail.com', 1, 675), 
+  ('Sofia', 'Isabelle', 'Monroe', '10-25-1984', 'San Francisco, CA', 2, 1, 94000, '6670 Doriana Street', '101', 'San Diego', 5, '92139', '415-789-1234', 'sofia_monroe@gmail.com', 1, 560);
 
 INSERT INTO account_details (user_id, account_type, opened, creditor, credit_limit, credit_use, current_status, collection, collection_agency, amount_paid_to_collection) VALUES 
   (1, 1, '12-3-2008', 'American Express', 5000, 3490, 1, 1, null, null),
