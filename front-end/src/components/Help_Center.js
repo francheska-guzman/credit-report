@@ -31,19 +31,28 @@ class HelpCenter extends Component {
       <div className="basic faq flex-2">
       <h2 className="bone">FAQ</h2>
       <br/>
+        <details>
+		<summary className="question bone">How can I improve my credit score?</summary>
+		<li>Pay your bills on time. Delinquent payments and collections can have a major negative impact on a credit score.</li>
+		<li>Keep balances low on credit cards and other “revolving credit.” High outstanding debt can affect a credit score.</li>
+		<li>Pay off debt rather than moving it around. Also, don’t close unused cards as a short-term strategy to improve your 
+		credit score. Owing the same amount but having fewer open accounts may lower your credit score.</li>
+		</details>
+
       	<details>
-		<summary className="question bone">Question 1</summary>
-		<p>Answer 1</p>
+		<summary className="question bone">What is a soft inquiry?</summary>
+		<p>When you check your own credit report or give permission to someone like a 
+		potential employer to review your credit report, a soft inquiry occurs. 
+		Because soft inquiries aren’t linked to a specific application for new credit, 
+		they’re only visible on your credit report to you.</p>
 		</details>
 
 		<details>
-		<summary className="question bone">Question 2</summary>
-		<p>Answer 2</p>
-		</details>
-
-		<details>
-		<summary className="question bone">Question 3</summary>
-		<p>Answer 3</p>
+		<summary className="question bone">What is a hard inquiry?</summary>
+		<p>A hard inquiry occurs when a lender with whom you’ve applied for 
+		credit (such as mortgage, auto loan or credit card) reviews your credit report as part of their 
+		decision-making process. This type of inquiry appears on your 
+		credit report and can influence your credit scores.</p>
 		</details>
       </div>
       </div>
