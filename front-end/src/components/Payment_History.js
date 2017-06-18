@@ -88,10 +88,10 @@ class PaymentHistory extends Component {
         <table className="centralize flex-1">
        	<tbody>
   	      <tr>
-  	      	<th className="month t-title factor-info">Creditor</th>
-  	      	<th className="month t-title factor-info">Credit Limit</th>
-  	      	<th className="month t-title factor-info">Credit Use</th>
-            <th className="month t-title factor-info">J F M A M J J A S O N D</th>
+  	      	<th className="month t-title factor-info flex-1">Creditor</th>
+  	      	<th className="month t-title factor-info flex-1">Credit Limit</th>
+  	      	<th className="month t-title factor-info flex-1">Credit Use</th>
+            <th className="month t-title factor-info flex-1">J F M A M J J A S O N D</th>
   	      </tr>
             <td>{this.tableCreditor()}</td>
             <td>{this.tableCreditLimit()}</td>
