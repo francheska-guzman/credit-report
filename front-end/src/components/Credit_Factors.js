@@ -44,7 +44,7 @@ class CreditFactors extends Component {
         state={this.props.state} />);
     }
     else {
-      console.log("No data to show.");
+      console.log("You need to sign in first.");
     }
   }
 

@@ -46,7 +46,10 @@ class App extends Component {
       collection: [],
       collection_agency: [],
       amount_paid_to_collection: [],
-      payment_history: []
+      payment_history: [],
+      inq_creditor: [],
+      inq_account_type: [],
+      posted: []
     }
     this.getUserData = this.getUserData.bind(this);
     this.signOff = this.signOff.bind(this);
@@ -122,6 +125,29 @@ class App extends Component {
         collection_agency: collection_agency,
         amount_paid_to_collection: amount_paid_to_collection,
         payment_history: payment_history
+      })
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+    axios.get(`https://accesscontrolalloworiginall.herokuapp.com/https://creditreportapi.herokuapp.com/hardinquiries/${id}`)
+    .then((res) => {
+     var inq_creditor = [];
+     var inq_account_type = [];
+     var posted = []; 
+
+      // Looping through the data received from the api.
+      for (var n = 0; n < res.data.data.length; n += 1) {
+        inq_creditor.push(res.data.data[n].inq_creditor)
+        inq_account_type.push(res.data.data[n].account_type)
+        posted.push(res.data.data[n].posted)
+      }
+
+      this.setState({
+        inq_creditor: inq_creditor,
+        inq_account_type: inq_account_type,
+        posted: posted
       })
     })
     .catch((error) => {
