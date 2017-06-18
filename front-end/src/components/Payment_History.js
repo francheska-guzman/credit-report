@@ -32,7 +32,7 @@ class PaymentHistory extends Component {
 	  	}
 	  	// Otherwise, render red color.
 	  	else if(this.props.state.payment_history[i][n] === false) {
-	  	single_account.push(<td className="red-background"></td>);
+	  	single_account.push(<td className="red-background">✕</td>);
 		  }
 	  }
 	  // When the 12 months finish, then push to this other array.
@@ -78,6 +78,8 @@ class PaymentHistory extends Component {
       <div id="payment-history" className="flex-1">
       <div className="center">
         <h4 className="purple">Payment History</h4>
+        <h3>Even one late payment could hurt your credit health, so stay mindful of your due dates. 
+        A 100% on-time payment history is a good sign for lenders that you can reliably make payments.</h3>
       </div>
         <table className="dark factor-info">
        	<tbody>
@@ -85,12 +87,12 @@ class PaymentHistory extends Component {
   	      	<th className="t-title month">Creditor</th>
   	      	<th className="t-title month">Credit Limit</th>
   	      	<th className="t-title month">Credit Use</th>
-            <th className="t-title month">Payment History<br/>J F M A M J J A S O N D</th>
+            <th className="t-title month">J F M A M J J A S O N D</th>
   	      </tr>
             <td>{this.tableCreditor()}</td>
             <td>{this.tableCreditLimit()}</td>
             <td>{this.tableCreditUse()}</td>
-            <td>{this.tableOfPayments()}</td>
+            <td className="center">{this.tableOfPayments()}</td>
   	    </tbody>
         </table>
       </div>

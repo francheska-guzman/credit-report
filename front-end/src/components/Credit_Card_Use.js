@@ -173,10 +173,9 @@ constructor(props){
     return (
       <div id="credit-card-use" className="flex-1">
         <h4 className="center red">Credit Card Use</h4>
-          <span className="factor-info">Your credit card utilization is the 
+          <span className="factor-info">The credit card utilization is the 
           percentage of your credit limits that you're using. It's calculated 
           by dividing your total credit balances by your total credit limits on open accounts.</span><br /><br />
-          <span className="factor-info">A good rule of thumb is to keep your balances below 30% of your limit.</span><br /><br />
           <span className="graphic-description flex-5">{this.utilizationRatio()}</span>
             <table className="dark">
               <tbody>

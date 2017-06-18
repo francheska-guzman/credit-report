@@ -24,8 +24,8 @@ h2 {
 }
 
 h3 {
-  margin: 20px;
-  font-size: 24px;
+  margin: 22px;
+  font-size: 22px;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -264,12 +264,15 @@ th {
   background: #0E9E17;
   height: 20px;
   width: 20px;
+  font-size: 15px;
 }
 
 .red-background {
   background: #c1091f;
   height: 20px;
   width: 20px;
+  font-size: 15px;
+  color: #910808;
 }
 
 .month {
