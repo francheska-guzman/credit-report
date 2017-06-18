@@ -7,17 +7,11 @@ class Dashboard extends Component {
     super(props);
     this.state = {
       component: null,
-      credit_age_result: null,
-      credit_card_use_result: null,
-      derogatory_marks_result: null,
-      hard_inquiries_result: null,
-      payment_history_result: null,
-      total_accounts_result: null
     }
     this.renderComponent = this.renderComponent.bind(this);
   }
 
-  renderComponent(component){
+  renderComponent(component) {
     this.setState({
       component: component
     });
@@ -32,7 +26,10 @@ class Dashboard extends Component {
           </div>
           <div className="credit-factors flex-4"><CreditFactors 
                renderComponent={this.renderComponent} 
-               state={this.props.state} /></div>
+               state={this.props.state}
+               getAgeResult={this.getAgeResult}
+               getPaymentHistory={this.getPaymentHistory} />
+               </div>
         </div> 
         <div className="flex">{this.state.component}</div>
       </div>

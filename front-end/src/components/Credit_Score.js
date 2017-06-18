@@ -9,10 +9,9 @@ class CreditScore extends Component {
       state_score: null
     }
     this.userScore = this.userScore.bind(this);
-  	this.graphicAverage = this.graphicAverage.bind(this);
   }
 
-  componentWillMount() {
+  componentWillReceiveProps() {
     if(this.props.state.user === true) {
       this.setState({
         user_score: this.props.state.user_credit_score,
@@ -32,16 +31,11 @@ class CreditScore extends Component {
     )}
   }
 
-  graphicAverage() {
-
-  }
-
   render() {
     return (
       <div>
         <h2 className="center">Credit Score</h2>
         {this.userScore()}
-        {this.graphicAverage()}
       </div>
     );
   }

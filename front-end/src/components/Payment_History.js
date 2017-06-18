@@ -110,10 +110,12 @@ class PaymentHistory extends Component {
   	      	<th className="month t-title factor-info">Credit Use</th>
             <th className="month t-title factor-info">J F M A M J J A S O N D</th>
   	      </tr>
+          <tr>
             <td>{this.tableCreditor()}</td>
             <td>{this.tableCreditLimit()}</td>
             <td>{this.tableCreditUse()}</td>
             <td className="center">{this.tableOfPayments()}</td>
+          </tr>
   	    </tbody>
         </table>
       </div>
