@@ -13,6 +13,7 @@ router.get('/personalfinancial/:id', db.getOneUserAccounts);
 router.get('/personalfinancial/:id/:account_id', db.getOneUserAccount);
 router.get('/hardinquiries', db.getAllUsersAllInquiries);
 router.get('/hardinquiries/:id', db.getOneUsersAllInquiries);
-router.get('/averagebystate', db.getAverageScoreByState);
+router.get('/averagebystate', db.getAllAverageScoreByState);
+router.get('/averagebystate/:state', db.getOneAverageScoreByState);
 
 module.exports = router;

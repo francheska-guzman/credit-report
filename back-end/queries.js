@@ -131,8 +131,8 @@ let id = parseInt(req.params.id);
     });
 }
 
-// Get all credit scores by state.
-function getAverageScoreByState(req, res, next) {
+// Get all credit scores averages by state.
+function getAllAverageScoreByState(req, res, next) {
   db.any('SELECT * FROM us_credit_score')
     .then(function(data) {
       console.log('DATA: ', data);
@@ -140,7 +140,25 @@ function getAverageScoreByState(req, res, next) {
         .json({
           status: 'success',
           data: data,
-          message: 'List of credit score average by state retrieved.'
+          message: 'All credit scores averages by state retrieved.'
+        });
+    })
+    .catch(function(err) {
+      return next(err);
+    });
+}
+
+// Get one credit score average by state.
+function getOneAverageScoreByState(req, res, next) {
+  let state = req.params.state;
+  db.any('SELECT * FROM us_credit_score WHERE state = $1', state)
+    .then(function(data) {
+      console.log('DATA: ', data);
+      res.status(200)
+        .json({
+          status: 'success',
+          data: data,
+          message: 'One credit score average by state retrieved.'
         });
     })
     .catch(function(err) {
@@ -156,5 +174,6 @@ module.exports = {
   getOneUserAccount: getOneUserAccount,
   getAllUsersAllInquiries: getAllUsersAllInquiries,
   getOneUsersAllInquiries: getOneUsersAllInquiries,
-  getAverageScoreByState: getAverageScoreByState,
+  getAllAverageScoreByState: getAllAverageScoreByState,
+  getOneAverageScoreByState: getOneAverageScoreByState,
 };
