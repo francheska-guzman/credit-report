@@ -332,17 +332,17 @@ th {
 .profile {
   min-height: 600px;
   width: 100%;
-  background: #fcfcfc;
+  background: #f2f2f2;
 }
 
 .profile-wrap {
   width: 100%;
-  background: #fcfcfc;
+  background: #f2f2f2;
 }
 
 .profile-info {
   font-size: 18px;
-  padding: 5px 20px;
+  padding: 2px 20px;
   color: #262424;
 }
 
