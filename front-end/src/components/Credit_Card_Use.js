@@ -140,7 +140,8 @@ constructor(props){
 
   openCreditCards() {
     var table = [];
-
+    // If the account is "Credit Card" and is "Open", push into an array with the intention
+    // to render that information.
     for(var i = 0; i < this.props.state.opened.length; i += 1) {
       if (this.props.state.account_type[i] === "Credit Card" && this.props.state.current_status[i] === "Open") { 
           table.push([
@@ -152,10 +153,12 @@ constructor(props){
           ]);
         }
       }
+
       return (table.map(function(table, n){
         return (
           <tr key={n+1}>{table}</tr>
-      )}));
+       )}
+    ))
   }
 
   headerUse() {
@@ -175,14 +178,15 @@ constructor(props){
         <h4 className="center red">Credit Card Use</h4>
           <span className="factor-info">The credit card utilization is the 
           percentage of your credit limits that you're using. It's calculated 
-          by dividing your total credit balances by your total credit limits on open accounts.</span><br /><br />
+          by dividing your total credit balances by your total credit limits on open accounts.</span>
+          <br /><br />
           <span className="graphic-description flex-5">{this.utilizationRatio()}</span>
-            <table className="dark">
-              <tbody>
+          <table className="dark">
+            <tbody>
               {this.headerUse()}
               {this.openCreditCards()}
-              </tbody>
-            </table>
+            </tbody>
+          </table>
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Bar } from 'react-chartjs';
 
 class CreditScore extends Component {
   constructor(props){
@@ -11,7 +12,9 @@ class CreditScore extends Component {
     this.userScore = this.userScore.bind(this);
   }
 
-  componentWillReceiveProps() {
+  componentWillMount() {
+    // Grabbing the user credit score, the state when she live and the average
+    // in that state with the intention to render.
     if(this.props.state.user === true) {
       this.setState({
         user_score: this.props.state.user_credit_score,
@@ -22,6 +25,7 @@ class CreditScore extends Component {
   }
 
   userScore() {
+    // If there's data in user_score, then render the following message:
     if(this.state.user_score !== null) {
       return (
         <div>

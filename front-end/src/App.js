@@ -15,6 +15,8 @@ import axios from 'axios';
 
 console.log("App.js is working.");
 
+// The parent component, App.js, will set the state of all data received from the axios call.
+
 class App extends Component {
   constructor(props){
     super(props);
@@ -135,18 +137,19 @@ class App extends Component {
       console.log(error);
     });
 
+    // Also, getting the hard inquiries information.
     axios.get(`https://accesscontrolalloworiginall.herokuapp.com/https://creditreportapi.herokuapp.com/hardinquiries/${id}`)
     .then((res) => {
-     var inq_creditor = [];
-     var inq_account_type = [];
-     var posted = []; 
+       var inq_creditor = [];
+       var inq_account_type = [];
+       var posted = []; 
 
-      // Looping through the data received from the api.
-      for (var n = 0; n < res.data.data.length; n += 1) {
-        inq_creditor.push(res.data.data[n].inq_creditor)
-        inq_account_type.push(res.data.data[n].account_type)
-        posted.push(res.data.data[n].posted)
-      }
+        // Looping through the data received from the api.
+        for (var n = 0; n < res.data.data.length; n += 1) {
+          inq_creditor.push(res.data.data[n].inq_creditor)
+          inq_account_type.push(res.data.data[n].account_type)
+          posted.push(res.data.data[n].posted) 
+        }
 
       this.setState({
         inq_creditor: inq_creditor,
@@ -154,9 +157,6 @@ class App extends Component {
         posted: posted
       })
     })
-    .catch((error) => {
-      console.log(error);
-    });
   }
 
   signOff(){
@@ -170,23 +170,23 @@ class App extends Component {
   render() {
     return (
       <Router>
-       <div className="wrapper">
+      <div className="wrapper">
         <Navigation getUserData={this.getUserData}
                     signOff={this.signOff}
                     state={this.state}
                     />
-          <Switch>
-          <Route path="/" exact component={() => (<Dashboard 
-                    state={this.state} />) }/>
-          <Route path="/help-center" exact component={() => (<HelpCenter 
-                    />) }/>
-          <Route path="/my-account" exact component={() => (<MyAccount 
-                    signOff={this.signOff}
-                    state={this.state} />) }/>
-          <Route path="/*" component={() => (<FourOFour />) }/>
-          </Switch>
+        <Switch>
+              <Route path="/" exact component={() => 
+                  (<Dashboard state={this.state} />) }/>
+              <Route path="/help-center" exact component={() => 
+                  (<HelpCenter />) }/>
+              <Route path="/my-account" exact component={() => 
+                  (<MyAccount signOff={this.signOff}
+                              state={this.state} />) }/>
+              <Route path="/*" component={() => (<FourOFour />) }/>
+        </Switch>
         <Footer />
-       </div>
+      </div>
       </Router>
     );
   }

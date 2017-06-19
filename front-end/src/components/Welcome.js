@@ -8,16 +8,20 @@ class Welcome extends Component {
     this.getAHint = this.getAHint.bind(this);
   }
 
+  // When user write '1' or '2', the value received go to a method in a parent component.
+  // Also, deletes any input entered.
   userInformation(event) {
     event.preventDefault(); 
       this.props.getUserData(this.refs.id.value);
       this.refs.id.value = ' ';
   }
 
+  // When user click over the question mark:
   getAHint(event) {
     alert("Type the number '1' or '2'.");
   }
 
+  // A way to change button and input field depends if user log in or not.
   login() {
     if(this.props.state.user === false) {
       return (

@@ -26,24 +26,33 @@ class TotalAccounts extends Component {
     var counter_closed = 0;
     var counter = 0;
 
+    // Looping through all accounts and separate which accounts are open
+    // and which accounts are closed.
   	for(var i = 0; i < this.props.state.creditor.length; i += 1) {
   	  if(this.props.state.current_status[i] === "Open") {
+        // Inserting information from a single open account to open_accounts array.
   	  	open_accounts.push([
-  	  	<td key={i+1}>{this.props.state.creditor[i]}</td>, <td key={i+2}>{this.props.state.account_type[i]}</td>,
-  	  	<td key={i+3}>{this.props.state.credit_limit[i]}</td>, <td key={i+4}>{this.props.state.credit_use[i]}</td>,
+  	  	<td key={i+1}>{this.props.state.creditor[i]}</td>, 
+        <td key={i+2}>{this.props.state.account_type[i]}</td>,
+  	  	<td key={i+3}>{this.props.state.credit_limit[i]}</td>, 
+        <td key={i+4}>{this.props.state.credit_use[i]}</td>,
   	  	<td key={i+5}>{this.props.state.opened[i]}</td>]);
         counter_open += 1;
   	  }
   	  else if(this.props.state.current_status[i] === "Closed") {
-		closed_accounts.push([
-  	  	<td key={i+1}>{this.props.state.creditor[i]}</td>, <td key={i+2}>{this.props.state.account_type[i]}</td>,
-  	  	<td key={i+3}>{this.props.state.credit_limit[i]}</td>, <td key={i+4}>{this.props.state.credit_use[i]}</td>,
+        // Inserting information from a single closed account to closed_accounts array.
+		    closed_accounts.push([
+  	  	<td key={i+1}>{this.props.state.creditor[i]}</td>, 
+        <td key={i+2}>{this.props.state.account_type[i]}</td>,
+  	  	<td key={i+3}>{this.props.state.credit_limit[i]}</td>, 
+        <td key={i+4}>{this.props.state.credit_use[i]}</td>,
   	  	<td key={i+5}>{this.props.state.opened[i]}</td>]);
         counter_closed += 1;
   	  }
       counter += 1;
   	}
 
+    // Saving the information to be used in other methods.
   	this.setState({
   	  open_accounts: open_accounts,
   	  closed_accounts: closed_accounts,
@@ -57,9 +66,12 @@ class TotalAccounts extends Component {
   }
 
   totalAccounts() {
+    // If user don't have too many accounts (in this case less or
+    // equal 10), will render in red.
     if(this.state.counter <= 10) {
       return (<span className="red">{this.state.counter}</span>);
     }
+    // Otherwise, number of total accounts will render in green.
     else {
       return (<span className="green">{this.state.counter}</span>);
     }
@@ -79,6 +91,7 @@ class TotalAccounts extends Component {
     })
   )}
 
+  // Render rows for each open account.
   renderOpenAccounts() {
   	if(this.state.counter_open > 0) {
   	  return (
@@ -108,6 +121,7 @@ class TotalAccounts extends Component {
   	}
   }
 
+  // Render rows for each closed account.
   renderClosedAccounts() {
   	if(this.state.counter_closed > 0) {
   	  return (
