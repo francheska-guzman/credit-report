@@ -16,7 +16,6 @@ import axios from 'axios';
 console.log("App.js is working.");
 
 // The parent component, App.js, will set the state of all data received from the axios call.
-
 class App extends Component {
   constructor(props){
     super(props);
@@ -56,6 +55,7 @@ class App extends Component {
       posted: []
     }
     this.getUserData = this.getUserData.bind(this);
+    this.getHardInquiries = this.getHardInquiries.bind(this);
     this.signOff = this.signOff.bind(this);
   }
 
@@ -132,13 +132,17 @@ class App extends Component {
         amount_paid_to_collection: amount_paid_to_collection,
         payment_history: payment_history
       })
+      this.getHardInquiries();
     })
     .catch((error) => {
       console.log(error);
     });
+   }
 
-    // Also, getting the hard inquiries information.
-    axios.get(`https://accesscontrolalloworiginall.herokuapp.com/https://creditreportapi.herokuapp.com/hardinquiries/${id}`)
+   // Getting the hard inquiries information.
+   getHardInquiries() {
+   	// Making an axios call to hard inquiries.
+    axios.get(`https://accesscontrolalloworiginall.herokuapp.com/https://creditreportapi.herokuapp.com/hardinquiries/${this.state.id}`)
     .then((res) => {
        var inq_creditor = [];
        var inq_account_type = [];

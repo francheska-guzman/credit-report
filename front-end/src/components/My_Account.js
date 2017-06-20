@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+// console.log("My Account is working.");
+
 class MyAccount extends Component {
   constructor(props) {
   	super(props);
@@ -8,9 +10,11 @@ class MyAccount extends Component {
   }
 
   profile() {
+    // If no user, no profile data.
   	if(this.props.state.user === false) {
       return (<div className="profile flex"></div>)
   	}
+    // Otherwise, render all her information.
   	else {
   	  return (
         <div className="profile flex">
@@ -41,6 +45,7 @@ class MyAccount extends Component {
   	}
   }
 
+  // Calling the profile method.
   render() {
     return (
       <div className="flex">{this.profile()}</div>

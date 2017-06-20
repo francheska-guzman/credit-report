@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Bar } from 'react-chartjs';
+
+// console.log("Credit Score is working.");
 
 class CreditScore extends Component {
   constructor(props){
@@ -14,7 +15,7 @@ class CreditScore extends Component {
 
   componentWillMount() {
     // Grabbing the user credit score, the state when she live and the average
-    // in that state with the intention to render.
+    // in that state with the intention to render, if person is logged in.
     if(this.props.state.user === true) {
       this.setState({
         user_score: this.props.state.user_credit_score,
@@ -25,7 +26,8 @@ class CreditScore extends Component {
   }
 
   userScore() {
-    // If there's data in user_score, then render the following message:
+    // If there's data in user_score, render the name of the state
+    // where user lives, and the average score on that state.
     if(this.state.user_score !== null) {
       return (
         <div>

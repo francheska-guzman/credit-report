@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import AgeTable from './Age_Table';
 
+// console.log("Credit Age is working.");
+
 class CreditAge extends Component {
 constructor(props){
   super(props);
@@ -17,6 +19,7 @@ constructor(props){
   this.tableCreditAge = this.tableCreditAge.bind(this);
   this.ageAverage = this.ageAverage.bind(this);
   this.headerAgeTable = this.headerAgeTable.bind(this);
+  this.message = this.message.bind(this);
   }
 
   componentWillMount() {
@@ -105,6 +108,9 @@ constructor(props){
     var denominator = 0;
     var result = 0;
 
+      // Sum all years.
+      // Sum all months.
+      // Denominator is a counter that will be used to calculate the average.
       for(var n = 0; n < this.state.creditor_ca.length; n += 1){
         sum_years += this.state.num_of_years_ca[n];
         sum_months += this.state.num_of_months_ca[n];
@@ -114,44 +120,44 @@ constructor(props){
       numerator = sum_years + (sum_months/12);
       result = (numerator/denominator).toFixed(2);
 
+    // Reusing the method 'message' to this if/else statement.
     if(this.state.creditor_ca[0] !== [] && result < 5) {
-      return (
-        <h2 className="center">Average age of open accounts: <span className="red">{result} yrs</span></h2>
-    )}
-
+      return (this.message('red', result))
+    }
     else if(this.state.creditor_ca[0] !== [] && result <= 7) {
-      return (
-        <h2 className="center">Average age of open accounts: <span className="yellow">{result} yrs</span></h2>
-    )}
-
+      return (this.message('yellow', result))
+    }
     else if(this.state.creditor_ca[0] !== [] && result > 7) {
-      return (
-        <h2 className="center">Average age of open accounts: <span className="green">{result} yrs</span></h2>
-    )}
-
+      return (this.message('green', result))
+    }
     else {
-      return (
-        <h2 className="center">Unable to calculate the average, because you have 0 opened accounts.</h2>
-    )}
+      return (<h2 className="center">Unable to calculate the average, because you have 0 opened accounts.</h2>)
+    }
+  };
 
-  }
+  // The message receives the color and the variable result.
+  message(color, result) {
+    return (<h2 className="center">Average age of open accounts: <span className={color}>{result} yrs</span></h2>)
+  };
 
+  // If data, render table header.
   headerCreditAge() {
     if(this.state.creditor_ca[0] !== []) {
       return (
-      <tr>
-        <th className="t-title factor-info">Creditor</th>
-        <th className="t-title factor-info">Type of Account</th>
-        <th className="t-title factor-info">Age of Account</th>
-      </tr>
-    )};
+        <tr>
+          <th className="t-title factor-info">Creditor</th>
+          <th className="t-title factor-info">Type of Account</th>
+          <th className="t-title factor-info">Age of Account</th>
+        </tr>
+      );
+    }
   }
 
+  // If data, render another componet (which is the index of Credit Age).
   headerAgeTable() {
     if(this.state.creditor_ca[0] !== []) {
-      return (
-      <AgeTable />
-    )};
+      return (<AgeTable />)
+    };
   }
 
   render() {

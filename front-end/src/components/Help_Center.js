@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
 
+// console.log("Help Center is working.");
+
 class HelpCenter extends Component {
+
+  // I did not write the paragraphs. I got the information from experian.com.
+  // See line 38.
+
   render() {
     return (
       <div className="help-center flex">
       <div className="basic flex-3">
         <div className="center">
+
         <img alt="Help Center" src="/images/helpcenter.png"/>
+
         </div>
+
 	      <h2 className="bone">Credit Report Basics</h2>
 	  		<p className="indent">A credit report provides information on how you have 
 	  		used credit in the past, including how much debt you have, and whether 
@@ -25,6 +34,7 @@ class HelpCenter extends Component {
 		    <li className="indent">Credit accounts: Including credit cards, auto loans, mortgages.</li>
 		    <li className="indent">Public records: Court judgments, bankruptcies and tax liens.</li>
 		    <li className="indent">Recent inquiries: Who has recently asked to view your credit report and when.</li>  
+	
 	    <span>Source: <a href="http://www.experian.com/blogs/ask-experian/credit-education/report-basics/">Experian.com</a></span>
       </div>
 

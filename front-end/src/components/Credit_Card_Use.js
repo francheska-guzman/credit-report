@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import { Doughnut } from 'react-chartjs';
 import UtilizationTable from './Utilization_Table';
 
+console.log("Credit Card Use is working.");
+
 class CreditCardUse extends Component {
 constructor(props){
   super(props);
   this.utilizationRatio = this.utilizationRatio.bind(this);
   this.openCreditCards = this.openCreditCards.bind(this);
   this.headerUse = this.headerUse.bind(this);
+  this.renderGraphic = this.renderGraphic.bind(this);
+  this.renderMessage = this.renderMessage.bind(this);
   }
 
   utilizationRatio() {
@@ -37,105 +41,62 @@ constructor(props){
     ];
 
     // Using an if/else statement to display a color for a certain ratio range.
-  	if(ratio <= 9) {
+  	if(ratio <= 29) {
   	  return (
         <div className="flex">
-        <div className="flex-1 center">
-        <Doughnut data={data} options={{animateRotate: true}} width="250" height="250"/>
-        </div>
-          <div className="flex-1">
-            <ul className="factor-info">
-    	      <li className="ratio green">{ratio}%</li>
-            <li>You have {counter} open {creditcard}.</li>
-            <li>Your total credit limit is: {limit}</li>
-            <li>Your total credit use is: {use}</li>
-            <li>Your total available credit is: {available}</li>
-            </ul>
-          </div>
+        {this.renderGraphic(data)}
+        {this.renderMessage('ratio green', ratio, counter, creditcard, limit, use, available)}
         <UtilizationTable />
         </div>
-  	)}
-
-  	else if(ratio <= 29) {
-      return (
-        <div className="flex">
-        <div className="flex-1 center">
-        <Doughnut data={data} options={{animateRotate: true}} width="250" height="250"/>
-        </div>
-          <div className="flex-1">
-            <ul className="factor-info">
-            <li className="ratio green">{ratio}%</li>
-            <li>You have {counter} open {creditcard}.</li>
-            <li>Your total credit limit is: {limit}</li>
-            <li>Your total credit use is: {use}</li>
-            <li>Your total available credit is: {available}</li>
-            </ul>
-          </div>
-        <UtilizationTable />
-        </div>
-  	)}
-
+      )
+    }
   	else if(ratio <= 49) {
       return (
         <div className="flex">
-        <div className="flex-1 center">
-        <Doughnut data={data} options={{animateRotate: true}} width="250" height="250"/>
-        </div>
-          <div className="flex-1">
-            <ul className="factor-info">
-            <li className="ratio yellow">{ratio}%</li>
-            <li>You have {counter} open {creditcard}.</li>
-            <li>Your total credit limit is: {limit}</li>
-            <li>Your total credit use is: {use}</li>
-            <li>Your total available credit is: {available}</li>
-            </ul>
-          </div>
+        {this.renderGraphic(data)}
+        {this.renderMessage('ratio yellow', ratio, counter, creditcard, limit, use, available)}
         <UtilizationTable />
         </div>
-  	)}
-
-  	else if(ratio <= 74) {
-      return (
-        <div className="flex">
-        <div className="flex-1 center">
-        <Doughnut data={data} options={{animateRotate: true}} width="250" height="250"/>
-        </div>
-          <div className="flex-1">
-            <ul className="factor-info">
-            <li className="ratio red">{ratio}%</li>
-            <li>You have {counter} open {creditcard}.</li>
-            <li>Your total credit limit is: {limit}</li>
-            <li>Your total credit use is: {use}</li>
-            <li>Your total available credit is: {available}</li>
-            </ul>
-          </div>
-        <UtilizationTable />
-        </div>
-  	)}
-
+      )
+    }
   	else if(ratio <= 100) {
       return (
         <div className="flex">
-        <div className="flex-1 center">
-        <Doughnut data={data} options={{animateRotate: true}} width="250" height="250"/>
-        </div>
-          <div className="flex-1">
-            <ul className="factor-info">
-            <li className="ratio red">{ratio}%</li>
-            <li>You have {counter} open {creditcard}.</li>
-            <li>Your total credit limit is: {limit}</li>
-            <li>Your total credit use is: {use}</li>
-            <li>Your total available credit is: {available}</li>
-            </ul>
-          </div>
+        {this.renderGraphic(data)}
+        {this.renderMessage('ratio red', ratio, counter, creditcard, limit, use, available)}
         <UtilizationTable />
         </div>
-  	)}
-
+      )
+    }
     else {
       return (
         <div className="flex">You have 0 open credit card.</div>
-    )}
+      )
+    }
+  }
+
+  // I reuse method for else/if statement.
+  renderGraphic(data) {
+    return (
+      <div className="flex-1 center">
+        <Doughnut data={data} options={{animateRotate: true}} width="250" height="250"/>
+      </div>
+    )
+  }
+
+  // I reuse method for else/if statement.
+  renderMessage(ratiocolor, ratio, counter, creditcard, limit, use, available) {
+    return (
+      <div className="flex-1">
+        <ul className="factor-info">
+          <li className={ratiocolor}>{ratio}%</li>
+          <li>You have {counter} open {creditcard}.</li>
+          <li>Your total credit limit is: {limit}</li>
+          <li>Your total credit use is: {use}</li>
+          <li>Your total available credit is: {available}</li>
+        </ul>
+      </div>
+    )
   }
 
   openCreditCards() {

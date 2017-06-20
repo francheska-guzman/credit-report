@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import CreditScore from './Credit_Score';
 import CreditFactors from './Credit_Factors';
 
+// console.log("Dashboard is working.");
+
 class Dashboard extends Component {
   constructor(props){
     super(props);

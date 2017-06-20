@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+// This table is related to Credit Card Use component.
+
 class UtilizationTable extends Component {
   render() {
   return (

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import AccountsTable from './Accounts_Table';
 
+// console.log("Total Accounts is working.");
+
 class TotalAccounts extends Component {
   constructor(props){
     super(props);
@@ -80,19 +82,20 @@ class TotalAccounts extends Component {
   // Looping through open accounts array to render in the open accounts table.
   openAccounts() {
     return (this.state.open_accounts.map(function(open, o){
-        return <tr key={o+1}>{open}</tr> 
-    })
-  )}
+        return (<tr key={o+1}>{open}</tr>) 
+    }));
+  }
 
   // Looping through closed accounts array to render in the closed accounts table.
   closedAccounts() {
     return (this.state.closed_accounts.map(function(closed, c){
-        return <tr key={c+1}>{closed}</tr> 
-    })
-  )}
+        return (<tr key={c+1}>{closed}</tr>) 
+    }));
+  }
 
   // Render rows for each open account.
   renderOpenAccounts() {
+    // If user have open accounts, render table header:
   	if(this.state.counter_open > 0) {
   	  return (
   	  	<div className="flex-1">
@@ -112,17 +115,15 @@ class TotalAccounts extends Component {
 		</div>
   	  )
   	}
+    // Otherwise:
     else {
-  	  return (
-        <div className="flex-1">
-        <h2>You have {this.state.counter_open} open accounts.</h2>
-        </div>
-      )
+  	  return (<div className="flex-1"><h2>You have {this.state.counter_open} open accounts.</h2></div>)
   	}
   }
 
   // Render rows for each closed account.
   renderClosedAccounts() {
+    // If user have closed accounts, render table header:
   	if(this.state.counter_closed > 0) {
   	  return (
   	  	<div className="flex-1">
@@ -142,12 +143,9 @@ class TotalAccounts extends Component {
 		</div>
   	  )
   	}
+    // Otherwise:
   	else {
-  	  return (
-        <div className="flex-1">
-        <h2>You have {this.state.counter_closed} closed accounts.</h2>
-        </div>
-      )
+  	  return (<div className="flex-1"><h2>You have {this.state.counter_closed} closed accounts.</h2></div>)
   	}
   }
 

@@ -6,45 +6,49 @@ import HardInquiries from './Hard_Inquiries';
 import PaymentHistory from './Payment_History';
 import TotalAccounts from './Total_Accounts';
 
+// console.log("Credit Factors is working.");
+
 class CreditFactors extends Component {
   constructor(props){
     super(props);
     this.showData = this.showData.bind(this);
   }
 
+  // Check which credit factor has clicked by the user.
+  // The method renderComponent is defined in the Dashboard component.
   showData(event) {
     if(event.target.id === "creditfactor1" && this.props.state.user === true) {
       // console.log("Show Data: Credit Age");
-      this.props.renderComponent(<CreditAge 
-        state={this.props.state} />);
+      this.props.renderComponent(
+      <CreditAge state={this.props.state} />);
     }
     else if(event.target.id === "creditfactor2" && this.props.state.user === true) {
       // console.log("Show Data: Credit Card Use");
-      this.props.renderComponent(<CreditCardUse 
-        state={this.props.state} />);
+      this.props.renderComponent(
+      <CreditCardUse state={this.props.state} />);
     }
     else if(event.target.id === "creditfactor3" && this.props.state.user === true) {
       // console.log("Show Data: Derogatory Marks");  
-      this.props.renderComponent(<DerogatoryMarks 
-        state={this.props.state} />);  
+      this.props.renderComponent(
+      <DerogatoryMarks state={this.props.state} />);  
     }
     else if(event.target.id === "creditfactor4" && this.props.state.user === true) {
       // console.log("Show Data: Hard Inquiries"); 
-      this.props.renderComponent(<HardInquiries 
-        state={this.props.state} />);
+      this.props.renderComponent(
+      <HardInquiries state={this.props.state} />);
     }
     else if(event.target.id === "creditfactor5" && this.props.state.user === true) {
       // console.log("Show Data: Payment History"); 
-      this.props.renderComponent(<PaymentHistory 
-        state={this.props.state} />);
+      this.props.renderComponent(
+      <PaymentHistory state={this.props.state} />);
     }
     else if(event.target.id === "creditfactor6" && this.props.state.user === true) {
       // console.log("Show Data: Total Accounts"); 
-      this.props.renderComponent(<TotalAccounts 
-        state={this.props.state} />);
+      this.props.renderComponent(
+      <TotalAccounts state={this.props.state} />);
     }
     else {
-      console.log("You need to sign in first.");
+      console.log("You need to sign in first by the using user id '1' or user id '2'.")
     }
   }
 

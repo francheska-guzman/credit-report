@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Pie } from 'react-chartjs';
 
+// console.log("Derogatory Marks is working.");
+
 class DerogatoryMarks extends Component {
   constructor(props){
     super(props);
     this.renderMessage = this.renderMessage.bind(this);
     this.renderCollectionAccounts = this.renderCollectionAccounts.bind(this);
-    this.renderCollectionGraphic = this.renderCollectionGraphic.bind(this);
+    this.renderGraphic = this.renderGraphic.bind(this);
     this.renderTableHeader = this.renderTableHeader.bind(this);
   }
 
@@ -40,7 +42,7 @@ class DerogatoryMarks extends Component {
     )}
   }
 
-  renderCollectionGraphic() {
+  renderGraphic() {
     var collection_amount = 0;
     var paid = 0;
 
@@ -49,7 +51,9 @@ class DerogatoryMarks extends Component {
     for(var i = 0; i < this.props.state.amount_paid_to_collection.length; i += 1) {
       if (this.props.state.amount_paid_to_collection[i] > 0) {
 
+        // Total of debt.
         collection_amount += this.props.state.credit_use[i];
+        // How much the user paid to collection agencies.
         paid += this.props.state.amount_paid_to_collection[i];
 
     }}
@@ -58,7 +62,7 @@ class DerogatoryMarks extends Component {
     var pending = collection_amount - paid;
 
     // Object for Pie graphic:
-    let data = [
+    var data = [
             {color: "#3c076d", label: "Total amount pending to be paid", value: pending},
             {color: "#0a72b2", label: "Total amount you already paid to collection", value: paid}
     ];
@@ -75,6 +79,8 @@ class DerogatoryMarks extends Component {
   renderCollectionAccounts() {
     let collections = [];
    
+    // Looping to push information related to a same account into an array.
+    // Each data will be contained in a single table data (<td>).
     for(var i = 0; i < this.props.state.collection.length; i += 1) {
       if (this.props.state.collection[i] === "In Collection") {
         collections.push([
@@ -87,7 +93,9 @@ class DerogatoryMarks extends Component {
           <td>{this.props.state.current_status[i]}</td>
         ]);
        }}
-      
+
+    // Mapping through the array created above, to render the information
+    // in format of rows.
     return (collections.map(function(collections, i){
         return <tr key={i+1}>{collections}</tr> 
     })
@@ -116,9 +124,7 @@ class DerogatoryMarks extends Component {
     return (
       <div id="derogatory-marks" className="flex-1">
         <h4 className="center green">Derogatory Marks</h4>
-        {this.renderMessage()}
-        <br />
-        {this.renderCollectionGraphic()}
+        {this.renderMessage()}<br />{this.renderGraphic()}
         <table className="dark">
           <tbody>
             {this.renderTableHeader()}

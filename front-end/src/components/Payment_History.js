@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+console.log("Payment History is working.");
+
 class PaymentHistory extends Component {
   constructor(props){
   super(props);
