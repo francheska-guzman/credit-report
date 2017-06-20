@@ -105,9 +105,9 @@ class PaymentHistory extends Component {
   index() {
     return (
       <div>
-        <span className="green-background-i"> </span><span className="factor-description">You paid at least the minimum payment.</span><br/>
-        <span className="red-background-i"> </span><span className="factor-description">You missed a payment.</span><br/>
-        <span className="grey-background-i"> </span><span className="factor-description">We have no data (a reason could be that you recently open that account). No data doesn't have a negative impact.</span><br/>
+        <span className="green-background-i"> </span><span className="factor-description">You paid at least the minimum payment.</span><br/><br/>
+        <span className="red-background-i"> </span><span className="factor-description">You missed a payment.</span><br/><br/>
+        <span className="grey-background-i"> </span><span className="factor-description">We have no data related to this account. A reason could be that you recently open that account. No data doesn't have a negative impact.</span><br/><br/>
       </div>
     )
   }
