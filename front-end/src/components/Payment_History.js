@@ -121,7 +121,6 @@ class PaymentHistory extends Component {
         <h3 className="factor-info">Even one late payment could hurt your credit health, so stay mindful of your due dates. 
         A 100% on-time payment history is a good sign for lenders that you can reliably make payments.</h3>
       </div>
-      {this.index()}
         <table className="dark font18">
        	<tbody>
   	      <tr>
@@ -138,6 +137,7 @@ class PaymentHistory extends Component {
           </tr>
   	    </tbody>
         </table>
+        {this.index()}
       </div>
     );
   }
