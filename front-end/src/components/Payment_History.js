@@ -8,6 +8,7 @@ class PaymentHistory extends Component {
   this.state = {
   	accounts_ph: [],
     paid: 0,
+    nodata: 0,
     paid_unpaid_nodata: 0
   }
   this.percentage = this.percentage.bind(this);
@@ -23,6 +24,7 @@ class PaymentHistory extends Component {
   // Local variable.
   let accounts = [];
   let paid = 0;
+  let nodata = 0;
   let paid_unpaid_nodata = 0;
 
   	// Looping through each account.
@@ -45,6 +47,7 @@ class PaymentHistory extends Component {
       // If no data, render grey.
       else {
       single_account.push(<td key={n+1} className="grey-background"></td>);
+      nodata += 1;
       }
       paid_unpaid_nodata += 1;
 	  }
@@ -54,6 +57,7 @@ class PaymentHistory extends Component {
     this.setState({
       accounts_ph: accounts,
       paid: paid,
+      nodata: nodata,
       paid_unpaid_nodata: paid_unpaid_nodata
     }, function() {
         this.tableOfPayments();
@@ -89,7 +93,9 @@ class PaymentHistory extends Component {
   }
 
   percentage() {
-    var result = (this.state.paid/this.state.paid_unpaid_nodata).toFixed(2) * 100;
+    // Sum paid and no data, divided by the sum of paid, unpaid and no data.
+    // No data can't hurt the percentage of the user.
+    var result = ((this.state.paid + this.state.nodata)/this.state.paid_unpaid_nodata).toFixed(2) * 100;
 
     return (
       <h2 className="flex-1">You paid the <span className="font70">{result}%</span> of your total payments.</h2>
@@ -99,9 +105,9 @@ class PaymentHistory extends Component {
   index() {
     return (
       <div>
-        <span className="green-background-i"> </span><span className="factor-description">You paid at least the minimum payment due.</span><br/>
+        <span className="green-background-i"> </span><span className="factor-description">You paid at least the minimum payment.</span><br/>
         <span className="red-background-i"> </span><span className="factor-description">You missed a payment.</span><br/>
-        <span className="grey-background-i"> </span><span className="factor-description">No data. A reason could be that you recently open that account.</span><br/>
+        <span className="grey-background-i"> </span><span className="factor-description">We have no data (a reason could be that you recently open that account). No data doesn't have a negative impact.</span><br/>
       </div>
     )
   }
