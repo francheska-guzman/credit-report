@@ -31,8 +31,8 @@ class CreditScore extends Component {
     if(this.state.user_score !== null) {
       return (
         <div>
-          <h2 className="big">{this.state.user_score}</h2>
-          <h2 className="small">The average credit score in {this.state.user_state} is {this.state.state_score}.</h2>
+          <h2 className="font80">{this.state.user_score}</h2>
+          <h2 className="font20">The average credit score in {this.state.user_state} is {this.state.state_score}.</h2>
         </div>
     )}
   }

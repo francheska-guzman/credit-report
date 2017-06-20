@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-console.log("Payment History is working.");
+// console.log("Payment History is working.");
 
 class PaymentHistory extends Component {
   constructor(props){
@@ -15,6 +15,7 @@ class PaymentHistory extends Component {
   this.tableCreditLimit = this.tableCreditLimit.bind(this);
   this.tableCreditUse = this.tableCreditUse.bind(this);
   this.tableOfPayments = this.tableOfPayments.bind(this);
+  this.index = this.index.bind(this);
   }
 
   // Looping though payments to add color.
@@ -91,7 +92,17 @@ class PaymentHistory extends Component {
     var result = (this.state.paid/this.state.paid_unpaid_nodata).toFixed(2) * 100;
 
     return (
-      <h2 className="flex-1">You paid the {result}% of your total payments.</h2>
+      <h2 className="flex-1">You paid the <span className="font70">{result}%</span> of your total payments.</h2>
+    )
+  }
+
+  index() {
+    return (
+      <div>
+        <span className="green-background-i"> </span><span className="factor-description">You paid at least the minimum payment due.</span><br/>
+        <span className="red-background-i"> </span><span className="factor-description">You missed a payment.</span><br/>
+        <span className="grey-background-i"> </span><span className="factor-description">No data. A reason could be that you recently open that account.</span><br/>
+      </div>
     )
   }
 
@@ -104,13 +115,14 @@ class PaymentHistory extends Component {
         <h3 className="factor-info">Even one late payment could hurt your credit health, so stay mindful of your due dates. 
         A 100% on-time payment history is a good sign for lenders that you can reliably make payments.</h3>
       </div>
-        <table className="dark history">
+      {this.index()}
+        <table className="dark font18">
        	<tbody>
   	      <tr>
   	      	<th className="month t-title factor-info">Creditor</th>
   	      	<th className="month t-title factor-info">Credit Limit</th>
   	      	<th className="month t-title factor-info">Credit Use</th>
-            <th className="month t-title factor-info">J F M A M J J A S O N D</th>
+            <th className="month t-title left">J | F | M | A | M | J | J | A | S | O | N | D</th>
   	      </tr>
           <tr>
             <td>{this.tableCreditor()}</td>

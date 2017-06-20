@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Doughnut } from 'react-chartjs';
 import UtilizationTable from './Utilization_Table';
 
-console.log("Credit Card Use is working.");
+// console.log("Credit Card Use is working.");
 
 class CreditCardUse extends Component {
 constructor(props){
@@ -45,7 +45,7 @@ constructor(props){
   	  return (
         <div className="flex">
         {this.renderGraphic(data)}
-        {this.renderMessage('ratio green', ratio, counter, creditcard, limit, use, available)}
+        {this.renderMessage('font70 green', ratio, counter, creditcard, limit, use, available)}
         <UtilizationTable />
         </div>
       )
@@ -54,7 +54,7 @@ constructor(props){
       return (
         <div className="flex">
         {this.renderGraphic(data)}
-        {this.renderMessage('ratio yellow', ratio, counter, creditcard, limit, use, available)}
+        {this.renderMessage('font70 yellow', ratio, counter, creditcard, limit, use, available)}
         <UtilizationTable />
         </div>
       )
@@ -63,7 +63,7 @@ constructor(props){
       return (
         <div className="flex">
         {this.renderGraphic(data)}
-        {this.renderMessage('ratio red', ratio, counter, creditcard, limit, use, available)}
+        {this.renderMessage('font70 red', ratio, counter, creditcard, limit, use, available)}
         <UtilizationTable />
         </div>
       )

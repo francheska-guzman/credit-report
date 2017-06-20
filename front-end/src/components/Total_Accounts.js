@@ -153,7 +153,7 @@ class TotalAccounts extends Component {
     return (
       <div id="total-accounts" className="flex-1">
         <h4 className="center orange">Total Accounts</h4>
-        <h2 className="center">You have a total of {this.totalAccounts()} accounts.</h2>
+        <h2 className="center">You have a total of <span className="font70">{this.totalAccounts()}</span> accounts.</h2>
         <h3 className="center">Lenders typically like to see that you've used a variety of accounts responsibly.</h3>
         <AccountsTable />
         {this.renderOpenAccounts()}

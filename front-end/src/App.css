@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Bubbler+One|El+Messiri|Quicksand');
+/* General */
 
 body {
   margin: 0 auto;
   background: #eae8e8;
 }
 
+.centralize {
+  margin: auto;
+}
+
 /* Fonts */
 
-.center {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css?family=Bubbler+One|El+Messiri|Quicksand');
 
 h1 {
   margin: 5px 0 5px 20px;
@@ -49,6 +51,32 @@ h6 {
   margin: 0;
 }
 
+.font16 {
+  font-size: 16px;
+}
+
+.font18 {
+  font-size: 18px;
+}
+
+.font20 {
+  font-size: 20px;
+}
+
+.font70 {
+  font-size: 70px;
+  margin: 0;
+}
+
+.font80 {
+  font-size: 80px;
+}
+
+.font90 {
+  font-size: 90px;
+  margin: 0;
+}
+
 .blue {
   color: #0a72b2;
 }
@@ -59,6 +87,10 @@ h6 {
 
 .green {
   color: #0E9E17;
+}
+
+.grey {
+  color: #3d3a3a;
 }
 
 .yellow {
@@ -73,7 +105,35 @@ h6 {
   color: #d16100;
 }
 
-/* Flexbox */
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+  color: #262222;
+  font-family: 'Quicksand', sans-serif;
+}
+
+a:hover {
+  color: #6d6363;
+}
+
+ul {
+  list-style: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* Display */
 
 .flex {
   display: flex;
@@ -99,25 +159,11 @@ h6 {
   flex: 5;
 }
 
-/* Navigation */
-
-a {
-  text-decoration: none;
-  color: #262222;
-  font-family: 'Quicksand', sans-serif;
-}
-
-a:hover {
-  color: #6d6363;
-}
-
-ul {
-  list-style: none;
-}
-
 .wrapper {
   display: block;
 }
+
+/* Navigation */
 
 .navigation {
   background: #dbd6d6;
@@ -137,14 +183,6 @@ ul {
   background: #f2f2f2;
   border-radius: 30px;
   text-align: center;
-}
-
-.big {
-  font-size: 80px;
-}
-
-.small {
-  font-size: 20px;
 }
 
 /* Credit Factors */
@@ -182,59 +220,23 @@ ul {
   font-family: helvetica;
 }
 
-*:focus {
-  outline: none;
+/* For all Factors */
+
+table {
+  border: 1px solid #e5e3e3;
+  background: #efeded;
 }
 
-/* Credit Age */
-
-#credit-age {
-  background: #f2f2f2;
-  height: auto;
-  padding: 20px;
-  margin: 0 40px 40px 40px;
-}
-
-.r-background {
-  background: #c1091f;
-  width: 60px;
-}
-
-.y-background {
-  background: #CCB108;
-  width: 60px;
-}
-
-.g-background {
-  background: #0E9E17;
-  width: 60px;
-}
-
-.centralize {
-  margin: auto;
-}
-
-/* Credit Card Use */
-
-#credit-card-use {
-  background: #f2f2f2;
-  height: auto;
-  padding: 20px;
-  margin: 0 40px 40px 40px;
-}
-
-.ratio {
-  font-size: 80px;
+th {
+  background: #1c1919;
+  color: #f7f7f7;
+  padding: 5px;
   font-family: 'Quicksand', sans-serif;
 }
 
 .factor-info {
   font-size: 20px;
   font-family: 'Quicksand', sans-serif;
-}
-
-.utilization {
-  margin: 40px;
 }
 
 .dark {
@@ -255,16 +257,41 @@ ul {
   margin: 20px;
 }
 
-table {
-  border: 1px solid #e5e3e3;
-  background: #efeded;
+.r-background {
+  background: #c1091f;
+  width: 60px;
 }
 
-th {
-  background: #1c1919;
-  color: #f7f7f7;
-  padding: 5px;
-  font-family: 'Quicksand', sans-serif;
+.y-background {
+  background: #CCB108;
+  width: 60px;
+}
+
+.g-background {
+  background: #0E9E17;
+  width: 60px;
+}
+
+/* Credit Age */
+
+#credit-age {
+  background: #f2f2f2;
+  height: auto;
+  padding: 20px;
+  margin: 0 40px 40px 40px;
+}
+
+/* Credit Card Use */
+
+#credit-card-use {
+  background: #f2f2f2;
+  height: auto;
+  padding: 20px;
+  margin: 0 40px 40px 40px;
+}
+
+.utilization {
+  margin: 40px;
 }
 
 /* Derogatory Marks */
@@ -293,10 +320,6 @@ th {
   margin: 0 40px 40px 40px;
 }
 
-.history {
-  font-size: 18px;
-}
-
 .green-background {
   background: #0E9E17;
   height: 20px;
@@ -319,6 +342,25 @@ th {
   font-size: 15px;
   color: #6b6868; 
 }
+
+.green-background-i {
+  background: #0E9E17;
+  color: #6b6868; 
+  padding: 5px;
+}
+
+.red-background-i {
+  background: #c1091f;
+  color: #910808;
+  padding: 5px;
+}
+
+.grey-background-i {
+  background: #a5a5a5;
+  color: #6b6868; 
+  padding: 5px;
+}
+
 
 .month {
   height: 20px;
@@ -363,10 +405,6 @@ th {
 .bone {
   color: #605d5d;
   margin: 10px;
-}
-
-.block {
-  display: flex;
 }
 
 .question {
@@ -463,28 +501,11 @@ input[type=text] {
   color: #2d2c2c;
 }
 
-.bigger {
-  font-size: 90px;
-  margin: 0;
-}
-
-.smaller {
-  font-size: 70px;
-  margin: 0;
-}
-
-.num {
-  color: #3d3a3a;
-}
-
 /* Footer */
 
 .footer {
   background: #d8d4d4;
   padding: 10px;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 
 .image {

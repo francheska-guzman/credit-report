@@ -137,7 +137,11 @@ constructor(props){
 
   // The message receives the color and the variable result.
   message(color, result) {
-    return (<h2 className="center">Average age of open accounts: <span className={color}>{result} yrs</span></h2>)
+    return (
+      <h2 className="center">Average age of open accounts: 
+      <span className={color}><span className="font70"> {result}</span> yrs</span>
+      </h2>
+    )
   };
 
   // If data, render table header.
