@@ -180,9 +180,10 @@ class App extends Component {
                     state={this.state}
                     />
         <Switch>
-              <Route path="/index" exact component={() => 
-                  (<Dashboard state={this.state} />) }/>
-              <Route path="/help-censter" exact component={() => 
+              <Route path="/" exact component={() => 
+                  ( <App />
+                    <Dashboard state={this.state} />) }/>
+              <Route path="/help-center" exact component={() => 
                   (<HelpCenter />) }/>
               <Route path="/my-account" exact component={() => 
                   (<MyAccount signOff={this.signOff}
