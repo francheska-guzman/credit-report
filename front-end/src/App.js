@@ -171,6 +171,10 @@ class App extends Component {
     });
   }
 
+  componentDidMount() {
+    <Dashboard state={this.state} />
+  }
+
   render() {
     return (
       <Router>
@@ -180,8 +184,8 @@ class App extends Component {
                     state={this.state}
                     />
         <Switch>
-              <Route path="/" exact component={() => 
-                  (<Dashboard state={this.state} />) }/>
+              <Route process.env.PUBLIC_URL + '/' exact component={() => 
+                  (<App />) }/>
               <Route path="/help-center" exact component={() => 
                   (<HelpCenter />) }/>
               <Route path="/my-account" exact component={() => 
