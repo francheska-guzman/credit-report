@@ -180,14 +180,14 @@ class App extends Component {
                     state={this.state}
                     />
         <Switch>
-              <Route path="/" exact component={() => 
+              <Route path="/credit-report/" exact component={() => 
                   (<Dashboard state={this.state} />) }/>
-              <Route path="/help-center" exact component={() => 
+              <Route path="/credit-report/help-center" exact component={() => 
                   (<HelpCenter />) }/>
-              <Route path="/my-account" exact component={() => 
+              <Route path="/credit-report/my-account" exact component={() => 
                   (<MyAccount signOff={this.signOff}
                               state={this.state} />) }/>
-              <Route path="/*" component={() => (<FourOFour />) }/>
+              <Route path="/credit-report/*" component={() => (<FourOFour />) }/>
         </Switch>
         <Footer />
       </div>
