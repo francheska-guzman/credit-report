@@ -10,7 +10,7 @@ class Navigation extends Component {
         <h1 className="flex">Credit Report</h1>
           <nav>
           	<ul className="list-of-links">
-          	  <li className="nav-link"><NavLink to="/">Dashboard</NavLink></li>
+          	  <li className="nav-link"><NavLink to="/index">Dashboard</NavLink></li>
           	  <li className="nav-link"><NavLink to="/help-center">Help Center</NavLink></li>
           	  <li className="nav-link"><NavLink to="/my-account">My Account</NavLink></li>
             </ul>
