@@ -181,8 +181,7 @@ class App extends Component {
                     />
         <Switch>
               <Route path="/" exact component={() => 
-                  ( <App />
-                    <Dashboard state={this.state} />) }/>
+                  (<Dashboard state={this.state} />) }/>
               <Route path="/help-center" exact component={() => 
                   (<HelpCenter />) }/>
               <Route path="/my-account" exact component={() => 
