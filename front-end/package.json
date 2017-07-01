@@ -1,10 +1,12 @@
 {
   "name": "front-end",
+  "homepage": "https://francheska-guzman.github.io/credit-report",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
     "chart.js": "^1.1.1",
+    "gh-pages": "^1.0.0",
     "react": "^15.6.1",
     "react-bar-chart": "^0.1.2",
     "react-chartjs": "^0.8.0",
@@ -15,6 +17,8 @@
     "react-scripts": "1.0.7"
   },
   "scripts": {
+	"predeploy": "npm run build",
+	"deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
