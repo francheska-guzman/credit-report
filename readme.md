@@ -136,7 +136,7 @@ These are the components and how they are related.
 
 ## See the Project
 
-### Life Deployment of Credit Report App: https://creditreportapp.herokuapp.com/
+### Life Deployment of Credit Report App: https://francheska-guzman.github.io/credit-report
 
 ### Life Deployment of Credit Report API: https://creditreportapi.herokuapp.com/
 
