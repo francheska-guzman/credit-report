@@ -175,10 +175,12 @@ class App extends Component {
     return (
       <Router>
       <div className="wrapper">
-        <Navigation getUserData={this.getUserData}
+        <Route startsWith path="/credit-report/" component={() =>
+                  (<Navigation 
+                    getUserData={this.getUserData}
                     signOff={this.signOff}
                     state={this.state}
-                    />
+                    />) }/>
         <Switch>
               <Route path="/credit-report/" exact component={() => 
                   (<Dashboard state={this.state} />) }/>
@@ -189,7 +191,7 @@ class App extends Component {
                               state={this.state} />) }/>
               <Route path="/credit-report/*" component={() => (<FourOFour />) }/>
         </Switch>
-        <Footer />
+        <Route startsWith path="/credit-report/" component={() => (<Footer />) }/>
       </div>
       </Router>
     );
