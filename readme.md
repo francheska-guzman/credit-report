@@ -1,27 +1,26 @@
-General Assembly | Final Project
-
 # Credit Report
 
-<a name="tableofcontents">
+### <a name="tableofcontents">Table of Contents</a>
 
-### Table of Contents
+1. [About the project](#about)
+2. [Project proposal](./proposal.md)
+3. [GitHub board](https://github.com/francheska-guzman/credit-report/projects#boards?repos=93885730)
+4. [User stories](#userstories)
+5. [Wireframes Web/Browser Version](#browser)
+6. [Wireframes Mobile Version](#mobile)
+7. [Visual representation of the database](#database)
+8. [React components](#components)
+9. [Pseudocode](#pseudocode)
+10. [Technologies used](#technologies)
+11. [See the project](#project)
 
-1. [Project Proposal](./proposal.md)
-2. [GitHub Board](https://github.com/francheska-guzman/credit-report/projects#boards?repos=93885730)
-3. [User Stories](#userstories)
-4. [Browser Wireframes](#browser)
-5. [Mobile Wireframes](#mobile)
-6. [Visual representation of the database](#database)
-7. [React Components](#components)
-8. [Pseudocode](#pseudocode)
-9. [Technologies Used](#technologies)
-10. [See the Project](#project)
+## <a id="about">About the project</a>
 
-</a>
+General Assembly's Web Development Immersive <br />
+Final Project <br />
+Developed by Francheska Guzman
 
-<a name="userstories">
-
-## User Stories
+## <a name="userstories">User stories</a>
 
 1. As a user who doesn't know what is a Credit Report, and the impact of it in my life; I would like to get information about it, including quick tips for my credit health.
 2. As a user, I would like instructions on how to use the website.
@@ -34,13 +33,9 @@ General Assembly | Final Project
 	• Total accounts<br />
 	• Hard inquiries
 5. As a user, I would like a clean dashboard with colorful charts to visualize my financial situation.
-6. As a user, I want to protect my personal and financial data by using a login. (Post MVP 😅)
+6. As a user, I want to protect my personal and financial data by using a login.
 
-</a>
-
-<a name="browser">
-
-## Browser Wireframes
+## <a name="browser">Wireframes Web/Browser Version</a>
 
 Dashboard overview:
 
@@ -58,37 +53,21 @@ My account (render user basic information):
 
 ![Browser](./images/browser4.png)
 
-</a>
-
-<a name="mobile">
-
-## Mobile Wireframes
+## <a name="mobile">Wireframes Mobile Version</a>
 
 ![Mobile](./images/mobile1.png)
 
-</a>
-
-<a name="database">
-
-## Visual representation of the database
+## <a name="database">Visual representation of the database</a>
 
 ![Database](./images/database.png)
 
-</a>
-
-<a name="components">
-
-## React Components
+## <a name="components">React components</a>
 
 These are the components and how they are related.
 
 ![components](./images/components.png)
 
-</a>
-
-<a name="pseudocode">
-
-## Pseudocode
+## <a name="pseudocode">Pseudocode</a>
 
 1. Make an axios call to the Credit Report API, and get the personal and financial information from an especific user.
 2. Find the credit use and credit limit for each account open account.
@@ -96,11 +75,7 @@ These are the components and how they are related.
 4. Render the result in the Credit Card Use component in the following format: Credit name, Account Type, Credit Use, Credit Limit and the ratio already computed. (Utilization ratio for each account.)
 5. Finally, sum the credit use of all accounts, sum the credit limit of all accounts, and divide it. Render the result in a pie chart. (Utilization ratio in general.)
 
-</a>
-
-<a name="technologies">
-
-## Technologies Used
+## <a name="technologies">Technologies used</a>
 
 ### Core Stack:
 
@@ -130,16 +105,10 @@ These are the components and how they are related.
 
 ![Credit Card](./images/creditcard.png)  ![Personal Loan](./images/personalloan.png)  ![Student loan](./images/studentloan.png)  ![Auto Loan](./images/autoloan.png)  ![Home Loan](./images/homeloan.png)  ![Business Loan](./images/businessloan.png)
 
-</a>
-
-<a name="project">
-
-## See the Project
+## <a name="project">See the project</a>
 
 ### Life Deployment of Credit Report App: https://francheska-guzman.github.io/credit-report
 
 ### Life Deployment of Credit Report API: https://creditreportapi.herokuapp.com/
 
-</a>
-
-#### [Go Back: Table of Contents](#tableofcontents)
+### [Go Back: Table of Contents](#tableofcontents)
