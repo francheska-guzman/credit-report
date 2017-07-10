@@ -1,4 +1,4 @@
-**Francheska Guzman | GA Final Project**
+General Assembly | Final Project
 
 # Credit Report
 
