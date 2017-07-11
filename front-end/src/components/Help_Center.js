@@ -13,7 +13,7 @@ class HelpCenter extends Component {
       <div className="basic flex-3">
         <div className="center">
 
-        <img alt="Help Center" src="./images/helpcenter.png"/>
+        <img alt="Help Center" src="images/helpcenter.png"/>
 
         </div>
 
