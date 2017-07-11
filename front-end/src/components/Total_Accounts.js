@@ -159,12 +159,12 @@ class TotalAccounts extends Component {
         {this.renderOpenAccounts()}
         {this.renderClosedAccounts()}
         <div className="flex-1 center">
-          <img className="image" alt="Student Loan" src="./images/studentloan.png" />
-          <img className="image" alt="Credit Card" src="./images/creditcard.png" />
-          <img className="image" alt="Personal Loan" src="./images/personalloan.png" />
-          <img className="image" alt="Home Loan" src="./images/homeloan.png" />
-          <img className="image" alt="Business Loan" src="./images/businessloan.png" />
-          <img className="image" alt="Auto Loan" src="./images/autoloan.png" />
+          <img className="image" alt="Student Loan" src="images/studentloan.png" />
+          <img className="image" alt="Credit Card" src="images/creditcard.png" />
+          <img className="image" alt="Personal Loan" src="images/personalloan.png" />
+          <img className="image" alt="Home Loan" src="images/homeloan.png" />
+          <img className="image" alt="Business Loan" src="images/businessloan.png" />
+          <img className="image" alt="Auto Loan" src="images/autoloan.png" />
         </div>
       </div>
     );
