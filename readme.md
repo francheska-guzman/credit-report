@@ -77,7 +77,7 @@ These are the components and how they are related.
 
 ## <a name="technologies">Technologies used</a>
 
-### Core Stack:
+### Core Stack
 
 - HTML
 - CSS
@@ -89,15 +89,15 @@ These are the components and how they are related.
 - Heroku
 - GitHub
 
-### APIs:
+### APIs
 
 [Credit Report API](https://creditreportapi.herokuapp.com/) - I created this API to add personal and financial information for users, that I will be using to calculate their credit factors and credit score. This is not a final API, I will be adding more data and tables. Inmediatly I made changes to the database, I will be updating the "[Visual representation of the database](#database)".
 
-### Middleware:
+### Middleware
 
 - Libraries to create responsive charts: [ChartJS](http://www.chartjs.org/), [ChartistJS](http://gionkunz.github.io/chartist-js/), [Fusion Charts](http://www.fusioncharts.com/) and/or [Google Charts](https://developers.google.com/chart/).
 
-### Other sources:
+### Other sources
 
 - [balsamiq](https://balsamiq.com/) for the wireframes.
 
