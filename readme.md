@@ -12,7 +12,8 @@
 8. [React components](#components)
 9. [Pseudocode](#pseudocode)
 10. [Technologies used](#technologies)
-11. [See the project](#project)
+11. [Cross-browser compatibility](#compatibility)
+12. [See the project](#project)
 
 ## <a id="about">About the project</a>
 
@@ -104,6 +105,16 @@ These are the components and how they are related.
 - [logomakr](https://logomakr.com/) to create credit card, personal loan, student loan, auto loan, home loan, and business loan logos: 
 
 ![Credit Card](./images/creditcard.png)  ![Personal Loan](./images/personalloan.png)  ![Student loan](./images/studentloan.png)  ![Auto Loan](./images/autoloan.png)  ![Home Loan](./images/homeloan.png)  ![Business Loan](./images/businessloan.png)
+
+## <a id="compatibility">Cross-browser compatibility</a>
+
+This site has been tested in the following browsers:
+
+Chrome – Version 59.0.3071.115 
+
+Firefox – Version 54.0.1
+
+Safari – Version 9.1.2
 
 ## <a name="project">See the project</a>
 
