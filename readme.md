@@ -1,6 +1,6 @@
-# Credit Report
+# <a name="project">Credit Report</a>
 
-### <a name="tableofcontents">Table of Contents</a>
+### Table of Contents
 
 1. [About the project](#about)
 2. [Project proposal](./proposal.md)
@@ -13,7 +13,7 @@
 9. [Pseudocode](#pseudocode)
 10. [Technologies used](#technologies)
 11. [Cross-browser compatibility](#compatibility)
-12. [See the project](#project)
+12. [See the project](#deployment)
 
 ## <a id="about">About the project</a>
 
@@ -116,10 +116,10 @@ Firefox – Version 54.0.1
 
 Safari – Version 9.1.2
 
-## <a name="project">See the project</a>
+## <a name="deployment">See the project</a>
 
 ### Life Deployment of Credit Report App: https://francheska-guzman.github.io/credit-report
 
 ### Life Deployment of Credit Report API: https://creditreportapi.herokuapp.com/
 
-### [Go Back: Table of Contents](#tableofcontents)
+#### [Go back to the Table of Contents](#project)
