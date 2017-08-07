@@ -118,8 +118,8 @@ Safari – Version 9.1.2
 
 ## <a name="deployment">See the project</a>
 
-### Credit Report App: https://francheska-guzman.github.io/credit-report
+### Credit Report App: [https://francheska-guzman.github.io/credit-report](https://francheska-guzman.github.io/credit-report)
 
-### Credit Report API: https://creditreportapi.herokuapp.com/
+### Credit Report API: [https://creditreportapi.herokuapp.com](https://creditreportapi.herokuapp.com)
 
 #### [Go back to the Table of Contents](#project)
