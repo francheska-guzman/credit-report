@@ -6,8 +6,8 @@
 2. [Project proposal](./proposal.md)
 3. [GitHub board](https://github.com/francheska-guzman/credit-report/projects#boards?repos=93885730)
 4. [User stories](#userstories)
-5. [Wireframes Web/Browser Version](#browser)
-6. [Wireframes Mobile Version](#mobile)
+5. [Wireframes web version](#browser)
+6. [Wireframes mobile version](#mobile)
 7. [Visual representation of the database](#database)
 8. [React components](#components)
 9. [Pseudocode](#pseudocode)
@@ -36,7 +36,7 @@ Developed by Francheska Guzman
 5. As a user, I would like a clean dashboard with colorful charts to visualize my financial situation.
 6. As a user, I want to protect my personal and financial data by using a login.
 
-## <a name="browser">Wireframes Web/Browser Version</a>
+## <a name="browser">Wireframes web version</a>
 
 Dashboard overview:
 
@@ -54,7 +54,7 @@ My account (render user basic information):
 
 ![Browser](./images/browser4.png)
 
-## <a name="mobile">Wireframes Mobile Version</a>
+## <a name="mobile">Wireframes mobile version</a>
 
 ![Mobile](./images/mobile1.png)
 
@@ -84,8 +84,8 @@ These are the components and how they are related.
 - CSS
 - JavaScript
 - React
-- Node
-- Express
+- Node.js
+- Express.js
 - PostgreSQL
 - Heroku
 - GitHub
