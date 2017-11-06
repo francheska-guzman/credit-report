@@ -5,7 +5,7 @@ class Footer extends Component {
     return (
       <div className="footer flex-1 center">
         <h5>Credit Report</h5>
-        <h6>Francheska Guzman</h6>
+        <h6>Handmade by Francheska Guzman</h6>
       </div>
     );
   }
