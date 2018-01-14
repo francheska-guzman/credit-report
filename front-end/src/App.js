@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard';
 import HelpCenter from './components/Help_Center';
 import MyAccount from './components/My_Account';
 import FourOFour from './components/Four_o_Four';
+import Welcome from './components/Welcome';
 import {
         BrowserRouter as Router,
         Route,
@@ -176,14 +177,12 @@ class App extends Component {
       <Router>
       <div className="wrapper">
         <Route startsWith path="/credit-report/" component={() =>
-                  (<Navigation 
-                    getUserData={this.getUserData}
-                    signOff={this.signOff}
-                    state={this.state}
-                    />) }/>
+                  (<Navigation />) }/>
         <Switch>
               <Route path="/credit-report/" exact component={() => 
-                  (<Dashboard state={this.state} />) }/>
+                  (<Dashboard state={this.state}
+                              getUserData={this.getUserData}
+                              signOff={this.signOff} />) }/>
               <Route path="/credit-report/help-center" exact component={() => 
                   (<HelpCenter />) }/>
               <Route path="/credit-report/my-account" exact component={() => 

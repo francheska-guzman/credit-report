@@ -2,7 +2,7 @@
 
 body {
   margin: 0 auto;
-  background: #eae8e8;
+  background: #f7f7f7;
 }
 
 .centralize {
@@ -16,7 +16,7 @@ body {
 h1 {
   margin: 5px 0 5px 20px;
   color: #111111;
-  font-family: 'El Messiri', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 h2 {
@@ -135,6 +135,11 @@ ul {
 
 /* Display */
 
+.flex-dir-c {
+  display: flex;
+  flex-direction: column;
+}
+
 .flex {
   display: flex;
 }
@@ -166,8 +171,9 @@ ul {
 /* Navigation */
 
 .navigation {
-  background: #dbd6d6;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.19);
+  background: #e5e6e8;
+  padding: 3px 0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 .nav-link {
@@ -179,8 +185,8 @@ ul {
 /* Credit Score */
 
 .credit-score {
-  margin: 40px 5px 40px 40px;
-  background: #f2f2f2;
+  margin: 40px 5px 40px 20px;
+  background: #fcfcfc;
   border-radius: 30px;
   text-align: center;
 }
@@ -188,8 +194,8 @@ ul {
 /* Credit Factors */
 
 .credit-factors {
-  margin: 40px 40px 40px 5px;
-  background: #fcfcfc;
+  margin: 40px 20px 40px 5px;
+  background: #ffffff;
   border-radius: 30px;
   padding: 5px;
 }
@@ -223,19 +229,22 @@ ul {
 /* For all Factors */
 
 table {
-  border: 1px solid #e5e3e3;
-  background: #efeded;
+  border: .5px solid #e5e3e3;
+  background: #f9f9f9;
 }
 
 th {
-  background: #1c1919;
-  color: #f7f7f7;
   padding: 5px;
   font-family: 'Quicksand', sans-serif;
 }
 
+td {
+  font-size: 17px;
+  font-family: 'Quicksand', sans-serif;
+}
+
 .factor-info {
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -249,8 +258,10 @@ th {
 }
 
 .t-title {
-  background: #e0d9d9;
-  color: #1c1919;
+  padding: 5px;
+  font-size: 16.5px;
+  background: #eaebed;
+  color: #313233;
 }
 
 .graphic {
@@ -346,21 +357,23 @@ th {
 .green-background-i {
   background: #0E9E17;
   color: #6b6868; 
-  padding: 5px;
+  padding: 2px 11px;
+  margin: 0 15px 0 0;
 }
 
 .red-background-i {
   background: #c1091f;
   color: #910808;
-  padding: 5px;
+  padding: 2px 11px;
+  margin: 0 15px 0 0;
 }
 
 .grey-background-i {
   background: #a5a5a5;
   color: #6b6868; 
-  padding: 5px;
+  padding: 2px 11px;
+  margin: 0 15px 0 0;
 }
-
 
 .month {
   height: 20px;
@@ -429,8 +442,8 @@ th {
 /* Welcome */
 
 input[type=text] {
-  width: 180px;
-  height: 22px;
+  width: 250px;
+  height: 25px;
   font-family: 'Quicksand', sans-serif;
   font-size: 14px;
   border: none;
@@ -438,59 +451,53 @@ input[type=text] {
   border-bottom-left-radius: 10px;
   margin: 13px 0 13px 13px;
   padding: 5px;
-  background: #f2f2f2;
+  background: #ffffff;
   color: #262222;
 }
 
 .signIn {
-  height: 31px;
-  background: #c1baba;
+  font-family: 'Quicksand', sans-serif;
+  height: 34.5px;
+  background: #0768b7;
   border: none;
-  color: #262222;
+  color: #F6F6F6;
   font-size: 15px;
-  padding: 5px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
 .signIn:hover {
-  background: #ccc3c3;
+  background: #368fd8;
 }
 
 .signOff {
-  height: 31px;
-  background: #c1baba;
+  color: #0768b7;
+  background: none;
   border: none;
-  color: #262222;
-  font-size: 15px;
-  padding: 5px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
 }
 
 .signOff:hover {
-  background: #ccc3c3;
+  color: #38a5ff;
 }
 
 .hint {
   background: none;
   border: none;
   font-family: 'Quicksand', sans-serif;
-  font-size: 26px;
-  color: #ffffff;
+  font-size: 14px;
+  color: #0768b7;
 }
 
 .hint:hover {
-  color: #333030;
+  color: #38a5ff;
 }
 
 .wrap-message {
-  margin: 12px;
-}
-
-.message {
+  margin-top: 30px;
   font-family: 'Quicksand', sans-serif;
-  font-size: 15px;
-  padding: 7px;
-  background: #f2f2f2;
+  font-size: 16px;
 }
 
 /* Four o Four */
@@ -504,8 +511,7 @@ input[type=text] {
 /* Footer */
 
 .footer {
-  background: #d8d4d4;
-  padding: 10px;
+  padding: 15px 0 40px 0;
 }
 
 .image {

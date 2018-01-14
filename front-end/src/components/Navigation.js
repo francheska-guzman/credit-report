@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Welcome from './Welcome';
 import { NavLink } from 'react-router-dom';
 
 class Navigation extends Component {
@@ -15,10 +14,6 @@ class Navigation extends Component {
           	  <li className="nav-link"><NavLink to="/credit-report/my-account">My Account</NavLink></li>
             </ul>
           </nav>
-              <Welcome 
-                 getUserData={this.props.getUserData}
-                 signOff={this.props.signOff}
-                 state={this.props.state} />
       </div>
       </div>
     );
