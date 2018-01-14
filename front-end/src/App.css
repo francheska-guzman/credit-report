@@ -2,7 +2,6 @@
 
 body {
   margin: 0 auto;
-  background: #f7f7f7;
 }
 
 .centralize {
@@ -122,7 +121,7 @@ a {
 }
 
 a:hover {
-  color: #6d6363;
+  color: #108cd3;
 }
 
 ul {
@@ -171,7 +170,7 @@ ul {
 /* Navigation */
 
 .navigation {
-  background: #e5e6e8;
+  background: #ededed;
   padding: 3px 0;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.1);
 }
@@ -305,6 +304,12 @@ td {
   margin: 40px;
 }
 
+/* Dashboard */ 
+
+.dashboard {
+  background: #f7f7f7;
+}
+
 /* Derogatory Marks */
 
 #derogatory-marks {
@@ -411,7 +416,7 @@ td {
 /* Help Center */
 
 .help-center {
-  background: #ffffff;
+  background: #fcfcfc;
   height: auto;
 }
 
@@ -431,7 +436,7 @@ td {
 }
 
 .faq {
-  background: #f7f4f4;
+  background: #fcfcfc;
   padding: 20px;
 }
 
@@ -511,7 +516,8 @@ input[type=text] {
 /* Footer */
 
 .footer {
-  padding: 15px 0 40px 0;
+  padding: 20px 0;
+  background: #ededed;
 }
 
 .image {

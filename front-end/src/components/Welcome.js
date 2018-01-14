@@ -35,8 +35,8 @@ class Welcome extends Component {
     }
     else {
       return (
-        <div className="flex-dir-c wrap-message">
-          <br/>
+        <div className="flex-dir-c">
+          <br/><br/>
           <span>Welcome to Credit Report, {this.props.state.first_name} {this.props.state.last_name}.</span>
           <input className="signOff" type="button" value="Sign Off" onClick={this.props.signOff} />
         </div>

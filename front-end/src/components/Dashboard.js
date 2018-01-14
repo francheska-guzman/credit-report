@@ -25,7 +25,7 @@ class Dashboard extends Component {
   // and passing data to them.
   render() {
     return (
-      <div>
+      <div className="dashboard">
         <div className="center">
               <Welcome 
                   state={this.props.state} 
