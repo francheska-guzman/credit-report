@@ -416,7 +416,7 @@ td {
 /* Help Center */
 
 .help-center {
-  background: #fcfcfc;
+  background: #ffffff;
   height: auto;
 }
 
@@ -436,7 +436,7 @@ td {
 }
 
 .faq {
-  background: #fcfcfc;
+  background: #ffffff;
   padding: 20px;
 }
 
@@ -517,7 +517,7 @@ input[type=text] {
 
 .footer {
   padding: 20px 0;
-  background: #ededed;
+  background: #f7f7f7;
 }
 
 .image {
