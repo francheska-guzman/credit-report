@@ -64,7 +64,7 @@ My account (render user basic information):
 
 ## <a name="components">React components</a>
 
-These are the components and how they are related.
+This is an ilustration of how components are related in this application.
 
 ![components](./images/components.png)
 
@@ -108,13 +108,7 @@ These are the components and how they are related.
 
 ## <a id="compatibility">Cross-browser compatibility</a>
 
-This site has been tested in the following browsers:
-
-Chrome – Version 59.0.3071.115 
-
-Firefox – Version 54.0.1
-
-Safari – Version 9.1.2
+This site has been tested in the following browsers: Google Chrome, Firefox, and Safari.
 
 ## <a name="deployment">See the project</a>
 
