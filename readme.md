@@ -80,9 +80,8 @@ This is an ilustration of how components are related in this application.
 
 ### Core Stack
 
-- HTML
 - CSS
-- JavaScript
+- JSX
 - React
 - Node.js
 - Express.js
