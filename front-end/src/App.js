@@ -5,7 +5,6 @@ import Dashboard from './components/Dashboard';
 import HelpCenter from './components/Help_Center';
 import MyAccount from './components/My_Account';
 import FourOFour from './components/Four_o_Four';
-import Welcome from './components/Welcome';
 import {
         BrowserRouter as Router,
         Route,
@@ -64,7 +63,7 @@ class App extends Component {
   // Making an axios call to my api.
   // The first part of the url was added because of a cross-origin browser issue.
   // The instructor Joe helped me to figured out this problem.
-    axios.get(`https://accesscontrolalloworiginall.herokuapp.com/https://creditreportapi.herokuapp.com/personalfinancial/${id}`)
+    axios.get(`https://creditreportapi.herokuapp.com/personalfinancial/${id}`)
     .then((res) => {
 
       // Creating temporary variables to be using later for set state.
@@ -143,7 +142,7 @@ class App extends Component {
    // Getting the hard inquiries information.
    getHardInquiries() {
    	// Making an axios call to hard inquiries.
-    axios.get(`https://accesscontrolalloworiginall.herokuapp.com/https://creditreportapi.herokuapp.com/hardinquiries/${this.state.id}`)
+    axios.get(`https://creditreportapi.herokuapp.com/hardinquiries/${this.state.id}`)
     .then((res) => {
        var inq_creditor = [];
        var inq_account_type = [];
