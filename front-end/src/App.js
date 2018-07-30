@@ -63,7 +63,7 @@ class App extends Component {
   // Making an axios call to my api.
   // The first part of the url was added because of a cross-origin browser issue.
   // The instructor Joe helped me to figured out this problem.
-    axios.get(`https://creditreportapi.herokuapp.com/personalfinancial/${id}`)
+    axios.get(`https://cors-anywhere.herokuapp.com/https://creditreportapi.herokuapp.com/personalfinancial/${id}`)
     .then((res) => {
 
       // Creating temporary variables to be using later for set state.
@@ -142,7 +142,7 @@ class App extends Component {
    // Getting the hard inquiries information.
    getHardInquiries() {
    	// Making an axios call to hard inquiries.
-    axios.get(`https://creditreportapi.herokuapp.com/hardinquiries/${this.state.id}`)
+    axios.get(`https://cors-anywhere.herokuapp.com/https://creditreportapi.herokuapp.com/hardinquiries/${this.state.id}`)
     .then((res) => {
        var inq_creditor = [];
        var inq_account_type = [];
