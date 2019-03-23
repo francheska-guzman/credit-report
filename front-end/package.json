@@ -11,10 +11,11 @@
     "react-bar-chart": "^0.1.2",
     "react-chartjs": "^0.8.0",
     "react-dom": "^15.6.2",
+    "react-ga": "^2.5.7",
     "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
-    "react-scripts": "1.0.7"
+    "react-scripts": "^2.1.8"
   },
   "scripts": {
     "predeploy": "npm run build",
