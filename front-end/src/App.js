@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard';
 import HelpCenter from './components/Help_Center';
 import MyAccount from './components/My_Account';
 import FourOFour from './components/Four_o_Four';
+import ReactGA from 'react-ga';
 import {
         BrowserRouter as Router,
         Route,
@@ -57,6 +58,11 @@ class App extends Component {
     this.getUserData = this.getUserData.bind(this);
     this.getHardInquiries = this.getHardInquiries.bind(this);
     this.signOff = this.signOff.bind(this);
+  }
+	
+  initializeReactGA() {
+    ReactGA.initialize('UA-132345211-1');
+    ReactGA.pageview('/credit-report');
   }
 
   getUserData(id){
